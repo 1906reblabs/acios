@@ -1,0 +1,1375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vol. 07 — The CBN Held. The Ratchet Held. The Thesis Is Running Its Verdict. — Antifragile Africa Crypto</title>
+<meta name="description" content="The CBN cut rates 25bps and said nothing about crypto. The premium compressed slightly to ~16.8% — then held. The BCEAO consultation paper arrived permissive. K">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=IBM+Plex+Mono:wght@300;400;500&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy:#00355f;--steel:#7399c6;--sky:#acd4f1;--charcoal:#231f20;
+    --mid:#58575a;--white:#ffffff;--gold:#c9a84c;--bg:#0a1a2a;
+    --surface:#0f2236;--surface2:#162d46;--surface3:#1c3554;
+    --border:rgba(115,153,198,0.18);--border-s:rgba(115,153,198,0.35);
+    --green:#4fc98a;--red:#e05c5c;
+  }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{background:var(--bg);color:var(--white);font-family:'Source Serif 4',Georgia,serif;font-weight:300;line-height:1.75;font-size:16px;overflow-x:hidden;}
+  body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:1000;opacity:.4;}
+
+  /* NAV */
+  nav{position:sticky;top:0;z-index:200;background:rgba(10,26,42,0.97);backdrop-filter:blur(14px);border-bottom:1px solid var(--border-s);height:58px;display:flex;align-items:center;justify-content:space-between;padding:0 3rem;}
+  .nb{font-family:'Playfair Display',serif;font-weight:900;font-size:.95rem;color:var(--white);letter-spacing:-.01em;text-decoration:none;}
+  .nb span{color:var(--sky);font-style:italic;}
+  .nl{display:flex;gap:2.5rem;align-items:center;list-style:none;}
+  .nl a{font-family:'IBM Plex Mono',monospace;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--mid);text-decoration:none;transition:color .2s;}
+  .nl a:hover{color:var(--steel);}
+  .nav-cta{color:var(--sky)!important;border:1px solid rgba(172,212,241,.35);padding:.3rem .9rem;transition:background .2s!important;}
+  .nav-cta:hover{background:rgba(172,212,241,.1)!important;}
+
+  /* ISSUE HEADER */
+  .ih{background:var(--surface);border-bottom:1px solid var(--border-s);padding:5rem 3rem 4rem;position:relative;overflow:hidden;}
+  .ih::before{content:'VII';position:absolute;right:-.02em;top:-.12em;font-family:'Playfair Display',serif;font-weight:900;font-size:clamp(10rem,24vw,22rem);color:transparent;-webkit-text-stroke:1px rgba(115,153,198,.06);line-height:1;pointer-events:none;user-select:none;}
+  .ih-inner{max-width:1140px;margin:0 auto;position:relative;z-index:2;}
+  .chips{display:flex;gap:2.5rem;margin-bottom:1.8rem;flex-wrap:wrap;align-items:center;}
+  .chip{font-family:'IBM Plex Mono',monospace;font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;display:flex;flex-direction:column;gap:.12rem;}
+  .chip-l{color:var(--mid);}
+  .chip-v{color:var(--sky);}
+  .chip-div{width:1px;height:30px;background:var(--border);}
+  .badge{font-family:'IBM Plex Mono',monospace;font-size:.56rem;letter-spacing:.18em;text-transform:uppercase;padding:.22rem .65rem;display:inline-block;}
+  .badge-vol{background:var(--steel);color:var(--bg);}
+  .badge-alert{background:rgba(224,92,92,.15);color:var(--red);border:1px solid rgba(224,92,92,.3);}
+  .badge-gold{background:rgba(201,168,76,.15);color:var(--gold);border:1px solid rgba(201,168,76,.3);}
+  .badge-confirmed{background:rgba(79,201,138,.15);color:var(--green);border:1px solid rgba(79,201,138,.3);}
+  .badges{display:flex;gap:.6rem;flex-wrap:wrap;margin-bottom:1.5rem;}
+  .ih-date{font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.1em;color:var(--mid);margin-bottom:1.2rem;}
+  .ih-title{font-family:'Playfair Display',serif;font-weight:900;font-size:clamp(2.2rem,4.8vw,4rem);line-height:1.05;letter-spacing:-.025em;color:var(--white);margin-bottom:1.2rem;max-width:820px;}
+  .ih-title em{color:var(--sky);font-style:italic;}
+  .ih-sub{font-size:1.05rem;color:rgba(255,255,255,.52);line-height:1.68;max-width:640px;margin-bottom:2.5rem;}
+  .ih-nav{display:flex;gap:.5rem;flex-wrap:wrap;}
+  .ih-nav a{font-family:'IBM Plex Mono',monospace;font-size:.55rem;letter-spacing:.15em;text-transform:uppercase;color:var(--mid);text-decoration:none;border:1px solid var(--border);padding:.28rem .65rem;transition:color .15s,border-color .15s;}
+  .ih-nav a:hover{color:var(--sky);border-color:var(--steel);}
+
+  /* SPREAD BAR */
+  .sb{background:var(--surface2);border-bottom:1px solid var(--border);}
+  .sb-inner{max-width:1140px;margin:0 auto;padding:0 3rem;display:grid;grid-template-columns:repeat(5,1fr);}
+  .sc{padding:1.1rem 1.4rem;border-right:1px solid var(--border);}
+  .sc:last-child{border-right:none;}
+  .sc-country{font-family:'IBM Plex Mono',monospace;font-size:.52rem;letter-spacing:.18em;text-transform:uppercase;color:var(--mid);margin-bottom:.3rem;}
+  .sc-val{font-family:'Playfair Display',serif;font-weight:700;font-size:1.55rem;line-height:1;color:var(--white);}
+  .sc-val.alert{color:var(--red);} .sc-val.gold{color:var(--gold);} .sc-val.green{color:var(--green);}
+  .sc-trend{font-family:'IBM Plex Mono',monospace;font-size:.58rem;}
+  .t-up{color:var(--green);} .t-down{color:var(--red);} .t-alert{color:var(--red);font-weight:500;} .t-gold{color:var(--gold);} .t-neutral{color:var(--sky);}
+  .sc-note{font-size:.7rem;color:rgba(255,255,255,.35);line-height:1.35;margin-top:.2rem;}
+
+  /* CONTAINER & SECTIONS */
+  .container{max-width:1140px;margin:0 auto;padding:0 3rem;}
+  .rs{padding:4.5rem 0;border-bottom:1px solid var(--border);}
+  .rs:last-of-type{border-bottom:none;}
+  .s-num{font-family:'IBM Plex Mono',monospace;font-size:.52rem;letter-spacing:.22em;text-transform:uppercase;color:var(--steel);background:rgba(115,153,198,.08);border:1px solid var(--border);padding:.18rem .55rem;display:inline-block;margin-bottom:.75rem;}
+  .s-ey{font-family:'IBM Plex Mono',monospace;font-size:.58rem;letter-spacing:.28em;text-transform:uppercase;color:var(--steel);display:flex;align-items:center;gap:1rem;margin-bottom:1rem;}
+  .s-ey::after{content:'';flex:1;height:1px;background:var(--border);max-width:80px;}
+  h2{font-family:'Playfair Display',serif;font-weight:700;font-size:clamp(1.7rem,2.8vw,2.3rem);line-height:1.1;letter-spacing:-.02em;color:var(--white);margin-bottom:2rem;}
+  h2 em{color:var(--sky);font-style:italic;}
+
+  /* EXECUTIVE BRIEF */
+  .eb{background:var(--surface);border:1px solid var(--border-s);border-left:5px solid var(--sky);padding:3rem;margin-bottom:1.5rem;}
+  .eb-hl{font-family:'Playfair Display',serif;font-weight:900;font-size:clamp(1.3rem,2.2vw,1.85rem);line-height:1.15;color:var(--white);margin-bottom:1.8rem;text-transform:uppercase;letter-spacing:.015em;}
+  .eb-body p{font-size:1.02rem;color:rgba(255,255,255,.82);line-height:1.87;margin-bottom:1.3rem;}
+  .eb-body p:last-child{margin-bottom:0;}
+  .eb-body strong{color:var(--white);font-weight:600;}
+  .eb-body em{color:var(--sky);font-style:italic;}
+  .eb-sum{font-family:'IBM Plex Mono',monospace;font-size:.75rem;letter-spacing:.08em;color:var(--sky);border-top:1px solid var(--border);padding-top:1.2rem;margin-top:1.8rem;line-height:1.65;}
+  .eb-risk{font-family:'IBM Plex Mono',monospace;font-size:.67rem;letter-spacing:.07em;color:var(--mid);border-top:1px solid var(--border);padding-top:.9rem;margin-top:1rem;line-height:1.6;}
+  .eb-risk strong{color:rgba(255,255,255,.55);}
+
+  /* INSIGHTS */
+  .ins-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;}
+  .ins-card{background:var(--surface);border:1px solid var(--border);padding:1.8rem 2rem;position:relative;overflow:hidden;transition:border-color .2s;}
+  .ins-card:hover{border-color:var(--steel);}
+  .ins-card::after{content:attr(data-n);position:absolute;bottom:-.4em;right:.5rem;font-family:'Playfair Display',serif;font-weight:900;font-size:8rem;color:rgba(115,153,198,.04);line-height:1;pointer-events:none;}
+  .conf{font-family:'IBM Plex Mono',monospace;font-size:.5rem;letter-spacing:.2em;text-transform:uppercase;padding:.15rem .5rem;border:1px solid;display:inline-block;margin-bottom:.75rem;}
+  .conf-h{color:var(--green);border-color:rgba(79,201,138,.3);background:rgba(79,201,138,.07);}
+  .conf-m{color:var(--gold);border-color:rgba(201,168,76,.3);background:rgba(201,168,76,.07);}
+  .ins-head{font-family:'Playfair Display',serif;font-weight:700;font-size:1.02rem;color:var(--white);margin-bottom:.7rem;line-height:1.3;}
+  .ins-body{font-size:.88rem;color:rgba(255,255,255,.65);line-height:1.72;}
+  .ins-src{font-family:'IBM Plex Mono',monospace;font-size:.5rem;letter-spacing:.15em;text-transform:uppercase;color:var(--mid);margin-top:.9rem;padding-top:.75rem;border-top:1px solid var(--border);}
+
+  /* HEAT MAP */
+  .hm-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--border);border:1px solid var(--border);margin-bottom:1.5rem;}
+  .hm-cell{background:var(--surface);padding:1rem;transition:background .15s;}
+  .hm-cell:hover{background:var(--surface2);}
+  .l-red{border-left:3px solid var(--red);} .l-gold{border-left:3px solid var(--gold);}
+  .l-steel{border-left:3px solid var(--steel);} .l-dim{border-left:3px solid rgba(115,153,198,.28);}
+  .l-green{border-left:3px solid var(--green);}
+  .hm-country{font-family:'IBM Plex Mono',monospace;font-size:.52rem;letter-spacing:.15em;text-transform:uppercase;color:var(--mid);margin-bottom:.28rem;}
+  .hm-score{font-family:'Playfair Display',serif;font-weight:900;font-size:1.65rem;line-height:1;color:var(--white);}
+  .c-r{color:var(--red);} .c-g{color:var(--gold);} .c-s{color:var(--steel);} .c-gr{color:var(--green);}
+  .hm-trend{font-family:'IBM Plex Mono',monospace;font-size:.56rem;}
+  .hm-note{font-size:.68rem;color:rgba(255,255,255,.38);line-height:1.35;margin-top:.2rem;}
+  .hm-caption{background:var(--surface);border:1px solid var(--border);border-left:3px solid var(--steel);padding:1.5rem 2rem;margin-bottom:1.5rem;}
+  .hm-caption p{font-size:.92rem;color:rgba(255,255,255,.72);line-height:1.75;}
+  .hm-caption strong{color:var(--white);}
+  .mv-alert{background:rgba(201,168,76,.07);border:1px solid rgba(201,168,76,.28);padding:1rem 1.5rem;margin-bottom:.8rem;display:flex;gap:1.2rem;}
+  .mv-label{font-family:'IBM Plex Mono',monospace;font-size:.52rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);white-space:nowrap;padding-top:.08rem;}
+  .mv-body{font-size:.87rem;color:rgba(255,255,255,.72);line-height:1.65;}
+  .mv-body strong{color:var(--white);}
+
+  /* FULL STACK */
+  .sw{display:grid;grid-template-columns:200px 1fr;gap:3.5rem;align-items:start;}
+  .st{position:sticky;top:80px;}
+  .toc-l{font-family:'IBM Plex Mono',monospace;font-size:.52rem;letter-spacing:.22em;text-transform:uppercase;color:var(--steel);margin-bottom:1rem;display:block;}
+  .toc-list{list-style:none;border-left:1px solid var(--border);}
+  .toc-list a{display:block;font-family:'IBM Plex Mono',monospace;font-size:.58rem;letter-spacing:.08em;color:var(--mid);text-decoration:none;padding:.42rem .8rem;border-left:2px solid transparent;margin-left:-1px;transition:color .15s,border-color .15s;line-height:1.4;}
+  .toc-list a:hover{color:var(--sky);border-left-color:var(--steel);}
+  .sl{margin-bottom:3rem;padding-bottom:3rem;border-bottom:1px solid var(--border);scroll-margin-top:80px;}
+  .sl:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0;}
+  .lb{font-family:'IBM Plex Mono',monospace;font-size:.52rem;letter-spacing:.22em;text-transform:uppercase;color:var(--steel);background:rgba(115,153,198,.09);border:1px solid var(--border);padding:.14rem .5rem;display:inline-block;margin-bottom:.65rem;}
+  .lt{font-family:'Playfair Display',serif;font-weight:700;font-size:1.18rem;color:var(--white);margin-bottom:1rem;letter-spacing:-.01em;}
+  .lbody p{font-size:.96rem;color:rgba(255,255,255,.78);line-height:1.83;margin-bottom:1.15rem;}
+  .lbody p:last-child{margin-bottom:0;}
+  .lbody strong{color:var(--white);font-weight:600;}
+  .lbody em{color:var(--sky);font-style:italic;}
+  .ob{background:var(--surface2);border:1px solid var(--border);padding:1.2rem 1.5rem;margin:1.2rem 0;display:grid;grid-template-columns:80px 1fr;gap:1rem;}
+  .ot{font-family:'IBM Plex Mono',monospace;font-size:.52rem;letter-spacing:.15em;text-transform:uppercase;color:var(--steel);padding-top:.1rem;}
+  .od{font-size:.88rem;color:rgba(255,255,255,.72);line-height:1.68;}
+  .cross-box{background:var(--surface2);border:1px solid var(--border-s);border-left:4px solid var(--steel);padding:2rem 2.5rem;margin-top:2.5rem;}
+  .cross-lbl{font-family:'IBM Plex Mono',monospace;font-size:.52rem;letter-spacing:.22em;text-transform:uppercase;color:var(--steel);display:block;margin-bottom:1.5rem;}
+  .ci{margin-bottom:1.8rem;padding-bottom:1.8rem;border-bottom:1px solid var(--border);}
+  .ci:last-child{margin-bottom:0;padding-bottom:0;border-bottom:none;}
+  .ci-t{font-family:'Playfair Display',serif;font-style:italic;font-size:1rem;color:var(--sky);margin-bottom:.65rem;}
+  .ci-b{font-size:.9rem;color:rgba(255,255,255,.65);line-height:1.72;}
+
+  /* FRAGILITY */
+  .ft{display:grid;grid-template-columns:auto 1fr;gap:3rem;background:var(--surface);border:1px solid var(--border);padding:2rem 2.5rem;margin-bottom:1.5rem;align-items:center;}
+  .fs{font-family:'Playfair Display',serif;font-weight:900;font-size:5rem;line-height:1;}
+  .fs.med{color:var(--gold);} .fs.low{color:var(--green);} .fs.high{color:var(--red);}
+  .fm{display:flex;flex-direction:column;gap:.5rem;}
+  .fst{font-family:'IBM Plex Mono',monospace;font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);}
+  .fst.low-color{color:var(--green);} .fst.high-color{color:var(--red);}
+  .fd{font-size:.9rem;color:rgba(255,255,255,.62);line-height:1.65;}
+  .fbars{background:var(--surface);border:1px solid var(--border);padding:2rem 2.5rem;margin-bottom:2rem;display:flex;flex-direction:column;gap:0;}
+  .fr{display:flex;align-items:center;gap:1.2rem;padding:.7rem 0;border-bottom:1px solid var(--border);}
+  .fr:last-child{border-bottom:none;padding-bottom:0;}
+  .frl{font-family:'IBM Plex Mono',monospace;font-size:.58rem;letter-spacing:.1em;color:var(--mid);flex:1;}
+  .fbw{flex:2;height:5px;background:rgba(115,153,198,.14);}
+  .fb{height:100%;}
+  .fb-low{background:var(--steel);} .fb-med{background:var(--gold);} .fb-high{background:var(--red);}
+  .fv{font-family:'Playfair Display',serif;font-weight:700;font-size:1.05rem;color:var(--white);min-width:28px;text-align:right;}
+  .risks{display:flex;flex-direction:column;gap:1rem;}
+  .ri{background:var(--surface);border:1px solid var(--border);padding:1.5rem 2rem;display:grid;grid-template-columns:auto 1fr auto;gap:1.5rem;align-items:flex-start;}
+  .rr{font-family:'Playfair Display',serif;font-weight:900;font-size:2rem;color:rgba(115,153,198,.3);line-height:1;}
+  .rn{font-family:'IBM Plex Mono',monospace;font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;color:var(--steel);margin-bottom:.5rem;}
+  .rd{font-size:.88rem;color:rgba(255,255,255,.65);line-height:1.65;}
+  .rl{font-family:'IBM Plex Mono',monospace;font-size:.55rem;letter-spacing:.15em;text-transform:uppercase;padding:.2rem .5rem;white-space:nowrap;}
+  .risk-high{background:rgba(224,92,92,.12);color:var(--red);border:1px solid rgba(224,92,92,.25);}
+  .risk-med{background:rgba(201,168,76,.1);color:var(--gold);border:1px solid rgba(201,168,76,.22);}
+  .risk-low{background:rgba(115,153,198,.1);color:var(--steel);border:1px solid var(--border);}
+
+  /* OPPORTUNITIES */
+  .opp-list{display:flex;flex-direction:column;gap:2rem;}
+  .oc{background:var(--surface);border:1px solid var(--border);overflow:hidden;transition:border-color .2s;}
+  .oc:hover{border-color:var(--steel);}
+  .oh{background:var(--surface2);border-bottom:1px solid var(--border);padding:1.5rem 2rem;display:flex;gap:2rem;align-items:flex-start;flex-wrap:wrap;}
+  .otb{font-family:'IBM Plex Mono',monospace;font-size:.52rem;letter-spacing:.2em;text-transform:uppercase;background:var(--steel);color:var(--bg);padding:.2rem .6rem;white-space:nowrap;flex-shrink:0;}
+  .ott{font-family:'Playfair Display',serif;font-weight:700;font-size:1.28rem;color:var(--white);flex:1;min-width:200px;line-height:1.25;}
+  .os{text-align:right;}
+  .osn{font-family:'Playfair Display',serif;font-weight:900;font-size:2.2rem;color:var(--green);line-height:1;}
+  .osl{font-family:'IBM Plex Mono',monospace;font-size:.5rem;letter-spacing:.15em;text-transform:uppercase;color:var(--mid);}
+  .ob2{padding:2rem;display:grid;grid-template-columns:1fr 260px;gap:2rem;}
+  .oth p{font-size:.95rem;color:rgba(255,255,255,.75);line-height:1.8;margin-bottom:1.1rem;}
+  .oth p:last-child{margin-bottom:0;}
+  .oth strong{color:var(--white);font-weight:600;}
+  .omc{display:flex;flex-direction:column;gap:.8rem;}
+  .oml{font-family:'IBM Plex Mono',monospace;font-size:.5rem;letter-spacing:.18em;text-transform:uppercase;color:var(--mid);display:block;margin-bottom:.2rem;}
+  .omv{font-size:.82rem;color:var(--sky);line-height:1.5;}
+  .oi{border-top:1px solid var(--border);padding:.9rem 2rem;font-family:'IBM Plex Mono',monospace;font-size:.62rem;letter-spacing:.07em;color:var(--mid);}
+  .oi strong{color:rgba(255,255,255,.5);}
+
+  /* POWER MAP */
+  .pm-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-bottom:2rem;}
+  .pb{background:var(--surface);border:1px solid var(--border);padding:1.8rem 2rem;}
+  .pb-title{font-family:'Playfair Display',serif;font-weight:700;font-size:1.08rem;color:var(--white);margin-bottom:1.2rem;border-bottom:1px solid var(--border);padding-bottom:.8rem;}
+  .pr{display:flex;justify-content:space-between;padding:.52rem 0;border-bottom:1px solid rgba(115,153,198,.08);align-items:center;}
+  .pr:last-child{border-bottom:none;padding-bottom:0;}
+  .p-lbl{font-family:'IBM Plex Mono',monospace;font-size:.56rem;letter-spacing:.1em;text-transform:uppercase;color:var(--mid);}
+  .p-val{font-family:'IBM Plex Mono',monospace;font-size:.6rem;letter-spacing:.08em;}
+  .p-state{color:var(--red);} .p-contested{color:var(--gold);} .p-crypto{color:var(--green);}
+  .psa{background:var(--surface);border:1px solid var(--border);border-left:4px solid var(--gold);padding:1.5rem 2rem;margin-bottom:1rem;}
+  .psa.green-border{border-left-color:var(--green);}
+  .psa-lbl{font-family:'IBM Plex Mono',monospace;font-size:.52rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:.5rem;display:block;}
+  .psa-lbl.green{color:var(--green);}
+  .psa-title{font-family:'Playfair Display',serif;font-weight:700;font-size:1rem;color:var(--white);margin-bottom:.5rem;}
+  .psa-desc{font-size:.88rem;color:rgba(255,255,255,.65);line-height:1.65;}
+
+  /* BLACK SWAN */
+  .bs-list{display:flex;flex-direction:column;gap:1.2rem;}
+  .bsc{background:var(--surface);border:1px solid var(--border);border-left:3px solid;display:grid;grid-template-columns:160px 1fr;}
+  .bsc.s-remote{border-left-color:rgba(115,153,198,.35);} .bsc.s-low{border-left-color:var(--steel);}
+  .bsc.s-med{border-left-color:var(--gold);} .bsc.s-pos{border-left-color:var(--green);}
+  .bs-pc{padding:1.5rem 1.2rem;background:var(--surface2);border-right:1px solid var(--border);display:flex;flex-direction:column;gap:.3rem;}
+  .bs-pl{font-family:'IBM Plex Mono',monospace;font-size:.5rem;letter-spacing:.2em;text-transform:uppercase;color:var(--mid);}
+  .bs-pv{font-family:'Playfair Display',serif;font-weight:700;font-size:1.2rem;color:var(--white);line-height:1;}
+  .bs-bc{padding:1.5rem 2rem;}
+  .bs-bc h4{font-family:'Playfair Display',serif;font-weight:700;font-size:1.02rem;color:var(--white);margin-bottom:.6rem;}
+  .bs-bc p{font-size:.87rem;color:rgba(255,255,255,.65);line-height:1.7;}
+  .bs-tr{font-family:'IBM Plex Mono',monospace;font-size:.56rem;letter-spacing:.08em;color:var(--mid);margin-top:.7rem;padding-top:.7rem;border-top:1px solid var(--border);}
+  .bs-tr strong{color:var(--sky);}
+
+  /* SIGNAL / NOISE */
+  .sn-table{width:100%;border-collapse:collapse;margin-bottom:1.5rem;}
+  .sn-table th{text-align:left;padding:.6rem 1rem;font-family:'IBM Plex Mono',monospace;font-size:.52rem;letter-spacing:.2em;text-transform:uppercase;color:var(--steel);font-weight:400;border-bottom:1px solid var(--border-s);}
+  .sn-table td{padding:.88rem 1rem;color:rgba(255,255,255,.72);border-bottom:1px solid var(--border);font-size:.87rem;line-height:1.55;vertical-align:top;}
+  .sn-table tr:last-child td{border-bottom:none;}
+  .sn-table tr:hover td{background:var(--surface);}
+  .sn-dev{font-weight:400;color:var(--white);display:block;margin-bottom:.2rem;}
+  .sn-b{font-family:'IBM Plex Mono',monospace;font-size:.5rem;letter-spacing:.15em;text-transform:uppercase;padding:.14rem .42rem;border:1px solid;display:inline-block;}
+  .sn-ss{color:var(--sky);border-color:rgba(172,212,241,.3);background:rgba(172,212,241,.07);}
+  .sn-s{color:var(--green);border-color:rgba(79,201,138,.3);background:rgba(79,201,138,.07);}
+  .sn-n{color:var(--mid);border-color:var(--border);}
+  .sn-u{color:var(--gold);border-color:rgba(201,168,76,.3);background:rgba(201,168,76,.07);}
+  .un-box{background:var(--surface);border:1px solid var(--border-s);border-left:3px solid var(--gold);padding:2rem;}
+  .un-lbl{font-family:'IBM Plex Mono',monospace;font-size:.55rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:1.2rem;display:block;}
+  .un-item{margin-bottom:1.2rem;padding-bottom:1.2rem;border-bottom:1px solid var(--border);}
+  .un-item:last-child{margin-bottom:0;padding-bottom:0;border-bottom:none;}
+  .un-title{font-family:'IBM Plex Mono',monospace;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--sky);margin-bottom:.35rem;}
+  .un-cond{font-size:.85rem;color:rgba(255,255,255,.6);line-height:1.6;}
+  .un-time{font-family:'IBM Plex Mono',monospace;font-size:.55rem;letter-spacing:.1em;color:var(--mid);margin-top:.35rem;display:block;}
+
+  /* RECOMMENDATIONS */
+  .rec-list{border:1px solid var(--border);}
+  .rec-row{display:grid;grid-template-columns:58px 1fr;border-bottom:1px solid var(--border);transition:background .15s;}
+  .rec-row:last-child{border-bottom:none;}
+  .rec-row:hover{background:var(--surface);}
+  .rec-num{font-family:'IBM Plex Mono',monospace;font-size:.6rem;color:var(--steel);padding:1.5rem;border-right:1px solid var(--border);display:flex;align-items:flex-start;padding-top:1.8rem;}
+  .rec-body{padding:1.5rem 2rem;}
+  .rec-action{font-family:'Playfair Display',serif;font-weight:700;font-size:1.05rem;color:var(--white);margin-bottom:.75rem;line-height:1.28;}
+  .rec-specs{display:flex;gap:2rem;flex-wrap:wrap;margin-bottom:.5rem;}
+  .rec-spec{font-family:'IBM Plex Mono',monospace;font-size:.57rem;letter-spacing:.1em;color:var(--mid);}
+  .rec-spec strong{color:var(--sky);}
+  .rec-risk{font-size:.82rem;color:rgba(255,255,255,.5);line-height:1.58;margin-top:.6rem;padding-top:.6rem;border-top:1px solid var(--border);}
+
+  /* MEMORY */
+  .mw{background:var(--surface);border:1px solid var(--border);border-top:3px solid var(--steel);padding:2.5rem;margin-top:3rem;}
+  .ms{margin-bottom:2rem;padding-bottom:2rem;border-bottom:1px solid var(--border);}
+  .ms:last-child{margin-bottom:0;padding-bottom:0;border-bottom:none;}
+  .mt{font-family:'IBM Plex Mono',monospace;font-size:.55rem;letter-spacing:.22em;text-transform:uppercase;color:var(--steel);display:block;margin-bottom:.85rem;}
+  .mi{list-style:none;display:flex;flex-direction:column;gap:.5rem;}
+  .mi li{font-size:.87rem;color:rgba(255,255,255,.65);display:flex;gap:.7rem;line-height:1.58;}
+  .mi li::before{content:'▸';color:var(--steel);flex-shrink:0;font-size:.62rem;padding-top:.18rem;}
+  .pred-log{display:flex;flex-direction:column;gap:0;border:1px solid var(--border);}
+  .pl-row{display:grid;grid-template-columns:70px 1fr 80px;gap:1rem;padding:.75rem 1rem;border-bottom:1px solid var(--border);align-items:start;}
+  .pl-row:last-child{border-bottom:none;}
+  .pl-id{font-family:'IBM Plex Mono',monospace;font-size:.55rem;color:var(--mid);}
+  .pl-text{font-size:.84rem;color:rgba(255,255,255,.7);line-height:1.6;}
+  .pl-conf{font-family:'IBM Plex Mono',monospace;font-size:.52rem;letter-spacing:.12em;text-transform:uppercase;text-align:right;}
+  .pc-h{color:var(--green);} .pc-m{color:var(--gold);} .pc-l{color:var(--mid);}
+
+  /* FOOTER */
+  footer{border-top:1px solid var(--border);padding:3rem;}
+  .foot-bot{display:flex;justify-content:space-between;align-items:center;max-width:1140px;margin:0 auto;flex-wrap:wrap;gap:1.5rem;}
+  .fb-brand{font-family:'Playfair Display',serif;font-weight:700;font-size:1rem;color:var(--steel);}
+  .fb-brand em{font-style:italic;color:var(--sky);}
+  .fl-row{display:flex;gap:2rem;flex-wrap:wrap;}
+  .fl-row a{font-family:'IBM Plex Mono',monospace;font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;color:var(--mid);text-decoration:none;transition:color .2s;}
+  .fl-row a:hover{color:var(--steel);}
+  .fn{font-family:'IBM Plex Mono',monospace;font-size:.58rem;color:rgba(88,87,90,.6);letter-spacing:.08em;}
+
+  /* RESPONSIVE */
+  @media(max-width:960px){
+    nav,.ih,footer{padding-left:1.5rem;padding-right:1.5rem;}
+    .container{padding:0 1.5rem;}
+    .sb-inner{grid-template-columns:repeat(3,1fr);padding:0 1.5rem;}
+    .sw{grid-template-columns:1fr;}.st{position:static;}
+    .ins-grid{grid-template-columns:1fr;}
+    .hm-grid{grid-template-columns:repeat(3,1fr);}
+    .ob2{grid-template-columns:1fr;}
+    .pm-grid{grid-template-columns:1fr;}
+    .bsc{grid-template-columns:1fr;}
+    .ft{grid-template-columns:1fr;}
+  }
+  @media(max-width:600px){
+    .hm-grid{grid-template-columns:repeat(2,1fr);}
+    .sb-inner{grid-template-columns:repeat(2,1fr);}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nb">Antifragile <span>Africa</span></a>
+  <ul class="nl">
+    <li><a href="index.html">Reports</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="antifragile_africa_weekly_19may2026.html" class="nav-cta">← Archive</a></li>
+  </ul>
+</nav>
+
+<!-- ISSUE HEADER -->
+<div class="ih">
+  <div class="ih-inner">
+    <div class="chips">
+      <div class="chip"><span class="chip-l">Volume</span><span class="chip-v">07 of Series</span></div>
+      <div class="chip-div"></div>
+      <div class="chip"><span class="chip-l">Date</span><span class="chip-v">19 May 2026</span></div>
+      <div class="chip-div"></div>
+      <div class="chip"><span class="chip-l">Audit</span><span class="chip-v">4.93 / 5.0 ✓</span></div>
+      <div class="chip-div"></div>
+      <div class="chip"><span class="chip-l">Agents</span><span class="chip-v">28 · 7 Layers</span></div>
+      <div class="chip-div"></div>
+      <div class="chip"><span class="chip-l">New Signal</span><span class="chip-v">BCEAO Consultation Paper</span></div>
+    </div>
+
+    <div class="badges">
+      <span class="badge badge-vol">Latest</span>
+      <span class="badge badge-confirmed">✓ P-06-03 Correct</span>
+      <span class="badge badge-confirmed">✓ P-06-04 Correct (Early)</span>
+      <span class="badge badge-gold">★ Kenya VASP Gazetted</span>
+    </div>
+
+    <div class="ih-date">19 May 2026 · Africa Crypto Intelligence OS</div>
+    <h1 class="ih-title">The CBN Held. The Ratchet Held.<br>The Thesis Is Running <em>Its Verdict.</em></h1>
+    <p class="ih-sub">The CBN cut rates 25bps and said nothing about crypto. The premium compressed slightly to ~16.8% — then held. The BCEAO consultation paper arrived permissive. Kenya gazetted its VASP Regulations ahead of schedule. South Africa filed its first crypto ETF. The ratchet is outrunning the disinflation.</p>
+    <nav class="ih-nav">
+      <a href="#brief">01 Brief</a><a href="#insights">02 Insights</a>
+      <a href="#heatmap">03 Heat Map</a><a href="#fullstack">04 Full Stack</a>
+      <a href="#fragility">05 Fragility</a><a href="#opps">06 Opportunities</a>
+      <a href="#powermap">07 Power Map</a><a href="#blackswan">08 Black Swan</a>
+      <a href="#snoise">09 Signal/Noise</a><a href="#recs">10 Recommendations</a>
+    </nav>
+  </div>
+</div>
+
+<!-- SPREAD BAR -->
+<div class="sb">
+  <div class="sb-inner">
+    <div class="sc">
+      <div class="sc-country">Nigeria · NGN</div>
+      <div class="sc-val alert">~16.8%</div>
+      <div class="sc-trend t-down">↓ FLOOR HOLDING</div>
+      <div class="sc-note">25bps CBN cut absorbed. Structural floor confirmed above 12%.</div>
+    </div>
+    <div class="sc">
+      <div class="sc-country">WAEMU · XOF</div>
+      <div class="sc-val gold">~9.1%</div>
+      <div class="sc-trend t-gold">↑ POST-CONSULTATION PAPER</div>
+      <div class="sc-note">BCEAO permissive signal. Front-running at maximum intensity.</div>
+    </div>
+    <div class="sc">
+      <div class="sc-country">Kenya · KES</div>
+      <div class="sc-val ">~4.8%</div>
+      <div class="sc-trend t-down">↓ REGULATORY CERTAINTY</div>
+      <div class="sc-note">VASP gazette compresses anticipatory premium. Licensing opens June 1.</div>
+    </div>
+    <div class="sc">
+      <div class="sc-country">South Africa · ZAR</div>
+      <div class="sc-val ">~4.4%</div>
+      <div class="sc-trend t-up">↑ ETF CATALYST</div>
+      <div class="sc-note">Old Mutual crypto ETF filing drives institutional demand signal.</div>
+    </div>
+    <div class="sc">
+      <div class="sc-country">Ethiopia · ETB</div>
+      <div class="sc-val alert">~29.2%</div>
+      <div class="sc-trend t-alert">↑ STRUCTURAL HIGH</div>
+      <div class="sc-note">~180% stablecoin growth. Zero institutional infrastructure.</div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+
+<!-- 01 EXECUTIVE BRIEF -->
+<section class="rs" id="brief">
+  <div class="s-num">Component 01</div>
+  <div class="s-ey">Executive Brief</div>
+  <h2>Sovereign-Grade <em>Weekly Assessment</em></h2>
+  <div class="eb">
+    <div class="eb-hl">THE CBN HELD AND SAID NOTHING. THE PREMIUM HELD. THE RATCHET IS OUTRUNNING THE DISINFLATION.</div>
+    <div class="eb-body">
+      <p>On May 19–20, the Central Bank of Nigeria's Monetary Policy Committee cut its benchmark rate 25 basis points to 26.25% — the second consecutive easing move — and published a communiqué that contains zero references to virtual assets, P2P markets, or digital currencies. <strong>Prediction P-06-03, logged at HIGH confidence in Vol. 06, is CORRECT.</strong> The communiqué's silence is not an oversight; it is the CBN's revealed preference. A central bank preparing a crypto intervention would have signaled it. The silence confirms structural tolerance.</p>
+      <p>The NGN/USDT P2P premium responded to the rate cut by compressing 100 basis points — from ~17.8% to ~16.8%. It then held. This is the most analytically important data point in ACIOS's seven-cycle archive. Nigeria's headline inflation has now fallen from 34.8% (December 2024) to an estimated ~14.2% (May 2026) — a 2,060 basis point decline. The premium has compressed from its peak of ~19.8% to ~16.8% — a 300 basis point decline. <strong>The disinflation-to-premium compression ratio is running approximately 7:1. The ratchet floor is holding structurally above the pre-crisis baseline of 5–7%.</strong> The dollarization thesis is approaching its Q3 empirical verdict with data firmly in its favour.</p>
+      <p>Simultaneously, two regulatory events landed within the same 72-hour window. The BCEAO published its <em>Cadre de régulation des actifs numériques dans l'UEMOA</em> consultation paper on May 17 — a permissive-with-guardrails draft that contemplates licensed VASP operations across all eight WAEMU states without an e-CFA requirement in the near term. And Kenya's VASP Regulations were gazetted on May 15, ahead of ACIOS's Q3 forecast. <strong>Prediction P-06-04, logged at MEDIUM confidence, is CORRECT and early.</strong> The Kenya VASP licensing window opens June 1 with 52 confirmed pre-applicants.</p>
+      <p>The third development — South Africa's Old Mutual Wealth filing the continent's first institutional crypto ETF application with the FSCA — marks the moment the South African pension wave transitions from direct allocation (pension funds buying BTC) to retail democratization infrastructure (ETF vehicles enabling mass-market exposure). The FSCA approval timeline is estimated at 90–180 days. <strong>The South African institutional layer is now building the distribution infrastructure that will bring the next order of magnitude of retail capital into African crypto.</strong></p>
+    </div>
+    <div class="eb-risk"><strong>Key risk:</strong> Nigeria premium collapses below 10% before inflation reaches 12% — this would falsify the ratchet thesis and require full analytical framework revision. Current probability: LOW (8%). The 7:1 compression ratio suggests the floor is structurally anchored well above that level.</div>
+    <div class="eb-sum">The CBN held and said nothing; the premium held its floor; the BCEAO consultation paper is permissive; Kenya gazetted its VASP regulations early; South Africa filed its first crypto ETF. The ratchet thesis is running its hardest empirical test and passing.</div>
+  </div>
+</section>
+
+<!-- 02 NON-OBVIOUS INSIGHTS -->
+<section class="rs" id="insights">
+  <div class="s-num">Component 02</div>
+  <div class="s-ey">Top Non-Obvious Insights</div>
+  <h2>What Most Analysts <em>Won't Tell You</em></h2>
+  <div class="ins-grid">
+    <div class="ins-card" data-n="1">
+      <div class="conf conf-h">HIGH Confidence</div>
+      <div class="ins-head">The 7:1 Compression Ratio Is the Ratchet's Empirical Signature — and It's Running Exactly as the Model Predicted</div>
+      <div class="ins-body">Nigeria's inflation fell 2,060bps over 17 months. The P2P premium fell 300bps from its peak. The 7:1 ratio means for every 7 percentage points of inflation improvement, the premium compresses by 1. This is not compression toward zero — it is compression toward a structural floor defined by capital control severity, not by inflation. The pre-crisis premium was 5–7%. The current floor appears to be 15–17%. The ratchet has permanently lifted the structural floor by approximately 1,000bps. This is the empirical signature of irreversible informal dollarization. No mainstream African crypto analyst has put this number on record. ACIOS is publishing it now.</div>
+      <div class="ins-src">Source agents: Macro Analyst · Contrarian Analyst · Trend Memory (Nigeria Dollarization Ratchet)</div>
+    </div>
+    <div class="ins-card" data-n="2">
+      <div class="conf conf-h">HIGH Confidence</div>
+      <div class="ins-head">The BCEAO Consultation Paper's Most Important Feature Is What It Doesn't Contain: an e-CFA Requirement</div>
+      <div class="ins-body">The <em>Cadre de régulation</em> consultation paper proposes a licensed VASP framework, compliance requirements, and consumer protection rules. It does not mandate use of a BCEAO-issued digital currency as settlement medium. It does not set a timeline for a WAEMU e-CFA. It does not prohibit dollar stablecoins. By omission, the BCEAO has signaled that WAEMU's digital monetary future will be built on dollar stablecoin rails — licensed, regulated, but fundamentally denominated in USD. This is the sovereignty concession buried in a permissive-sounding framework. The Fed's presence at Dakar was not coincidental.</div>
+      <div class="ins-src">Source agents: Sovereignty Strategist · Regulatory Surveillance Agent · Contrarian Analyst</div>
+    </div>
+    <div class="ins-card" data-n="3">
+      <div class="conf conf-h">HIGH Confidence</div>
+      <div class="ins-head">Kenya's 52-Firm Pre-Application Surge Creates an Information Asymmetry That Will Define the Market for 5 Years</div>
+      <div class="ins-body">The 52 firms that submitted VASP pre-applications have seen the full regulatory criteria before the official licensing documentation is publicly distributed. They have had conversations with CBK and CMA staff. They have shaped their product architecture to meet requirements that haven't been published. The first 10 VASP licenses issued on June 1 will go to firms that built their compliance infrastructure against insider regulatory knowledge. Firms entering the process after the gazette publication are building blind. The information asymmetry created in the 45 days between gazette and license opening is the most durable competitive moat available in East African crypto right now.</div>
+      <div class="ins-src">Source agents: Regulatory Surveillance Agent · Network Effects Analyst · Opportunity Strategist</div>
+    </div>
+    <div class="ins-card" data-n="4">
+      <div class="conf conf-m">MEDIUM Confidence</div>
+      <div class="ins-head">The Old Mutual ETF Filing Is Not a South Africa Story — It Is an African Retail Distribution Story</div>
+      <div class="ins-body">Old Mutual Wealth manages approximately R350 billion in assets across Southern Africa, with significant retail distribution through financial advisors in South Africa, Zimbabwe, Namibia, and Botswana. A crypto ETF approval does not just create a South African retail product — it creates a pan-Southern African distribution mechanism for crypto exposure, leveraging an existing advisor network of approximately 6,000 tied agents. The ETF wrapper is the mechanism that takes the pension wave's institutional validation and converts it into a product that a financial advisor in Harare can recommend to a retail client. The geographic reach of this filing is not South Africa. It is Southern Africa.</div>
+      <div class="ins-src">Source agents: Power Dynamics Analyst · Opportunity Strategist · Network Effects Analyst</div>
+    </div>
+    <div class="ins-card" data-n="5">
+      <div class="conf conf-m">MEDIUM Confidence</div>
+      <div class="ins-head">Morocco's AMMC Licensing Criteria Reveal a First-Mover Window That Closes Precisely When It Becomes Obvious</div>
+      <div class="ins-body">The AMMC published draft licensing criteria this week: minimum capital of MAD 5M (~$500K), technology audit requirements, and a mandatory Moroccan banking relationship. The MAD 5M threshold is calibrated to exclude micro-operators while remaining accessible to serious mid-tier players. The banking relationship requirement is the actual barrier — Moroccan banks are still derisking crypto, creating a 60–90 day window where the criteria are known but the banking access is being negotiated. The operator who solves the Moroccan banking problem in the next 60 days and applies first receives the first license in Africa's fourth-largest economy with zero competition. That window closes the moment the first license is announced and other banks decide to offer crypto-correspondent services.</div>
+      <div class="ins-src">Source agents: Regulatory Surveillance Agent · Opportunity Strategist · Trading & Liquidity Agent</div>
+    </div>
+  </div>
+</section>
+
+<!-- 03 HEAT MAP -->
+<section class="rs" id="heatmap">
+  <div class="s-num">Component 03</div>
+  <div class="s-ey">Africa Crypto Momentum Map</div>
+  <h2>Cycle 07 <em>Country Scores</em></h2>
+
+  <div class="mv-alert">
+    <span class="mv-label">⚡ Kenya +6 → 87</span>
+    <div class="mv-body"><strong>VASP Regulations Gazette No. 4821 (May 15)</strong> elevates Kenya to the highest CMS score in ACIOS history for any East African market. 52 pre-applicants confirmed. Licensing opens June 1. EAC hub position locked in for the decade.</div>
+  </div>
+  <div class="mv-alert">
+    <span class="mv-label">⚡ Morocco +14 → 58</span>
+    <div class="mv-body"><strong>AMMC licensing criteria published.</strong> Largest single-cycle CMS jump in ACIOS archive. Morocco moves from pre-crystallisation to active framework. MAD 5M capital requirement + banking relationship = 60-day first-mover window.</div>
+  </div>
+  <div class="mv-alert">
+    <span class="mv-label">⚡ WAEMU +5 → 85</span>
+    <div class="mv-body"><strong>BCEAO consultation paper published May 17.</strong> Permissive-with-guardrails. No e-CFA requirement. Dollar stablecoin licensing contemplated. Front-running premium surges to ~9.1%. Eight-country simultaneous opportunity confirmed.</div>
+  </div>
+
+  <div class="hm-grid">
+    <div class="hm-cell l-green">
+      <div class="hm-country">Kenya</div>
+      <div class="hm-score c-gr">87</div>
+      <div class="hm-trend t-up">↑ +6 VASP GAZETTE</div>
+      <div class="hm-note">Highest EAC score ever. 52 firms. June 1 licensing open.</div>
+    </div>
+    <div class="hm-cell l-red">
+      <div class="hm-country">Nigeria</div>
+      <div class="hm-score c-r">81</div>
+      <div class="hm-trend t-down">↓ -1 FLOOR HOLDING</div>
+      <div class="hm-note">Ratchet floor ~16.8%. CBN silent. 7:1 compression ratio confirmed.</div>
+    </div>
+    <div class="hm-cell l-green">
+      <div class="hm-country">WAEMU Bloc</div>
+      <div class="hm-score c-gr">85</div>
+      <div class="hm-trend t-gold">↑ +5 CONSULT PAPER</div>
+      <div class="hm-note">8 countries, 140M people, 1 permissive paper. XOF premium ~9.1%.</div>
+    </div>
+    <div class="hm-cell l-red">
+      <div class="hm-country">South Africa</div>
+      <div class="hm-score c-r">80</div>
+      <div class="hm-trend t-up">↑ +3 ETF FILING</div>
+      <div class="hm-note">Old Mutual ETF. 248 CASPs. Retail distribution arc beginning.</div>
+    </div>
+    <div class="hm-cell l-gold">
+      <div class="hm-country">Ethiopia</div>
+      <div class="hm-score c-g">70</div>
+      <div class="hm-trend t-up">↑ +4 DEMAND GAP</div>
+      <div class="hm-note">~29% ETB spread. ~180% stablecoin growth. Zero institutions.</div>
+    </div>
+    <div class="hm-cell l-gold">
+      <div class="hm-country">Ghana</div>
+      <div class="hm-score c-g">69</div>
+      <div class="hm-trend t-up">↑ +1 BoG PATH</div>
+      <div class="hm-note">First solar mining facility operational. Licensing progressing.</div>
+    </div>
+    <div class="hm-cell l-steel">
+      <div class="hm-country">Morocco</div>
+      <div class="hm-score c-s">58</div>
+      <div class="hm-trend t-gold">↑ +14 AMMC CRITERIA</div>
+      <div class="hm-note">Largest weekly CMS jump. Banking access = first-mover window.</div>
+    </div>
+    <div class="hm-cell l-steel">
+      <div class="hm-country">Egypt</div>
+      <div class="hm-score c-s">55</div>
+      <div class="hm-trend t-up">↑ +3 FRA FRAMEWORK</div>
+      <div class="hm-note">Comment period closed June 1. Framework direction emerging.</div>
+    </div>
+    <div class="hm-cell l-gold">
+      <div class="hm-country">Rwanda</div>
+      <div class="hm-score c-g">64</div>
+      <div class="hm-trend t-up">↑ +1 EAC HUB</div>
+      <div class="hm-note">EAC stablecoin masterplan 2031 — Rwanda as regulatory anchor.</div>
+    </div>
+    <div class="hm-cell l-steel">
+      <div class="hm-country">Angola</div>
+      <div class="hm-score c-s">45</div>
+      <div class="hm-trend t-up">↑ +3 CORRIDOR</div>
+      <div class="hm-note">OTC volume +280% since Vol. 04 first detection.</div>
+    </div>
+    <div class="hm-cell l-steel">
+      <div class="hm-country">Mozambique</div>
+      <div class="hm-score c-s">43</div>
+      <div class="hm-trend t-up">↑ +2 INDIAN OCEAN</div>
+      <div class="hm-note">MZN ~8% premium. Zero institutional competition persists.</div>
+    </div>
+    <div class="hm-cell l-steel">
+      <div class="hm-country">Tanzania</div>
+      <div class="hm-score c-s">52</div>
+      <div class="hm-trend t-neutral">→ STABLE</div>
+      <div class="hm-note">BAFT consultation outcome still pending.</div>
+    </div>
+    <div class="hm-cell l-dim">
+      <div class="hm-country">DRC</div>
+      <div class="hm-score c-s">40</div>
+      <div class="hm-trend t-up">↑ +4 KINSHASA OTC</div>
+      <div class="hm-note">Southern Central Africa corridor accelerating.</div>
+    </div>
+    <div class="hm-cell l-gold">
+      <div class="hm-country">Mauritius</div>
+      <div class="hm-score c-g">60</div>
+      <div class="hm-trend t-neutral">→ ESTABLISHED</div>
+      <div class="hm-note">VAITOS Act. Indian Ocean regulatory hub. Stable.</div>
+    </div>
+    <div class="hm-cell l-gold">
+      <div class="hm-country">Côte d'Ivoire</div>
+      <div class="hm-score c-g">74</div>
+      <div class="hm-trend t-gold">↑ +2 BCEAO PAPER</div>
+      <div class="hm-note">Abidjan: optimal WAEMU first-licensed entry point.</div>
+    </div>
+  </div>
+
+  <div class="hm-caption">
+    <p><strong>Cycle 07's defining geographic story is the simultaneous crystallisation of three separate regulatory frameworks</strong> — BCEAO (8 countries), Kenya VASP (1 country + EAC), and Morocco AMMC (1 country) — within the same 72-hour window. This is unprecedented in ACIOS's seven-cycle archive. The map's most significant shift is Kenya reaching 87 CMS, the highest score ever recorded for any East African market, on the back of a gazette that transforms regulatory intent into operational licensing. The WAEMU bloc at 85 confirms that eight countries moving together on a central bank signal produces momentum equivalent to Nigeria's structural dollarization arc — but with regulatory infrastructure rather than monetary dysfunction as the driver.</p>
+  </div>
+</section>
+
+<!-- 04 FULL STACK -->
+<section class="rs" id="fullstack">
+  <div class="s-num">Component 04</div>
+  <div class="s-ey">Full Stack Analysis</div>
+  <h2>12 Analytical Layers — <em>Cycle 07</em></h2>
+  <div class="sw">
+    <aside class="st">
+      <span class="toc-l">Layers</span>
+      <ul class="toc-list">
+        <li><a href="#sl1">L01 · Monetary Competition</a></li>
+        <li><a href="#sl2">L02 · Blockchain Infrastructure</a></li>
+        <li><a href="#sl3">L03 · Mining & Energy</a></li>
+        <li><a href="#sl4">L04 · Trading & Liquidity</a></li>
+        <li><a href="#sl5">L05 · DeFi Shadow Banking</a></li>
+        <li><a href="#sl6">L06 · Governance & Power</a></li>
+        <li><a href="#sl7">L07 · Macro</a></li>
+        <li><a href="#sl8">L08 · Network Effects</a></li>
+        <li><a href="#sl9">L09 · Fragility</a></li>
+        <li><a href="#sl10">L10 · Power Dynamics</a></li>
+        <li><a href="#sl11">L11 · Contrarian</a></li>
+        <li><a href="#sl12">L12 · Strategy</a></li>
+        <li><a href="#scross">Cross-Layer</a></li>
+      </ul>
+    </aside>
+    <div>
+      <div class="sl" id="sl1">
+        <div class="lb">Layer 01</div>
+        <div class="lt">Monetary Competition</div>
+        <div class="lbody">
+          <p>The monetary competition this cycle resolves a question ACIOS has been building toward for seven cycles: <strong>does stablecoin adoption persist through monetary normalization?</strong> The answer, as of May 19, 2026, is yes — with the 7:1 compression ratio as its empirical signature. For every 700bps of inflation improvement, the NGN/USDT premium falls approximately 100bps. The structural floor is settling at 15–17%, not the pre-crisis 5–7%. The monetary competition in Nigeria's informal economy is over. USDT won. The question is no longer whether crypto wins the monetary competition — it is which entity captures the value of having won it.</p>
+          <p>The BCEAO consultation paper's monetary architecture is the cycle's most consequential structural development. The <em>Cadre de régulation</em> explicitly contemplates dollar-denominated stablecoins as licensed payment instruments under WAEMU law. This is not regulatory tolerance — it is regulatory recognition. WAEMU is in the process of formally installing USDT and USDC into its monetary architecture as licensed instruments. The CFA franc's digital future, if the framework proceeds as drafted, will be a regulated dollar stablecoin layer sitting above CFA fiat — not an e-CFA competing with it.</p>
+          <p>Kenya's VASP gazette creates a new monetary layer classification: the CBK-supervised stablecoin, distinct from both traditional e-money and unregulated crypto. The dual-regulator architecture (CBK for stablecoins, CMA for exchanges) gives Kenya the most sophisticated domestic monetary taxonomy on the continent — more sophisticated than the BCEAO's initial framework draft, and significantly more sovereignty-preserving.</p>
+        </div>
+      </div>
+      <div class="sl" id="sl2">
+        <div class="lb">Layer 02</div>
+        <div class="lt">Blockchain Infrastructure</div>
+        <div class="lbody">
+          <p>Tron's USDT dominance in West African P2P storage intensified this cycle, reaching an estimated 81% share of Nigeria's P2P stablecoin volume. The BCEAO consultation paper's compliance requirements — KYC, transaction monitoring, suspicious activity reporting — will be significantly harder to meet for Tron-based informal operators than for licensed entity operators using compliant blockchain rails. <strong>The BCEAO framework may inadvertently be the catalyst that shifts West African volume from USDT-Tron (informal, unlicensed) to RLUSD or USDC on compliant rails.</strong> This is the most significant blockchain infrastructure implication of the consultation paper.</p>
+          <p>Ripple's RLUSD has now signed partnerships with three of the five largest African-focused exchanges (Chipper Cash, VALR, Yellow Card) plus one tier-one bank (Absa). If the BCEAO framework's compliance requirements are written to RLUSD's existing architecture — as the Fed's Dakar presence suggests is possible — RLUSD becomes the de facto licensed stablecoin for WAEMU before its competitors have finished reading the consultation paper. The chain-level implication: XRP Ledger becomes the settlement layer for licensed WAEMU crypto, while Tron retains the informal P2P layer. Two parallel infrastructure stacks, licensed and unlicensed, serving the same 140 million people.</p>
+          <p>The Safaricom M-Pesa API evidence from Vol. 06 remains active and has been confirmed by a second independent developer this cycle. Q3 2026 announcement remains base case. Chain selection remains our most significant pending infrastructure verdict.</p>
+        </div>
+      </div>
+      <div class="sl" id="sl3">
+        <div class="lb">Layer 03</div>
+        <div class="lt">Mining & Energy</div>
+        <div class="lbody">
+          <p>Ghana's first solar mining facility under the BoG de facto framework became operational this cycle — the first mining operation in West Africa with documented regulatory acknowledgment. The 2.4MW facility is modest, but the precedent is not: Ghana now has a mining operation that can be cited in regulatory submissions, due diligence documents, and banking applications. The precedent value exceeds the hashrate value by an order of magnitude.</p>
+          <p>South Africa's Eskom interruptible supply agreement model is attracting international attention. Two additional mining operators have initiated discussions with Eskom following the first agreement's announcement. The model — miners absorb curtailed generation in exchange for preferential tariffs — converts South Africa's structural grid weakness into a competitive mining advantage. At scale, this could make South Africa the first African market where grid instability is formally incorporated into mining economics as a feature rather than a risk.</p>
+          <p>Ethiopia remains the structural leader on Mining Viability Index metrics: cheapest energy, largest hydro surplus, and — ironically — the strongest domestic crypto demand to monetize mining proceeds locally. The NBE P2P restriction proposal from Vol. 06 remains unresolved. Watch signal: NBE formal circular publication, which would clarify whether the restriction targets trading (minimal mining impact) or all digital asset activities (material mining impact).</p>
+        </div>
+      </div>
+      <div class="sl" id="sl4">
+        <div class="lb">Layer 04</div>
+        <div class="lt">Trading & Liquidity</div>
+        <div class="lbody">
+          <p>Lagos OTC desks processed an estimated $112–148M in BTC volume this week — stable from Vol. 06. The supply constraint that produced 48–72 hour fill times on institutional tickets has eased slightly as the Sandton institutional BTC custody infrastructure builds out. VALR confirmed this cycle that it is launching institutional custody services — validating Prediction P-06 (implicit) and closing the Sandton supply gap identified in Vol. 04.</p>
+          <p>Kenya's P2P premium compressed from ~5.2% to ~4.8% on the back of the VASP gazette. This is the expected pattern: regulatory certainty compresses anticipatory premium, which had been pricing in the risk of an unfavourable framework. The compression is not demand destruction — it is risk premium normalisation. Volumes are unchanged. The 4.8% structural premium reflects the real monetary dynamics (KES depreciation, capital account friction) rather than regulatory uncertainty markup.</p>
+          <p>Morocco's OTC market is in rapid structural transition. Exchange Alpha's suspension has created visible P2P volume on Binance P2P and LocalBitcoins Morocco. The AMMC licensing criteria announcement has not yet produced a licensed alternative — the premium widening to ~4.5% MAD/USDT this cycle reflects supply disruption without demand reduction. This is the premium compression arc's peak — it resolves when the first AMMC license creates a formal OTC alternative.</p>
+        </div>
+      </div>
+      <div class="sl" id="sl5">
+        <div class="lb">Layer 05</div>
+        <div class="lt">DeFi Shadow Banking</div>
+        <div class="lbody">
+          <p>The BCEAO framework's compliance requirements will reshape DeFi banking dynamics in WAEMU significantly. The consultation paper requires transaction monitoring and suspicious activity reporting — requirements that permissionless DeFi protocols structurally cannot meet. The framework is not hostile to DeFi by intent, but it is hostile to DeFi by architecture. <strong>The likely outcome: a two-layer WAEMU crypto financial system — licensed CeFi for formal economy participants, unlicensed DeFi for informal economy participants — with no legal bridge between them.</strong> This mirrors Nigeria's post-2021 banking ban market structure, which ACIOS has documented as producing stronger crypto adoption, not weaker.</p>
+          <p>The Old Mutual ETF filing is the most structurally significant DeFi-adjacent development this cycle, though it is not DeFi. ETF wrappers are the traditional finance mechanism for providing institutional-grade risk management around crypto exposure — they are DeFi's competitor for the institutionalized savings market. South Africa choosing ETF over DeFi as its institutional crypto vehicle tells us that the formal financial sector is capturing the South African institutional opportunity, not the DeFi ecosystem. The DeFi opportunity in South Africa remains in the retail SME layer — specifically, SME credit products not served by the ETF market.</p>
+          <p>Ethiopia's 180% stablecoin growth is structurally DeFi-adjacent: it is informal shadow banking at scale, using crypto rails to do what formal banking cannot. But it remains entirely P2P and off-chain. No DeFi protocol is capturing Ethiopian demand. The addressable DeFi opportunity in Ethiopia is real and growing — and entirely unserved.</p>
+        </div>
+      </div>
+      <div class="sl" id="sl6">
+        <div class="lb">Layer 06</div>
+        <div class="lt">Governance & Power</div>
+        <div class="lbody">
+          <p>The CBN's governance posture is now definitionally characterised by strategic silence. Seven consecutive policy cycles without a crypto-specific statement, through a banking ban, a partial reversal, a hyperinflation peak, a premium at 20%, and now a disinflation arc. The CBN has chosen not to govern crypto — it has chosen to tolerate the informal parallel system while governing the formal system. <strong>This is not weak governance; it is the most sophisticated regulatory strategy available to a central bank whose formal tools cannot reach informal markets.</strong> The CBN has effectively ceded monetary sovereignty in the informal layer and concentrated its governance resources where they can have effect.</p>
+          <p>Kenya's dual-regulator governance architecture (CBK for stablecoins, CMA for exchanges) sets the continent's most sophisticated governance model. The architecture separates monetary instruments (stablecoins, requiring prudential oversight) from capital markets instruments (crypto exchange products, requiring market integrity oversight). No other African regulator has made this distinction explicitly. The BCEAO's consultation paper does not make it. The FSCA in South Africa does not make it. <strong>Kenya's dual-regulator model is the governance template that will define African crypto regulation for the next decade — but only if it is replicated, which requires regulators in other jurisdictions to understand what Kenya has actually built.</strong></p>
+          <p>The AMMC's licensing criteria publication is Morocco's first formal act of crypto governance rather than crypto tolerance. The shift from tolerance to governance is always the inflection point — it creates legal certainty, banking access, and institutional participation simultaneously. Morocco has crossed that threshold. The 60–90 day window before the first license is issued is the governance transition period.</p>
+        </div>
+      </div>
+      <div class="sl" id="sl7">
+        <div class="lb">Layer 07</div>
+        <div class="lt">Macro</div>
+        <div class="lbody">
+          <div class="ob">
+            <div class="ot">1st order</div>
+            <div class="od">CBN cut MPR 25bps to 26.25%. Nigeria headline inflation estimated at ~14.2%. NGN/USDT premium at ~16.8% — 100bps compression from ~17.8% at Vol. 06. CBN communiqué: 12 paragraphs, zero crypto references. MPC communiqué Section 4 (External Sector) discusses FX reserves (+3.4% to $38.2B), remittances, and oil price trajectory. No digital assets mention.</div>
+          </div>
+          <div class="ob">
+            <div class="ot">2nd order</div>
+            <div class="od">The 25bps cut is the second consecutive easing move. The CBN is prioritising growth over inflation management — a policy stance that is consistent with higher-for-longer informal dollar demand. Easing monetary conditions reduce the incentive for formal USD savings but do not reduce the incentive for informal USD savings, because the underlying capital controls and FX access friction remain unchanged. The macro conditions that created the premium have not changed; only the inflation rate has improved. The premium is compressing toward a floor defined by capital control severity, not by inflation.</div>
+          </div>
+          <div class="ob">
+            <div class="ot">3rd order</div>
+            <div class="od">The 7:1 compression ratio — 2,060bps of inflation improvement producing 300bps of premium compression — is the empirical signature of structural dollarization. Historical comparisons: Zimbabwe (2008–2009) showed similar ratios during the peak dollarization phase before formal legal tender status. Ecuador (2000) showed a sharper ratio. Argentina (2001–2002) showed a shallower ratio in a context with stronger capital controls. Nigeria's ratio suggests the dollarization process is approximately 60–70% complete — the premium will continue to compress slowly toward a 12–15% structural floor as inflation normalises, but it will not reach the pre-crisis 5–7% level without a fundamental change in the capital control architecture.</div>
+          </div>
+        </div>
+      </div>
+      <div class="sl" id="sl8">
+        <div class="lb">Layer 08</div>
+        <div class="lt">Network Effects</div>
+        <div class="lbody">
+          <p>Kenya's VASP licensing event creates the most significant network effects development of the cycle: <strong>the 52-firm clustering effect.</strong> When 52 operators simultaneously establish compliance infrastructure, banking relationships, and regulatory relationships in the same jurisdiction, they collectively create a regulatory ecosystem that compounds over time. Each additional licensed operator makes the next one easier — shared compliance precedents, shared regulatory interpretation, shared banking partners. Kenya is past the tipping point for regulatory ecosystem network effects. Late entrants face compounding disadvantages.</p>
+          <p>Binance P2P's Nigerian dominance score holds at 86/100 — above the near-irreversible threshold. The 25bps rate cut produced no measurable change in Binance P2P's market share. This confirms that the platform's dominance is network-effect-driven, not price-driven — users are not comparing Binance P2P's spreads to alternative platforms in response to macro changes. They are using Binance P2P because that is where the network is. This is the definition of tipping-point dominance.</p>
+          <p>The BCEAO framework creates a new network effects category: <strong>regulatory arbitrage network effects.</strong> The first entity to obtain a WAEMU license under the framework becomes the reference point for all subsequent license applicants. Its compliance architecture, banking relationships, and regulatory interpretation become the de facto industry standard — simply because it was first. The second licencee builds on the first's precedent. The third on the second's. The network effect compounds with each license issued, disadvantaging late entrants exponentially.</p>
+        </div>
+      </div>
+      <div class="sl" id="sl9">
+        <div class="lb">Layer 09</div>
+        <div class="lt">Fragility</div>
+        <div class="lbody">
+          <p><strong>Fragility Index: 3.8/10 — MEDIUM, declining trend.</strong> The CBN MPC's clean communiqué removes the binary event risk that elevated the index in Vol. 06 (CBN surprise restriction scenario). The BCEAO paper's permissive lean reduces the 8-country cascade risk from MEDIUM to LOW. Two major fragility sources have resolved favorably in this cycle — the index's decline reflects genuine systemic de-risking, not complacency.</p>
+          <p>New fragility introduced this cycle: <strong>WAEMU compliance cliff.</strong> The BCEAO framework's compliance requirements — KYC, transaction monitoring, AML reporting — create a structural fragility for informal P2P operators in WAEMU who cannot meet them. When the framework is enacted, informal operators face a binary: comply (technically difficult, expensive) or become explicitly illegal (versus currently tolerated). A mass compliance failure by informal WAEMU P2P operators would produce a premium spike, liquidity disruption, and potentially a confidence shock across all eight markets simultaneously. This is not a tail risk — it is a base case for a subset of market participants. The system-level impact depends on how many informal operators can transition to compliance versus how many exit the market.</p>
+          <p>The Old Mutual ETF filing introduces a new positive fragility: <strong>South African institutional demand surge.</strong> If the ETF is approved quickly (90 days, possible given the FSCA's established crypto licensing framework), it could create a sudden surge in institutional BTC demand that overwhelms the existing South African custody infrastructure. This would transmit supply pressure back to Lagos OTC — the supply chain stress identified in Vol. 04 and Vol. 05. The Sandton custody infrastructure must scale faster than the ETF approval timeline.</p>
+        </div>
+      </div>
+      <div class="sl" id="sl10">
+        <div class="lb">Layer 10</div>
+        <div class="lt">Power Dynamics</div>
+        <div class="lbody">
+          <p>This cycle's power dynamics are defined by a simultaneity that has no precedent in the ACIOS archive: three state actors (CBN, BCEAO, AMMC) made crypto governance moves within the same 72-hour window. The CBN chose silence — a power preservation move. The BCEAO published a licensing framework — a power capture move. The AMMC published licensing criteria — a power assertion move. Three different regulatory strategies, three different power objectives, three different outcomes for market participants. Understanding the difference is the ACIOS alpha.</p>
+          <p>Kenya's power structure crystallised this cycle into its final form: CBK governs the monetary layer, CMA governs the capital markets layer, licensed VASPs operate the market layer, Safaricom controls the distribution layer. <strong>Four distinct power centers, each with defined authority, none with total control.</strong> This is the most stable crypto power architecture on the continent — it is distributed enough to prevent single-point regulatory capture while coordinated enough to enforce compliance. Compare to Nigeria (CBN attempts to govern informal markets it cannot reach) and WAEMU (BCEAO centralising governance of eight jurisdictions simultaneously). Kenya's distributed model is structurally superior.</p>
+          <p>The Old Mutual ETF filing shifts South Africa's power balance in a specific direction: from regulatory institutions (FSCA's licensing framework) toward market institutions (Old Mutual's distribution network). The FSCA created the preconditions for this move. Old Mutual is executing it. When the ETF is approved, South Africa's crypto market power will be partially held by a traditional financial institution — the first time in African crypto that a pre-crypto incumbent acquires structural market power without acquiring a crypto company.</p>
+        </div>
+      </div>
+      <div class="sl" id="sl11">
+        <div class="lb">Layer 11</div>
+        <div class="lt">Contrarian</div>
+        <div class="lbody">
+          <p><strong>THE CONSENSUS:</strong> The BCEAO consultation paper is bullish for WAEMU crypto. A permissive framework means adoption accelerates, premiums compress toward licensed rates, and the 140M-person market opens to institutional participation.</p>
+          <p><strong>THE CONTRARIAN TRUTH:</strong> The BCEAO framework will split WAEMU into two parallel crypto markets — one licensed and dollar-stablecoin-based (serving the formal economy), one unlicensed and informal (serving the 70%+ of the population in the informal economy). The informal market will not be absorbed by the licensed framework; it will be driven underground. <strong>The premium will compress for licensed operators and spike for unlicensed operators — producing a divergence within the same 8-country bloc that no Western analysis framework is currently modelling.</strong> The total addressable market for informal WAEMU crypto may actually increase as the licensed layer makes the informal layer explicitly illegal, driving demand for services that the licensed layer cannot provide (pseudonymity, small tickets, no KYC).</p>
+          <p><strong>THE MISPRICED OPPORTUNITY:</strong> Nigeria's informal P2P market is being analysed as a problem to be solved by regulatory clarity. It is actually the solution that African users have already implemented — at scale, durably, and in a way that survives every macro environment. The entity that builds infrastructure for the informal layer — not the licensed layer — controls the larger market. Yellow Card and VALR are building for the licensed 30%. The 70% informal market has no institutional infrastructure provider. That is the asymmetric opportunity that the consensus is systematically missing.</p>
+        </div>
+      </div>
+      <div class="sl" id="sl12">
+        <div class="lb">Layer 12</div>
+        <div class="lt">Strategy</div>
+        <div class="lbody">
+          <p>Three strategic windows are simultaneously open and simultaneously time-bounded. First: the Kenya VASP pre-application information advantage expires June 1 — any firm not already in dialogue with CBK/CMA is building compliance infrastructure without insider regulatory knowledge. Second: the BCEAO consultation response window will close within 60 days of the paper's publication (May 17), giving entities approximately 45 days to submit comments that shape the WAEMU framework for a decade. Third: the Morocco AMMC first-license window is 60–90 days — the banking relationship is the bottleneck, not the capital or the technology.</p>
+          <p>The Old Mutual ETF approval timeline creates a specific positioning opportunity: the 90–180 days between filing and approval is the window to build institutional BTC custody capacity in South Africa before the ETF creates demand that cannot be met locally. VALR's institutional custody launch (confirmed this cycle) is the right move at the right time — the question is whether it scales fast enough. Any other FSCA-licensed entity with custody capability should be scaling now.</p>
+          <p>The meta-strategic observation: for the first time since ACIOS's founding cycle, the dominant strategic theme is not <strong>where disorder creates opportunity</strong> (the classic ACIOS thesis) but <strong>where order is being constructed and who constructs it first.</strong> BCEAO, AMMC, and Kenya VASP are all framework-construction events — moments where the rules of a market are written. Entities present during rule-writing gain structural advantages that persist for the framework's entire validity period. The ACIOS thesis has not changed; the mechanism has.</p>
+        </div>
+      </div>
+
+      <div class="sl" id="scross">
+        <div class="lb">Cross-Layer</div>
+        <div class="lt">Cross-Layer Insights</div>
+        <div class="cross-box">
+          <span class="cross-lbl">Insights visible only from the synthesized stack</span>
+          <div class="ci">
+            <div class="ci-t">The 72-Hour Regulatory Window That No Analyst Has Fully Mapped: BCEAO Paper + Kenya Gazette + AMMC Criteria Published Simultaneously</div>
+            <div class="ci-b">Three independent regulatory events — the BCEAO consultation paper (May 17), the Kenya VASP gazette (May 15), and the Morocco AMMC criteria (May 16) — landed within 72 hours. Each was independently significant. Together, they represent a continental regulatory crystallisation event that has no precedent in African crypto history. The cross-layer implication: entities positioned across all three jurisdictions simultaneously are capturing a 10-year structural advantage in the week that African crypto's regulatory architecture was written. Most operators are focused on one jurisdiction. The operators who understand all three in the same 72-hour window are the ones who will define the continent's crypto market structure for a decade.</div>
+          </div>
+          <div class="ci">
+            <div class="ci-t">Nigeria's 7:1 Compression Ratio and the BCEAO Framework Are Running Toward the Same Endpoint From Opposite Directions</div>
+            <div class="ci-b">Nigeria's dollarization ratchet is building dollar monetary dominance from the bottom up — informal, P2P, unlicensed, user-driven. The BCEAO framework is installing dollar monetary dominance from the top down — formal, licensed, central-bank-approved, institution-driven. Both processes end in the same place: African crypto markets denominated in USD stablecoins, with local currencies serving as fiat on-ramps rather than monetary reference points. The difference is who profits: bottom-up dollarization profits informal operators and unbanked users. Top-down dollarization profits licensed operators and institutional participants. ACIOS's core thesis — that African crypto adoption is structural and permanent — is being validated simultaneously by both processes.</div>
+          </div>
+          <div class="ci">
+            <div class="ci-t">The South African ETF Filing and the Kenya 52-Firm Surge Are the Same Event in Two Different Markets: The Transition From Regulatory Permission to Market Infrastructure</div>
+            <div class="ci-b">In Kenya, 52 firms rushing to apply for VASP licenses is the market's mechanism for converting regulatory permission into market infrastructure — compliance architecture, banking relationships, consumer products. In South Africa, Old Mutual's ETF filing is the same mechanism operating through a different institutional form — a traditional finance incumbent converting FSCA licensing permission into distribution infrastructure. Both events mark the same structural transition: from a market where regulatory permission is the primary constraint to a market where infrastructure capacity is the primary constraint. This transition is the moment where the institutional money arrives — because institutional capital requires infrastructure before it moves. Both Kenya and South Africa crossed this threshold in Cycle 07.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 05 FRAGILITY -->
+<section class="rs" id="fragility">
+  <div class="s-num">Component 05</div>
+  <div class="s-ey">Fragility Index</div>
+  <h2>Systemic Risk Assessment — <em>Cycle 07</em></h2>
+  <div class="ft">
+    <div>
+      <div class="fs low">3.8<span style="font-size:2rem;color:var(--mid)">/10</span></div>
+    </div>
+    <div class="fm">
+      <div class="fst ">● MEDIUM — DECLINING TREND</div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:.65rem;color:var(--red);">↓ -0.4 from Vol. 06 (4.2) · Second consecutive decrease</div>
+      <div class="fd">CBN binary event risk resolved (communiqué clean). BCEAO cascade risk downgraded from MEDIUM to LOW (permissive paper). Two major fragility sources removed. New risks introduced: WAEMU compliance cliff and South African ETF demand surge. Net result: system de-risking continues. Primary residual risk: Tether reserve opacity affecting ~85% of African P2P stablecoin savings.</div>
+    </div>
+  </div>
+  <div class="fbars">
+    <div class="fr">
+      <div class="frl">Stablecoin Reserve Risk (Tether opacity)</div>
+      <div class="fbw"><div class="fb fb-med" style="width:50%"></div></div>
+      <div class="fv">5.0</div>
+    </div>
+    <div class="fr">
+      <div class="frl">Exchange Solvency Risk (Binance concentration)</div>
+      <div class="fbw"><div class="fb fb-low" style="width:33%"></div></div>
+      <div class="fv">3.3</div>
+    </div>
+    <div class="fr">
+      <div class="frl">DeFi Protocol Risk (smart contract exposure)</div>
+      <div class="fbw"><div class="fb fb-low" style="width:27%"></div></div>
+      <div class="fv">2.7</div>
+    </div>
+    <div class="fr">
+      <div class="frl">Regulatory Cascade Risk (BCEAO restrictive outcome)</div>
+      <div class="fbw"><div class="fb fb-low" style="width:25%"></div></div>
+      <div class="fv">2.5</div>
+    </div>
+    <div class="fr">
+      <div class="frl">Macro Contagion Risk (oil / FX reversal)</div>
+      <div class="fbw"><div class="fb fb-low" style="width:38%"></div></div>
+      <div class="fv">3.8</div>
+    </div>
+  </div>
+  <div class="risks">
+    <div class="ri">
+      <div class="rr">01</div>
+      <div>
+        <div class="rn">WAEMU Compliance Cliff — Informal Operator Displacement</div>
+        <div class="rd">The BCEAO framework's compliance requirements (KYC, transaction monitoring, AML reporting) are structurally incompatible with informal P2P operations. When enacted, informal operators face a binary: comply (expensive, technically difficult) or become explicitly illegal. A mass compliance failure across 8 WAEMU markets simultaneously would produce a premium spike, liquidity disruption, and confidence shock. Trigger signal: BCEAO framework enactment date announced with compliance deadline &lt; 6 months. Mitigation: operators establishing licensed entities now can absorb informal volume rather than allowing it to go underground.</div>
+      </div>
+      <div class="rl risk-med">MEDIUM</div>
+    </div>
+    <div class="ri">
+      <div class="rr">02</div>
+      <div>
+        <div class="rn">South Africa ETF Demand Surge — Custody Infrastructure Lag</div>
+        <div class="rd">If the Old Mutual ETF is approved within 90 days (possible given the established FSCA framework), institutional BTC demand could surge before South African custody infrastructure scales to meet it. Demand transmits back to Lagos OTC — repeating the supply squeeze of Vol. 04–05 but at higher magnitude. Trigger signal: FSCA ETF approval announcement. Mitigation: VALR institutional custody launch (confirmed this cycle) provides partial buffer.</div>
+      </div>
+      <div class="rl risk-low">LOW-MEDIUM</div>
+    </div>
+    <div class="ri">
+      <div class="rr">03</div>
+      <div>
+        <div class="rn">Tether Reserve Event — Structural Residual</div>
+        <div class="rd">The permanent residual risk: approximately 85% of African crypto P2P savings are held in USDT. A Tether reserve impairment event would destroy the savings base of the largest informal financial system on the continent. No new signals active this cycle. Probability stable at LOW (5%). The risk is structural and cannot be eliminated without a fundamental shift in African stablecoin diversification — which the BCEAO framework, by licensing multiple stablecoin issuers, may catalyse over 12–24 months.</div>
+      </div>
+      <div class="rl risk-low">LOW</div>
+    </div>
+  </div>
+</section>
+
+<!-- 06 OPPORTUNITIES -->
+<section class="rs" id="opps">
+  <div class="s-num">Component 06</div>
+  <div class="s-ey">Asymmetric Opportunities</div>
+  <h2>Hidden Trades — <em>Cycle 07</em></h2>
+  <div class="opp-list">
+    <div class="oc">
+      <div class="oh">
+        <div class="otb">Tier 1 · Regulatory Window</div>
+        <div class="ott">Kenya VASP First 10 — Information Asymmetry Closes June 1</div>
+        <div class="os"><div class="osn">9.2</div><div class="osl">Asymmetry Score</div></div>
+      </div>
+      <div class="ob2">
+        <div class="oth">
+          <p><strong>The highest asymmetry score in ACIOS's seven-cycle history.</strong> The Kenya VASP licensing window opens June 1 with 52 confirmed pre-applicants who have seen the full regulatory criteria before public distribution. The first 10 licenses will be issued to firms that built compliance infrastructure against inside regulatory knowledge — a 45-day head start that translates into 5-year market position advantages in the EAC's designated crypto hub.</p>
+          <p><strong>The asymmetry is not the license — it is the knowledge advantage.</strong> Firms entering after June 1 are building compliance architecture blind relative to pre-applicants. Every day after June 1, the information gap widens as early applicants demonstrate their frameworks to regulators and the feedback loop compounds. The trade is not 'get a Kenya VASP license.' The trade is 'be among the first 10, which requires being in the room now.'</p>
+          <p><strong>Why the score is 9.2:</strong> The upside is a 10-year structural position in East Africa's designated crypto hub, with EAC 2031 stablecoin masterplan leverage. The downside of action is a compliance investment (~$500K–$2M for a serious application). The window closes definitively on June 1 — not as a soft deadline but as a hard information asymmetry expiry date.</p>
+        </div>
+        <div class="omc">
+          <div>
+            <span class="oml">For Whom</span>
+            <span class="omv">Exchange operators · Stablecoin issuers · EAC-focused fintech with $500K+ compliance budget</span>
+          </div>
+          <div>
+            <span class="oml">Timeframe</span>
+            <span class="omv">Immediate — June 1 hard expiry on information advantage</span>
+          </div>
+          <div>
+            <span class="oml">Trigger</span>
+            <span class="omv">CBK/CMA application portal opens June 1 · Submit same day</span>
+          </div>
+        </div>
+      </div>
+      <div class="oi"><strong>Invalidation:</strong> FSCA equivalent framework delays Kenya VASP implementation (low probability — gazette published). Draft capital requirements (~$4M for stablecoins) are not tiered — partner-based licensing as alternative entry for smaller operators.</div>
+    </div>
+    <div class="oc">
+      <div class="oh">
+        <div class="otb">Tier 1 · BCEAO Framework</div>
+        <div class="ott">WAEMU Consultation Response — Shape the Framework for 8 Countries Before It's Final</div>
+        <div class="os"><div class="osn">8.8</div><div class="osl">Asymmetry Score</div></div>
+      </div>
+      <div class="ob2">
+        <div class="oth">
+          <p>The BCEAO consultation paper closes for comments approximately 60 days from publication (May 17) — approximately July 16, 2026. <strong>Zero institutional crypto players have submitted formal comments to a BCEAO consultation in the publication's history.</strong> The framework's key definitions — 'licensed VASP,' 'compliant stablecoin,' 'permissible cross-border transaction' — are being written in a vacuum.</p>
+          <p><strong>The mechanism:</strong> A technically competent submission that defines 'compliant stablecoin' as requiring X, Y, Z — where your entity happens to satisfy X, Y, Z — shapes a regulatory category that persists for the framework's validity period (typically 5–10 years). This is not regulatory capture. It is regulatory expertise participation. It is standard practice in every developed financial market. It is entirely absent from African crypto regulatory engagement.</p>
+          <p>The BCEAO's permissive lean is confirmed by the consultation paper's structure — but permissive frameworks can become restrictive in implementation if the compliance architecture is designed by actors with restrictive interests. Submit comments now to ensure the implementation architecture matches the permissive intent.</p>
+        </div>
+        <div class="omc">
+          <div>
+            <span class="oml">For Whom</span>
+            <span class="omv">Stablecoin issuers · Exchange operators with WAEMU presence · Francophone compliance advisors</span>
+          </div>
+          <div>
+            <span class="oml">Timeframe</span>
+            <span class="omv">~57 days — July 16, 2026 estimated close</span>
+          </div>
+          <div>
+            <span class="oml">Trigger</span>
+            <span class="omv">BCEAO consultation portal opens · Submit within 14 days of opening for maximum regulatory engagement</span>
+          </div>
+        </div>
+      </div>
+      <div class="oi"><strong>Invalidation:</strong> BCEAO ignores comment process and issues predetermined framework (probability 15%). BCEAO framework delayed beyond Q4 2026 (probability 20%).</div>
+    </div>
+    <div class="oc">
+      <div class="oh">
+        <div class="otb">Tier 1 · First Mover</div>
+        <div class="ott">Morocco AMMC First License — Banking Relationship Is the Only Remaining Barrier</div>
+        <div class="os"><div class="osn">8.3</div><div class="osl">Asymmetry Score</div></div>
+      </div>
+      <div class="ob2">
+        <div class="oth">
+          <p>The AMMC has published its licensing criteria: MAD 5M minimum capital (~$500K), technology audit, mandatory Moroccan banking relationship. The capital and technology requirements are solvable in weeks. <strong>The Moroccan banking relationship is solvable in 60–90 days.</strong> Every major Moroccan bank is currently in internal risk assessment — the first bank to extend correspondent services to a crypto operator controls the gateway to the first AMMC license.</p>
+          <p><strong>The premium compression arc:</strong> Morocco's MAD/USDT premium is currently ~4.5%. Post-licensing compression (based on Ghana's equivalent arc) targets ~1.5–2%. The operator with banking access established before the first license is issued captures the full compression arc — estimated 250–300bps margin improvement on all MAD/USDT volume during the arc.</p>
+          <p>Morocco has 37 million people, Africa's fourth-largest GDP, and direct access to Europe's North African diaspora remittance corridor ($12B annually). The first AMMC-licensed crypto operator in Morocco is the gateway to all of this — and currently, zero institutional operators have Moroccan banking relationships.</p>
+        </div>
+        <div class="omc">
+          <div>
+            <span class="oml">For Whom</span>
+            <span class="omv">OTC desk operators with French banking relationships · Exchange operators with MENA presence</span>
+          </div>
+          <div>
+            <span class="oml">Timeframe</span>
+            <span class="omv">60–90 days to first license (banking = critical path)</span>
+          </div>
+          <div>
+            <span class="oml">Trigger</span>
+            <span class="omv">AMMC licensing portal opens · First Moroccan bank extends crypto correspondent · Apply same week</span>
+          </div>
+        </div>
+      </div>
+      <div class="oi"><strong>Invalidation:</strong> AMMC moves from criteria publication to prohibition (probability 8%). Moroccan banking sector maintains blanket derisking beyond 90 days — extend timeline assessment.</div>
+    </div>
+    <div class="oc">
+      <div class="oh">
+        <div class="otb">Tier 1 · Infrastructure Gap</div>
+        <div class="ott">South Africa Institutional BTC Custody — Scale Before the ETF Approval</div>
+        <div class="os"><div class="osn">8.0</div><div class="osl">Asymmetry Score</div></div>
+      </div>
+      <div class="ob2">
+        <div class="oth">
+          <p>Old Mutual's ETF filing will produce an FSCA decision within 90–180 days. The ETF approval creates institutional BTC demand that must be satisfied through FSCA-licensed custody infrastructure — not through Lagos OTC. <strong>VALR has confirmed institutional custody services this cycle. Every other FSCA-licensed entity has approximately 90 days to build equivalent capacity before the ETF approval creates demand that VALR alone cannot serve.</strong></p>
+          <p>The South African institutional custody gap is not a supply problem — it is an infrastructure problem. BTC is available. The licensed custody, settlement, and reporting infrastructure that FSCA-regulated pension funds and ETF providers require does not yet exist at scale. The 90-day ETF approval window is the last opportunity to build before demand arrives.</p>
+          <p><strong>Why this is Tier 1:</strong> The ETF approval timeline is non-negotiable — it depends on FSCA processes, not market conditions. The demand that follows approval is non-negotiable — Old Mutual's distribution network will place the product regardless of whether custody infrastructure exists. Building now is not optionality; it is the only way to participate.</p>
+        </div>
+        <div class="omc">
+          <div>
+            <span class="oml">For Whom</span>
+            <span class="omv">FSCA-licensed entities · International custody operators seeking South African licensing · VALR competitors</span>
+          </div>
+          <div>
+            <span class="oml">Timeframe</span>
+            <span class="omv">90 days to ETF approval (estimated) · Build now</span>
+          </div>
+          <div>
+            <span class="oml">Trigger</span>
+            <span class="omv">FSCA ETF approval announcement · Scale operations same week</span>
+          </div>
+        </div>
+      </div>
+      <div class="oi"><strong>Invalidation:</strong> FSCA delays ETF approval beyond 180 days — extends build window. VALR dominates institutional custody before competitors establish — trade becomes partnership play rather than direct build.</div>
+    </div>
+    <div class="oc">
+      <div class="oh">
+        <div class="otb">Tier 2 · Structural Demand</div>
+        <div class="ott">Ethiopia Infrastructure — The Cleanest First-Mover Window on the Continent</div>
+        <div class="os"><div class="osn">7.9</div><div class="osl">Asymmetry Score</div></div>
+      </div>
+      <div class="ob2">
+        <div class="oth">
+          <p>Ethiopia's ~29% ETB/USDT spread and ~180% post-depreciation stablecoin growth are the cleanest empirical validation of the ACIOS macro-adoption model in the current dataset. Zero licensed infrastructure exists. The government that liberalised the FX regime in 2024 is a government capable of engaging pragmatically with market realities — the crypto infrastructure licensing conversation is 12–18 months away, not 3–5 years.</p>
+          <p><strong>The first-mover window in Ethiopia is defined by the absence of competition, not by the presence of regulatory permission.</strong> No operator needs a license to begin the market intelligence, banking relationship, and community building work that will position it as the obvious regulatory partner when Ethiopia opens. The operator who arrives at the regulatory conversation already embedded in the market wins the first license by default.</p>
+          <p>The entry cost today — market intelligence, local partnerships, community engagement — is trivially low relative to the expected value of first-mover position in a 120M-person market with the highest measured stablecoin demand on the continent.</p>
+        </div>
+        <div class="omc">
+          <div>
+            <span class="oml">For Whom</span>
+            <span class="omv">Regional exchange operators · Research-focused allocators · DFI-backed entities building African market maps</span>
+          </div>
+          <div>
+            <span class="oml">Timeframe</span>
+            <span class="omv">Intelligence phase now · Infrastructure 12–24 months</span>
+          </div>
+          <div>
+            <span class="oml">Trigger</span>
+            <span class="omv">Ethiopian government issues digital asset policy signal · Competitor announces Ethiopia entry</span>
+          </div>
+        </div>
+      </div>
+      <div class="oi"><strong>Invalidation:</strong> National Bank of Ethiopia formal prohibition circular. Political instability deteriorates to FX re-control. Size initial engagement as intelligence investment — not capital commitment.</div>
+    </div>
+  </div>
+</section>
+
+<!-- 07 POWER MAP -->
+<section class="rs" id="powermap">
+  <div class="s-num">Component 07</div>
+  <div class="s-ey">Power Map</div>
+  <h2>Control Architecture — <em>Cycle 07</em></h2>
+  <div class="pm-grid">
+    <div class="pb">
+      <div class="pb-title">Nigeria — State vs. Crypto — CONTESTED → Crypto Gaining</div>
+      <div class="pr">
+        <span class="p-lbl">Fiat On-Ramp</span>
+        <span class="p-val p-contested">CBN/banks (weakening grip)</span>
+      </div>
+      <div class="pr">
+        <span class="p-lbl">Exchange Layer</span>
+        <span class="p-val p-crypto">Binance P2P (near-monopoly 86/100)</span>
+      </div>
+      <div class="pr">
+        <span class="p-lbl">Monetary Layer</span>
+        <span class="p-val p-crypto">USDT-Tron (informal dominant)</span>
+      </div>
+      <div class="pr">
+        <span class="p-lbl">State Power Trend</span>
+        <span class="p-val p-contested">Strategic silence = concession</span>
+      </div>
+      <div class="pr">
+        <span class="p-lbl">Sovereignty Score</span>
+        <span class="p-val p-state">2.0 / 5 ↓</span>
+      </div>
+    </div>
+    <div class="pb">
+      <div class="pb-title">WAEMU — Framework in Formation — STATE DESIGNING RULES</div>
+      <div class="pr">
+        <span class="p-lbl">Regulatory Architect</span>
+        <span class="p-val p-state">BCEAO (consultation paper live)</span>
+      </div>
+      <div class="pr">
+        <span class="p-lbl">Monetary Layer</span>
+        <span class="p-val p-contested">CFA franc + USDT (licensed soon)</span>
+      </div>
+      <div class="pr">
+        <span class="p-lbl">External Influence</span>
+        <span class="p-val p-state">Fed presence at Dakar (HIGH)</span>
+      </div>
+      <div class="pr">
+        <span class="p-lbl">Framework Character</span>
+        <span class="p-val p-crypto">Permissive-with-guardrails</span>
+      </div>
+      <div class="pr">
+        <span class="p-lbl">Sovereignty Score</span>
+        <span class="p-val p-contested">2.9 / 5 (CFA link constrains)</span>
+      </div>
+    </div>
+    <div class="pb">
+      <div class="pb-title">Kenya — Distributed Governance — STATE-GOVERNED · MARKET-OPERATED</div>
+      <div class="pr">
+        <span class="p-lbl">Stablecoin Layer</span>
+        <span class="p-val p-state">CBK (prudential oversight)</span>
+      </div>
+      <div class="pr">
+        <span class="p-lbl">Exchange Layer</span>
+        <span class="p-val p-state">CMA (market integrity)</span>
+      </div>
+      <div class="pr">
+        <span class="p-lbl">Distribution Layer</span>
+        <span class="p-val p-contested">Safaricom M-Pesa (Q3 signal active)</span>
+      </div>
+      <div class="pr">
+        <span class="p-lbl">VASP Pipeline</span>
+        <span class="p-val p-crypto">52 pre-applicants · June 1 opens</span>
+      </div>
+      <div class="pr">
+        <span class="p-lbl">Sovereignty Score</span>
+        <span class="p-val p-crypto">4.3 / 5 — Strongest on continent</span>
+      </div>
+    </div>
+    <div class="pb">
+      <div class="pb-title">South Africa — Institutional Transition — MARKET-LED / STATE-GOVERNED</div>
+      <div class="pr">
+        <span class="p-lbl">Licensing Authority</span>
+        <span class="p-val p-state">FSCA (248 CASPs licensed)</span>
+      </div>
+      <div class="pr">
+        <span class="p-lbl">Pension Layer</span>
+        <span class="p-val p-crypto">4 fund disclosures confirmed</span>
+      </div>
+      <div class="pr">
+        <span class="p-lbl">ETF Layer</span>
+        <span class="p-val p-contested">Old Mutual filing (FSCA pending)</span>
+      </div>
+      <div class="pr">
+        <span class="p-lbl">Custody Layer</span>
+        <span class="p-val p-crypto">VALR institutional (launching)</span>
+      </div>
+      <div class="pr">
+        <span class="p-lbl">Sovereignty Score</span>
+        <span class="p-val p-crypto">3.9 / 5 — Adequate</span>
+      </div>
+    </div>
+  </div>
+  <div class="psa ">
+    <span class="psa-lbl ">★ HISTORIC: Kenya Reaches 87 CMS — Highest EAC Score in ACIOS Archive</span>
+    <div class="psa-title">Kenya VASP Gazette Locks In East Africa's Crypto Hub For a Decade</div>
+    <div class="psa-desc">The VASP Regulations Gazette No. 4821 (May 15) is not a regulatory event — it is a market structure event. The combination of CBK stablecoin oversight, CMA exchange oversight, EAC 2031 masterplan, and 52 pre-applicants creates a self-reinforcing institutional ecosystem that will be extremely difficult to displace. <strong>Every firm that obtains a Kenya VASP license is implicitly also positioning for EAC-wide stablecoin integration in 2031.</strong> The regulatory moat is not the license — it is the 5-year head start on the EAC masterplan's compliance architecture.</div>
+  </div>
+  <div class="psa green-border">
+    <span class="psa-lbl green">★ NEW POWER CENTRE: Old Mutual Enters African Crypto</span>
+    <div class="psa-title">A Pre-Crypto Incumbent Acquires Structural Market Power Without Acquiring a Crypto Company</div>
+    <div class="psa-desc">Old Mutual's ETF filing is the first time a major pre-crypto African financial institution has made a market power move in crypto through product design rather than acquisition or partnership. Old Mutual is not buying a crypto exchange. It is not partnering with a CASP. It is creating a product that converts its existing R350B AUM and 6,000-advisor distribution network into crypto market infrastructure. <strong>This is the power move that changes the competitive landscape: Old Mutual does not need to understand crypto — it needs to understand its distribution network, which it already owns.</strong> The incumbents have arrived.</div>
+  </div>
+</section>
+
+<!-- 08 BLACK SWAN -->
+<section class="rs" id="blackswan">
+  <div class="s-num">Component 08</div>
+  <div class="s-ey">Black Swan Watch</div>
+  <h2>Tail Risk Scenario Library — <em>Cycle 07</em></h2>
+  <div class="bs-list">
+    <div class="bsc s-low">
+      <div class="bs-pc">
+        <div class="bs-pl">Probability</div>
+        <div class="bs-pv">LOW</div>
+        <div class="bs-trend t-down">↓ Declining</div>
+      </div>
+      <div class="bs-bc">
+        <h4>BCEAO Framework Goes Restrictive — Eight-Country Simultaneous Cascade</h4>
+        <p>BCEAO consultation paper is permissive-with-guardrails. Probability of restrictive final framework has declined from MEDIUM (Vol. 06) to LOW following paper publication. The remaining risk: compliance architecture implementation tightens the framework beyond intent — a process that has occurred in other jurisdictions (EU MiCA's DeFi provisions vs. stated intent). Probability: 15% and declining.</p>
+        <p>Trigger conditions that would re-elevate probability: France's Banque de France applies formal pressure for MiCA-aligned restriction; FATF greylist of a major WAEMU member state; significant WAEMU crypto-related financial crime event before framework enactment.</p>
+        <div class="bs-tr"><strong>Trigger signal:</strong> BCEAO publishes framework with mandatory bank-mediated settlement requirement or transaction threshold < $100 equivalent. Monitor BCEAO official communications through July 2026.</div>
+      </div>
+    </div>
+    <div class="bsc s-low">
+      <div class="bs-pc">
+        <div class="bs-pl">Probability</div>
+        <div class="bs-pv">LOW</div>
+        <div class="bs-trend t-down">↓ Declining</div>
+      </div>
+      <div class="bs-bc">
+        <h4>CBN Emergency Crypto Restriction — Now REMOTE Following Clean MPC Communiqué</h4>
+        <p>The CBN MPC communiqué's complete silence on crypto is the strongest possible signal that emergency restriction is not being prepared. A central bank planning an emergency intervention in a market does not publish a 12-paragraph macro communiqué that fails to mention it. Probability downgraded from LOW (8%) to REMOTE (3%).</p>
+        <p>The scenario remains in the library because it cannot be permanently eliminated — the CBN retains the legal authority to act at any time. But the probability of action in the next 90 days, given the communiqué evidence, is as low as it has been in ACIOS's seven-cycle tracking period.</p>
+        <div class="bs-tr"><strong>Trigger signal:</strong> CBN out-of-cycle emergency circular. Any CBN official public statement using 'P2P', 'virtual asset', or 'digital currency' in a restrictive context. Currently no signals active.</div>
+      </div>
+    </div>
+    <div class="bsc s-med">
+      <div class="bs-pc">
+        <div class="bs-pl">Probability</div>
+        <div class="bs-pv">MEDIUM</div>
+        <div class="bs-trend t-gold">↑ Rising</div>
+      </div>
+      <div class="bs-bc">
+        <h4>Safaricom Q2 Surprise Announcement — M-Pesa Crypto Integration Before End of June <span style="font-family:'IBM Plex Mono',monospace;font-size:.5rem;letter-spacing:.15em;text-transform:uppercase;color:var(--green);background:rgba(79,201,138,.08);border:1px solid rgba(79,201,138,.2);padding:.1rem .35rem;margin-left:.5rem;">★ New</span></h4>
+        <p>The Safaricom API evidence (five-signal confirmation, Vol. 06; sixth signal confirmed this cycle by second independent developer) suggests Q3 2026 as base case for M-Pesa crypto integration announcement. But the technical preparation visible in the API suggests the integration could be ready for Q2 — June 30 at the latest. A Q2 surprise announcement would compress the timeline for all dependent strategic decisions.</p>
+        <p><strong>Why this is listed as Black Swan (positive):</strong> A Q2 announcement before the Kenya VASP licensing process completes would create a regulatory sequencing question — M-Pesa crypto integration before the VASP framework is fully operational. This could either accelerate VASP implementation (CBK fast-tracks Safaricom's VASP license) or create a temporary unlicensed integration period. Both outcomes are strategically significant in different ways.</p>
+        <div class="bs-tr"><strong>Trigger signal:</strong> Safaricom investor communications mentioning 'digital assets' or 'stablecoin.' M-Pesa app update in app store with new asset class functionality. Safaricom-CBK joint press statement. Probability: 35% before June 30, 85% before September 30.</div>
+      </div>
+    </div>
+    <div class="bsc s-pos">
+      <div class="bs-pc">
+        <div class="bs-pl">Probability</div>
+        <div class="bs-pv">POSITIVE</div>
+        <div class="bs-trend t-up">↑ Rising</div>
+      </div>
+      <div class="bs-bc">
+        <h4>African Nation Bitcoin Legal Tender — Probability Rising as Macro Conditions Intensify</h4>
+        <p>Zimbabwe's ZiG currency has depreciated approximately 18% since launch. Ghana's cedi continues to face pressure despite IMF program compliance. Zambia's kwacha faces post-debt-restructuring monetary challenges. Three of ACIOS's four highest-probability Bitcoin legal tender candidates are experiencing macro deterioration that increases the political incentive for a decisive monetary intervention.</p>
+        <p>The El Salvador precedent has now survived long enough (4+ years) to provide a positive case study that African finance ministers can reference without being dismissed as reckless. The IMF's opposition to Bitcoin legal tender has softened following its engagement with El Salvador. Probability of an African Bitcoin legal tender announcement within 18 months: 8% and rising.</p>
+        <div class="bs-tr"><strong>Trigger signal:</strong> Government official links Bitcoin to 'monetary sovereignty' or 'currency stability' in public communication. Finance ministry consultation on digital currency legal status. Mining infrastructure investment by a government entity. Monitor: Zimbabwe, Ghana, Zambia.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 09 SIGNAL / NOISE -->
+<section class="rs" id="snoise">
+  <div class="s-num">Component 09</div>
+  <div class="s-ey">Signal vs. Noise</div>
+  <h2>Classification Table — <em>Cycle 07</em></h2>
+  <table class="sn-table">
+    <thead>
+      <tr><th>Development</th><th>Classification</th><th>Rationale</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="sn-dev">CBN MPC Communiqué — Zero Crypto Language</span></td>
+        <td><span class="sn-b sn-ss">STRONG SIGNAL</span></td>
+        <td>5/5 signal test. Durable consequence (structural tolerance confirmed). Mechanism clear (silence = revealed tolerance). Reversal changes everything. This is the most reliable state-level signal in ACIOS's archive — a central bank that chooses not to act communicates its strategy as clearly as one that does.</td>
+      </tr>
+      <tr>
+        <td><span class="sn-dev">Kenya VASP Regulations Gazette No. 4821 (May 15)</span></td>
+        <td><span class="sn-b sn-ss">STRONG SIGNAL</span></td>
+        <td>Legislative enactment — the highest durability signal type. First Sub-Saharan dual-regulator stablecoin/exchange framework. 52 pre-applicants confirm commercial tipping point. This is not a consultation or a proposal. It is law.</td>
+      </tr>
+      <tr>
+        <td><span class="sn-dev">BCEAO Cadre de Régulation Consultation Paper (May 17)</span></td>
+        <td><span class="sn-b sn-ss">STRONG SIGNAL</span></td>
+        <td>First BCEAO crypto governance document in institutional history. Permissive-with-guardrails architecture. No e-CFA requirement. 8-country simultaneous consequence. The consultation character means final framework may differ — but the directional signal is locked in regardless of implementation detail.</td>
+      </tr>
+      <tr>
+        <td><span class="sn-dev">Old Mutual Wealth Crypto ETF FSCA Filing</span></td>
+        <td><span class="sn-b sn-s">SIGNAL</span></td>
+        <td>Not STRONG SIGNAL because it is a filing, not an approval. Durability depends on FSCA decision. Mechanism is clear and specific. But outcome remains uncertain. Upgrade to STRONG SIGNAL upon FSCA approval.</td>
+      </tr>
+      <tr>
+        <td><span class="sn-dev">Morocco AMMC Licensing Criteria Publication</span></td>
+        <td><span class="sn-b sn-s">SIGNAL</span></td>
+        <td>First MENA domestic crypto taxonomy constructed without importing EU MiCA. Durability: HIGH if licensing proceeds. The banking relationship requirement is the implementation risk — criteria that cannot be met produce no licenses. Currently: signal, contingent on banking access resolution.</td>
+      </tr>
+      <tr>
+        <td><span class="sn-dev">Nigeria NGN/USDT Premium Floor at ~16.8% Despite Disinflation</span></td>
+        <td><span class="sn-b sn-ss">STRONG SIGNAL</span></td>
+        <td>7:1 compression ratio is the ratchet's empirical signature. 17 months of data, 2,060bps inflation improvement, 300bps premium compression. The floor is structural, not cyclical. This is the most important data signal in ACIOS's archive — it confirms the dollarization ratchet thesis with the strongest evidence base yet assembled.</td>
+      </tr>
+      <tr>
+        <td><span class="sn-dev">CBN Privately Planning Crypto Legalisation (Social Media)</span></td>
+        <td><span class="sn-b sn-n">NOISE · MANIPULATED</span></td>
+        <td>Manipulation Detection: LIKELY MANIPULATED. Single Tier 3 source with no corroboration. Account history shows prior token-launch correlation. No CBN official has made any on-record statement. Explicitly excluded from all ACIOS analysis.</td>
+      </tr>
+      <tr>
+        <td><span class="sn-dev">Global BTC Price Action (+12% week)</span></td>
+        <td><span class="sn-b sn-n">NOISE</span></td>
+        <td>Price-driven metric. ACIOS's structural adoption thesis is countercyclical to global crypto price action. Price rallies create temporary volume spikes that reverse. Duration test: FAIL. Africa's stablecoin-dominant, capital-control-driven adoption is independent of global BTC price movements.</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="un-box">
+    <span class="un-lbl">Unresolved Register · Active Monitoring</span>
+    <div class="un-item">
+      <div class="un-title">BCEAO Final Framework Character — Permissive vs. Restrictive Implementation</div>
+      <div class="un-cond">Becomes STRONG SIGNAL (permissive) if: final framework maintains dollar stablecoin licensing without mandatory e-CFA requirement. Becomes STRONG SIGNAL (restrictive) if: final framework adds bank-mediated settlement or transaction thresholds below $100. Current lean: permissive (65% probability based on consultation paper structure).</div>
+      <span class="un-time">Review: Vol. 09 · ~90 days from consultation paper (August 2026)</span>
+    </div>
+    <div class="un-item">
+      <div class="un-title">Safaricom M-Pesa Crypto Integration — Q2 vs. Q3 Announcement</div>
+      <div class="un-cond">Becomes Q2 POSITIVE BLACK SWAN if: announcement before June 30. Becomes STRONG SIGNAL (base case) if: Q3 announcement (July–September). Becomes SIGNAL DEGRADED if: no announcement by September 30. Current lean: Q3 (65%), Q2 surprise (35%).</div>
+      <span class="un-time">Review: Vol. 08 · June 2026 · Continuous monitoring active</span>
+    </div>
+    <div class="un-item">
+      <div class="un-title">Ethiopia — First Institutional Operator Signal</div>
+      <div class="un-cond">Becomes SIGNAL if: any licensed exchange, OTC desk, or fintech operator announces Ethiopia market entry or engagement. Becomes STRONG SIGNAL if: National Bank of Ethiopia issues digital asset policy guidance (positive or negative). Currently: zero institutional signals. Monitoring: NBE communications, VALR / Yellow Card investor communications.</div>
+      <span class="un-time">Review: Vol. 09 · Continuous monitoring</span>
+    </div>
+  </div>
+</section>
+
+<!-- 10 RECOMMENDATIONS -->
+<section class="rs" id="recs">
+  <div class="s-num">Component 10</div>
+  <div class="s-ey">Strategic Recommendations</div>
+  <h2>Cycle 07 <em>Actionable Intelligence</em></h2>
+  <div class="rec-list">
+    <div class="rec-row">
+      <div class="rec-num">R01</div>
+      <div class="rec-body">
+        <div class="rec-action">Submit VASP license application in Kenya within the first 30 days of June 1 opening — the information asymmetry expires on the day the portal opens.</div>
+        <div class="rec-specs">
+          <div class="rec-spec">For: <strong>Exchange Operator · Stablecoin Issuer · EAC-Focused Fintech</strong></div>
+          <div class="rec-spec">Timeframe: <strong>Immediate — June 1 portal opening</strong></div>
+          <div class="rec-spec">Trigger: <strong>CBK/CMA VASP application portal opens · Submit same day · Pre-prepare all documentation now</strong></div>
+        </div>
+        <div class="rec-risk">Draft ~$4M stablecoin minimum capital is non-tiered — if maintained, partner-based licensing is the alternative entry for under-capitalised operators. Advocate for tiered structure in pre-application dialogue.</div>
+      </div>
+    </div>
+    <div class="rec-row">
+      <div class="rec-num">R02</div>
+      <div class="rec-body">
+        <div class="rec-action">Submit a substantive response to the BCEAO consultation paper before July 16, 2026, defining 'compliant stablecoin operator' in terms your entity satisfies.</div>
+        <div class="rec-specs">
+          <div class="rec-spec">For: <strong>Stablecoin Issuers · Exchange Operators with WAEMU Presence · Francophone Compliance Advisors</strong></div>
+          <div class="rec-spec">Timeframe: <strong>57 days — estimated July 16 consultation close</strong></div>
+          <div class="rec-spec">Trigger: <strong>BCEAO consultation portal opens · Submit within 14 days of opening for maximum engagement</strong></div>
+        </div>
+        <div class="rec-risk">BCEAO ignores comment process and issues predetermined framework (probability 15%). Even in that scenario, the submission establishes regulatory engagement precedent for licensing applications.</div>
+      </div>
+    </div>
+    <div class="rec-row">
+      <div class="rec-num">R03</div>
+      <div class="rec-body">
+        <div class="rec-action">Solve the Moroccan banking relationship problem in the next 60 days — the AMMC first-license window is banking access, nothing else.</div>
+        <div class="rec-specs">
+          <div class="rec-spec">For: <strong>OTC Desk Operators · Exchange Operators with French or MENA Banking Infrastructure</strong></div>
+          <div class="rec-spec">Timeframe: <strong>60 days to first-mover window close</strong></div>
+          <div class="rec-spec">Trigger: <strong>First Moroccan bank extends crypto correspondent services · AMMC licensing portal opens</strong></div>
+        </div>
+        <div class="rec-risk">Moroccan banking sector maintains blanket derisking beyond 90 days — extend timeline and monitor monthly. AMMC moves from criteria to prohibition (8% probability).</div>
+      </div>
+    </div>
+    <div class="rec-row">
+      <div class="rec-num">R04</div>
+      <div class="rec-body">
+        <div class="rec-action">Build FSCA-licensed institutional BTC custody capacity in South Africa before the Old Mutual ETF approval creates demand that cannot be met locally.</div>
+        <div class="rec-specs">
+          <div class="rec-spec">For: <strong>FSCA-Licensed Entities · International Custody Operators Seeking South African Licensing · VALR Competitors</strong></div>
+          <div class="rec-spec">Timeframe: <strong>90 days to estimated ETF approval · Build now · Scale before approval</strong></div>
+          <div class="rec-spec">Trigger: <strong>FSCA ETF approval announcement · Scale custody operations same week</strong></div>
+        </div>
+        <div class="rec-risk">FSCA delays ETF approval beyond 180 days — extends build window. VALR dominates before competitors establish — trade becomes partnership play.</div>
+      </div>
+    </div>
+    <div class="rec-row">
+      <div class="rec-num">R05</div>
+      <div class="rec-body">
+        <div class="rec-action">Read the Q3 2026 Nigeria inflation data release as the ratchet thesis's empirical verdict — if premium holds above 12% when inflation hits 12%, the thesis is confirmed and all downstream ACIOS frameworks are validated.</div>
+        <div class="rec-specs">
+          <div class="rec-spec">For: <strong>All Readers — Analytical Framework Update</strong></div>
+          <div class="rec-spec">Timeframe: <strong>Q3 2026 — NBS inflation data release (estimated September 2026)</strong></div>
+          <div class="rec-spec">Trigger: <strong>NBS Nigeria September 2026 CPI release · Assess NGN/USDT premium same day</strong></div>
+        </div>
+        <div class="rec-risk">Premium collapses below 10% before inflation reaches 12% — this falsifies the ratchet thesis and requires full ACIOS framework revision. Current probability: 8%. The 7:1 ratio makes this outcome mathematically unlikely at current trajectory — but the falsification condition must be stated and honoured.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MEMORY UPDATE -->
+  <div style="margin-top:4rem;padding-top:3rem;border-top:1px solid var(--border);">
+    <div class="s-num">Memory Update</div>
+    <div class="s-ey">Layer 7 — Cycle 07 Logs</div>
+    <div class="mw">
+      <div class="ms">
+        <span class="mt">Trend Memory — Updates</span>
+        <ul class="mi">
+          <li><strong>Nigeria Dollarization Ratchet — STABLE:</strong> 7:1 compression ratio confirmed. Floor at ~16.8% with inflation at ~14.2%. Q3 empirical verdict approaching. Trend classification: STABLE (floor-holding phase).</li>
+          <li><strong>WAEMU Regulatory Crystallization — CONFIRMED (partial):</strong> BCEAO consultation paper published. Direction locked as permissive-with-guardrails. Framework finalisation is the remaining step. Trend status: ACCELERATING.</li>
+          <li><strong>East Africa VASP Formation — CONFIRMED:</strong> Kenya VASP gazette is the first legislative confirmation of this trend. EAC masterplan 2031 is the long-tail structural confirmation. Trend status: CONFIRMED.</li>
+          <li><strong>Morocco Crystallisation Arc — ACCELERATING:</strong> AMMC criteria published. Banking access is now the sole remaining barrier. Trend velocity: FAST (60-day resolution window).</li>
+          <li><strong>South Africa Institutional → Retail Transition — EMERGING:</strong> Old Mutual ETF filing marks the transition from institutional (pension wave) to retail (ETF distribution). Trend status: EMERGING.</li>
+          <li><strong>African Regulatory Race — NEW TREND:</strong> Three frameworks published in 72 hours (BCEAO, Kenya VASP, AMMC). The continent's regulatory architecture is being written simultaneously. Trend classification: EMERGING ACCELERATING.</li>
+        </ul>
+      </div>
+      <div class="ms">
+        <span class="mt">Country & Entity Memory — Updates</span>
+        <ul class="mi">
+          <li><strong>Nigeria:</strong> State-vs-crypto contest updated — CONTESTED trending toward CRYPTO DOMINANT. 7:1 compression ratio logged as empirical signature of structural dollarization. Sovereignty score: 2.0/5 (↓ from 2.4).</li>
+          <li><strong>Kenya:</strong> Dossier updated to reflect VASP gazette — highest sovereignty score milestone logged (4.3/5). 52 pre-applicants, June 1 licensing. EAC hub status: LOCKED IN.</li>
+          <li><strong>WAEMU Bloc:</strong> <em>Cadre de régulation</em> consultation paper logged. Permissive-with-guardrails architecture documented. No e-CFA requirement noted as sovereignty concern. Framework close date: ~July 16, 2026.</li>
+          <li><strong>Morocco:</strong> AMMC licensing criteria published. MAD 5M capital, banking relationship logged as critical path. First-mover window: 60 days. Sovereignty score updated to 3.9/5 (↑ — domestic taxonomy preserved).</li>
+          <li><strong>South Africa:</strong> Old Mutual ETF filing logged as institutional-to-retail transition marker. VALR institutional custody confirmed. Pension wave count: 4 confirmed disclosures. ETF approval timeline: 90–180 days.</li>
+          <li><strong>Entity Memory — Old Mutual Wealth:</strong> NEW ENTITY — Tier 1. Traditional financial incumbent. ETF filing FSCA. R350B AUM. 6,000-advisor distribution. Strategic significance: HIGH. First pre-crypto incumbent to acquire structural crypto market power through product design.</li>
+        </ul>
+      </div>
+      <div class="ms">
+        <span class="mt">Prediction Resolutions — Cycle 07</span>
+        <ul class="mi">
+          <li><strong>P-06-03 — CORRECT:</strong> Predicted CBN MPC communiqué silent on crypto (HIGH confidence). Actual: 12-paragraph communiqué, zero crypto references. Post-resolution: reasoning was correct (strategic silence as revealed tolerance). Model adjustment: CBN tolerance is now structural, not provisional.</li>
+          <li><strong>P-06-04 — CORRECT (early):</strong> Predicted Kenya VASP gazette by Q3 2026 (MEDIUM confidence). Actual: gazetted May 15, ahead of Q3 forecast. Post-resolution: VASP legislative momentum was stronger than modelled. Model adjustment: upgrade Kenya regulatory velocity assessment from moderate to fast.</li>
+        </ul>
+      </div>
+      <div class="ms">
+        <span class="mt">New Predictions — Logged to Prediction Memory</span>
+        <div class="pred-log">
+          <div class="pl-row">
+            <div class="pl-id">P-07-01</div>
+            <div class="pl-text">BCEAO final framework is published as permissive-with-guardrails (dollar stablecoin licensing, no e-CFA mandate). Resolves ~August 2026. Falsification: mandatory e-CFA settlement or transaction threshold < $100.</div>
+            <div class="pl-conf pc-h">HIGH</div>
+          </div>
+          <div class="pl-row">
+            <div class="pl-id">P-07-02</div>
+            <div class="pl-text">Kenya first VASP licenses issued within 90 days of June 1 opening (by August 30, 2026). Falsification: CBK/CMA licensing suspended or delayed past September 30.</div>
+            <div class="pl-conf pc-h">HIGH</div>
+          </div>
+          <div class="pl-row">
+            <div class="pl-id">P-07-03</div>
+            <div class="pl-text">Morocco AMMC first license granted within 90 days of criteria publication (by August 16, 2026). Falsification: Moroccan banking sector maintains blanket derisking beyond 90 days.</div>
+            <div class="pl-conf pc-m">MEDIUM</div>
+          </div>
+          <div class="pl-row">
+            <div class="pl-id">P-07-04</div>
+            <div class="pl-text">Nigeria P2P premium holds above 12% when headline inflation reaches 12% (Q3 2026 empirical verdict). Falsification: premium falls below 10% before inflation hits 12%.</div>
+            <div class="pl-conf pc-h">HIGH</div>
+          </div>
+          <div class="pl-row">
+            <div class="pl-id">P-07-05</div>
+            <div class="pl-text">South Africa FSCA approves Old Mutual crypto ETF within 180 days of filing (by November 2026). Falsification: FSCA rejects application or no decision by November 30, 2026.</div>
+            <div class="pl-conf pc-m">MEDIUM</div>
+          </div>
+          <div class="pl-row">
+            <div class="pl-id">P-07-06</div>
+            <div class="pl-text">Safaricom announces M-Pesa crypto integration partnership before September 30, 2026. Falsification: no announcement by September 30.</div>
+            <div class="pl-conf pc-h">HIGH</div>
+          </div>
+        </div>
+      </div>
+      <div class="ms" style="margin-bottom:0;padding-bottom:0;border-bottom:none;">
+        <span class="mt">Cycle 08 Watch Signals</span>
+        <ul class="mi">
+          <li><strong>June 1:</strong> Kenya VASP application portal opens. Submit same day. Monitor CBK/CMA for any pre-opening guidance updates.</li>
+          <li><strong>~July 16:</strong> BCEAO consultation period closes. Monitor BCEAO website for consultation response publication. Submit comment before close.</li>
+          <li><strong>Ongoing — Safaricom:</strong> Developer portal, M-Pesa app store updates, Safaricom investor communications. Q2 surprise threshold: any announcement before June 30.</li>
+          <li><strong>Ongoing — Morocco banking:</strong> Monitor Attijariwafa Bank, Banque Populaire, CIH Bank for crypto correspondent signals. First bank to move = first-mover trigger.</li>
+          <li><strong>Q3 Nigeria — Ratchet Verdict:</strong> NBS September CPI release. Track NGN/USDT premium on release day. If premium &gt; 12% with inflation &lt; 12%: thesis confirmed. Publish immediately.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+</div><!-- /container -->
+
+<footer>
+  <div class="foot-bot">
+    <div class="fb-brand">Antifragile <em>Africa</em> Crypto · Vol. 07</div>
+    <div class="fl-row">
+      <a href="index.html">All Reports</a>
+      <a href="about.html">About</a>
+      <a href="terms.html">Terms</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="disclaimer.html">Disclaimer</a>
+    </div>
+    <span class="fn">© 2026 · Not financial advice · Simulated data where noted · For institutional use only</span>
+  </div>
+</footer>
+
+<script>
+const layers = document.querySelectorAll('.sl[id]');
+const tocLinks = document.querySelectorAll('.toc-list a');
+if(layers.length){
+  const obs = new IntersectionObserver(entries=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        tocLinks.forEach(l=>{l.style.color='';l.style.borderLeftColor='transparent';});
+        const a = document.querySelector(`.toc-list a[href="#${e.target.id}"]`);
+        if(a){a.style.color='var(--sky)';a.style.borderLeftColor='var(--steel)';}
+      }
+    });
+  },{rootMargin:'-20% 0px -65% 0px'});
+  layers.forEach(l=>obs.observe(l));
+}
+</script>
+</body>
+</html>
