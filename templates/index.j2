@@ -1,4 +1,103 @@
 
+{# ── FEATURED LATEST ISSUE ── #}
+{% if latest %}
+<section class="fi">
+  <div class="s-ey">Latest Report</div>
+  <div class="s-t">This Week's <em>Intelligence</em></div>
+  <p class="s-sub">Vol. {{ lmeta.vol }} — {{ lmeta.date }}{% if lmeta.agents %} — {{ lmeta.agents }} agents, {{ lmeta.layers }} layers{% endif %}</p>
+  <div class="fc">
+    <div class="fb-c">
+      <div class="fmet">
+        {% for b in lmeta.get('badges', []) %}
+        <span class="badge {{ b.cls }}">{{ b.text }}</span>
+        {% endfor %}
+        {% if not lmeta.get('badges') %}
+        <span class="badge badge-vol">Latest</span>
+        {% endif %}
+        <span class="fdate">{{ lmeta.date }}</span>
+        <span class="fvol">Vol. {{ lmeta.vol }}</span>
+      </div>
+      <a href="{{ lmeta.filename or '#' }}" class="ftit">{{ lmeta.title | title_html }}</a>
+      {% if lmeta.standfirst %}
+      <p class="fdesc">{{ lmeta.standfirst }}</p>
+      {% endif %}
+      {# Key bullet points from exec brief paragraphs or standfirst #}
+      {% set opps = lc.get('opportunities', []) %}
+      {% if opps %}
+      <ul class="fhl">
+        {% for opp in opps[:5] %}
+        <li>{{ opp.title | safe }}</li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+      <a href="{{ lmeta.filename or '#' }}" class="btn-p">Read Full Report →</a>
+    </div>
+    {# Spreads sidebar #}
+    <div class="fsd">
+      <span class="sbl">This Week's Spreads</span>
+      {% for s in lspreads %}
+      <div class="sm">
+        <div class="sc-l">{{ s.country }}</div>
+        <div class="sv {{ s.val_cls }}">{{ s.val }}</div>
+        <div class="{{ s.trend_cls }}">{{ s.trend }}</div>
+        {% if s.note %}<div class="snote">{{ s.note }}</div>{% endif %}
+      </div>
+      {% endfor %}
+      {% if lmeta.audit %}
+      <div class="sm">
+        <div class="sc-l">Audit Score</div>
+        <div class="sv green">{{ lmeta.audit }}</div>
+        <div class="snote">Out of 5.0 — PASS ✓</div>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{# ── ARCHIVE GRID ── #}
+<section class="ar">
+  <div class="s-ey">Archive</div>
+  <div class="s-t">All <em>Reports</em></div>
+  <p class="s-sub">Every issue, permanently available. Intelligence compounds.</p>
+  <div class="ag">
+    {% for issue in issues %}
+    {% set imeta = issue.meta %}
+    {% set ic    = issue.components %}
+    {# Determine card style: pilot issues get gold accent #}
+    {% set is_pilot = 'pilot' in (imeta.vol or '') | lower or '00' in (imeta.vol or '') %}
+    <a href="{{ imeta.filename or '#' }}" class="ac {{ 'pilot' if is_pilot else '' }}">
+      <div class="acd">
+        {{ imeta.date }}
+        <span class="acv {{ 'pilot' if is_pilot else '' }}">
+          {{ 'Pilot / Vol. 00' if is_pilot else 'Vol. ' ~ imeta.vol }}
+        </span>
+      </div>
+      <div class="act">{{ imeta.title_plain or imeta.title }}</div>
+      {% if imeta.standfirst %}
+      <div class="ace">{{ imeta.standfirst[:160] }}{% if imeta.standfirst | length > 160 %}…{% endif %}</div>
+      {% endif %}
+      {# Tag cloud from spreads countries #}
+      {% set sp = ic.get('spreads', []) %}
+      <div class="ats">
+        {% for s in sp[:5] %}
+        <span class="at">{{ s.country.split('·')[0].strip() }}</span>
+        {% endfor %}
+        {% if imeta.new_signal %}
+        <span class="at">{{ imeta.new_signal }}</span>
+        {% endif %}
+      </div>
+    </a>
+    {% else %}
+    {# No issues found — placeholder #}
+    <div class="ac" style="opacity:.4;pointer-events:none;">
+      <div class="acd">Coming Soon<span class="acv">Vol. 01</span></div>
+      <div class="act">First Issue Publishing Soon</div>
+      <div class="accoming"><span class="aclbl">Coming Soon</span></div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
 {# ── THESIS PILLARS ── #}
 <section class="ps">
   <div class="s-ey">Core Framework</div>
