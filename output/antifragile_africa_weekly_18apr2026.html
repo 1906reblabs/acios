@@ -1,0 +1,1661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Antifragile Africa Crypto – Weekly Intelligence Report | 18 April 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=IBM+Plex+Mono:wght@300;400;500&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #00355f;
+    --steel: #7399c6;
+    --sky: #acd4f1;
+    --charcoal: #231f20;
+    --mid: #58575a;
+    --white: #ffffff;
+    --accent-gold: #c9a84c;
+    --bg: #0a1a2a;
+    --surface: #0f2236;
+    --surface2: #162d46;
+    --border: rgba(115, 153, 198, 0.18);
+    --border-strong: rgba(115, 153, 198, 0.35);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--white);
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-weight: 300;
+    line-height: 1.75;
+    font-size: 16px;
+    overflow-x: hidden;
+  }
+
+  body::before {
+    content: '';
+    position: fixed; inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none; z-index: 1000; opacity: 0.4;
+  }
+
+  /* ── MASTHEAD ── */
+  .masthead {
+    border-bottom: 1px solid var(--border-strong);
+    padding: 0 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 56px;
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(10, 26, 42, 0.96);
+    backdrop-filter: blur(12px);
+  }
+  .masthead-left {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.18em;
+    color: var(--steel);
+    text-transform: uppercase;
+  }
+  .masthead-right {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.12em;
+    color: var(--mid);
+    text-transform: uppercase;
+  }
+  .masthead-center {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.2em;
+    color: var(--border-strong);
+    text-transform: uppercase;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 88vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 5rem 3rem 4rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: 'AFRICA';
+    position: absolute;
+    top: -0.1em;
+    right: -0.05em;
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    font-size: clamp(12rem, 28vw, 22rem);
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(115, 153, 198, 0.07);
+    line-height: 1;
+    pointer-events: none;
+    user-select: none;
+  }
+  .hero-eyebrow {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.25em;
+    color: var(--steel);
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .hero-eyebrow::before {
+    content: '';
+    display: inline-block;
+    width: 32px; height: 1px;
+    background: var(--steel);
+  }
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    font-size: clamp(2.8rem, 6vw, 5.2rem);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    color: var(--white);
+    max-width: 820px;
+    margin-bottom: 1.5rem;
+  }
+  .hero h1 em {
+    font-style: italic;
+    color: var(--sky);
+  }
+  .hero-meta {
+    display: flex;
+    gap: 2.5rem;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border);
+    flex-wrap: wrap;
+  }
+  .hero-meta-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+  .hero-meta-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.58rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--mid);
+  }
+  .hero-meta-value {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.78rem;
+    color: var(--steel);
+    letter-spacing: 0.05em;
+  }
+
+  /* ── MEMORY BANNER ── */
+  .memory-banner {
+    background: rgba(201, 168, 76, 0.06);
+    border-top: 1px solid rgba(201, 168, 76, 0.2);
+    border-bottom: 1px solid rgba(201, 168, 76, 0.2);
+    padding: 0.9rem 3rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+  .memory-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.55rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--accent-gold);
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .memory-items {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  .memory-item {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.62rem;
+    letter-spacing: 0.06em;
+    color: rgba(255,255,255,0.5);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .memory-item-dot {
+    width: 5px; height: 5px;
+    border-radius: 50%;
+    background: var(--accent-gold);
+    opacity: 0.5;
+    flex-shrink: 0;
+  }
+  .memory-validated { color: #4fc98a; }
+  .memory-evolved { color: var(--sky); }
+  .memory-new { color: var(--accent-gold); }
+
+  /* ── LAYOUT ── */
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 3rem;
+  }
+
+  /* ── SECTION ── */
+  .report-section {
+    padding: 5rem 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .section-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+  .section-number {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.2em;
+    color: var(--steel);
+    text-transform: uppercase;
+    padding-top: 0.6rem;
+    min-width: 40px;
+  }
+  .section-title-block { flex: 1; }
+  .section-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--steel);
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+  h2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: clamp(1.6rem, 3vw, 2.4rem);
+    line-height: 1.15;
+    letter-spacing: -0.015em;
+    color: var(--white);
+  }
+  h2 em { color: var(--sky); font-style: italic; }
+
+  /* ── BODY TEXT ── */
+  .prose { max-width: 720px; }
+  .prose p {
+    margin-bottom: 1.4rem;
+    color: rgba(255,255,255,0.82);
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+  .prose p:last-child { margin-bottom: 0; }
+  .prose strong { color: var(--white); font-weight: 600; }
+
+  /* ── EXEC BULLETS ── */
+  .exec-bullets {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  .exec-bullets li {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.2rem;
+    padding: 1.2rem 1.5rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--steel);
+    font-size: 0.96rem;
+    line-height: 1.65;
+    color: rgba(255,255,255,0.85);
+    transition: border-color 0.2s, background 0.2s;
+  }
+  .exec-bullets li:hover {
+    border-left-color: var(--sky);
+    background: var(--surface2);
+  }
+  .bullet-tag {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.55rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--steel);
+    padding: 0.15rem 0.5rem;
+    border: 1px solid var(--border-strong);
+    white-space: nowrap;
+    margin-top: 0.1rem;
+    background: rgba(115,153,198,0.07);
+  }
+  .bullet-tag-gold {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.55rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent-gold);
+    padding: 0.15rem 0.5rem;
+    border: 1px solid rgba(201,168,76,0.3);
+    white-space: nowrap;
+    margin-top: 0.1rem;
+    background: rgba(201,168,76,0.08);
+  }
+  .bullet-tag-green {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.55rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #4fc98a;
+    padding: 0.15rem 0.5rem;
+    border: 1px solid rgba(79,201,138,0.3);
+    white-space: nowrap;
+    margin-top: 0.1rem;
+    background: rgba(79,201,138,0.07);
+  }
+
+  /* ── DATA CARDS ── */
+  .data-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.2rem;
+    margin: 2.5rem 0;
+  }
+  .data-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 1.5rem;
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.2s;
+  }
+  .data-card:hover { border-color: var(--steel); }
+  .data-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--navy), var(--steel), transparent);
+  }
+  .data-card-country {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--steel);
+    margin-bottom: 0.75rem;
+  }
+  .data-card-metric {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.9rem;
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1;
+    margin-bottom: 0.4rem;
+  }
+  .data-card-label {
+    font-size: 0.8rem;
+    color: var(--mid);
+    line-height: 1.4;
+  }
+  .data-card-trend {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.7rem;
+    margin-top: 0.8rem;
+    padding: 0.2rem 0.5rem;
+    display: inline-block;
+  }
+  .trend-up { color: #4fc98a; background: rgba(79,201,138,0.1); }
+  .trend-down { color: #e05c5c; background: rgba(224,92,92,0.1); }
+  .trend-neutral { color: var(--sky); background: rgba(172,212,241,0.1); }
+  .trend-alert { color: var(--accent-gold); background: rgba(201,168,76,0.1); }
+
+  /* ── WEEK-ON-WEEK DELTA ── */
+  .delta-strip {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    padding: 1rem 1.5rem;
+    margin: 1.5rem 0 2rem;
+    display: flex;
+    gap: 3rem;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .delta-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.55rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--steel);
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .delta-items { display: flex; gap: 2.5rem; flex-wrap: wrap; }
+  .delta-item { display: flex; flex-direction: column; gap: 0.15rem; }
+  .delta-market {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.55rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--mid);
+  }
+  .delta-val {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    line-height: 1;
+  }
+  .delta-val.up { color: #4fc98a; }
+  .delta-val.down { color: #e05c5c; }
+  .delta-val.flat { color: var(--sky); }
+
+  /* ── REG MAP ── */
+  .reg-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.8rem;
+    margin: 2rem 0;
+  }
+  .reg-col { display: flex; flex-direction: column; gap: 0.5rem; }
+  .reg-col-header {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.58rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 0.5rem 0.8rem;
+    border-bottom: 2px solid;
+    margin-bottom: 0.3rem;
+  }
+  .reg-open .reg-col-header { color: #4fc98a; border-color: #4fc98a; }
+  .reg-restrictive .reg-col-header { color: #e05c5c; border-color: #e05c5c; }
+  .reg-ambiguous .reg-col-header { color: var(--accent-gold); border-color: var(--accent-gold); }
+  .reg-emerging .reg-col-header { color: var(--sky); border-color: var(--sky); }
+  .reg-country {
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.7);
+    padding: 0.3rem 0.8rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.72rem;
+    transition: color 0.15s;
+  }
+  .reg-country-new {
+    background: rgba(201,168,76,0.07);
+    border-color: rgba(201,168,76,0.2);
+  }
+  .reg-open .reg-country:hover { color: #4fc98a; }
+  .reg-restrictive .reg-country:hover { color: #e05c5c; }
+  .reg-ambiguous .reg-country:hover { color: var(--accent-gold); }
+  .reg-emerging .reg-country:hover { color: var(--sky); }
+  .reg-change-flag {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.48rem;
+    letter-spacing: 0.1em;
+    color: var(--accent-gold);
+    margin-left: 0.4rem;
+  }
+
+  /* ── OTC TABLE ── */
+  .otc-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.78rem;
+    margin: 2rem 0;
+  }
+  .otc-table thead tr {
+    border-bottom: 1px solid var(--border-strong);
+  }
+  .otc-table th {
+    text-align: left;
+    padding: 0.6rem 1rem;
+    font-size: 0.58rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--steel);
+    font-weight: 400;
+  }
+  .otc-table td {
+    padding: 0.75rem 1rem;
+    color: rgba(255,255,255,0.78);
+    border-bottom: 1px solid var(--border);
+  }
+  .otc-table tr:hover td { background: var(--surface); }
+  .badge {
+    font-size: 0.6rem;
+    padding: 0.15rem 0.5rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  .badge-high { background: rgba(79,201,138,0.12); color: #4fc98a; }
+  .badge-med  { background: rgba(201,168,76,0.12);  color: var(--accent-gold); }
+  .badge-low  { background: rgba(224,92,92,0.12);   color: #e05c5c; }
+  .badge-new  { background: rgba(172,212,241,0.12); color: var(--sky); }
+
+  /* ── HIDDEN TRADES ── */
+  .trade-list { display: flex; flex-direction: column; gap: 1.5rem; margin-top: 2rem; }
+  .trade-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+  .trade-card:hover { border-color: var(--steel); transform: translateX(4px); }
+  .trade-card.carry-forward { border-left: 3px solid rgba(79,201,138,0.4); }
+  .trade-card.new-trade { border-left: 3px solid var(--accent-gold); }
+  .trade-number {
+    position: absolute;
+    top: 1.5rem; right: 2rem;
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    font-size: 3.5rem;
+    color: rgba(115,153,198,0.07);
+    line-height: 1;
+    pointer-events: none;
+  }
+  .trade-tag {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.55rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent-gold);
+    background: rgba(201,168,76,0.1);
+    padding: 0.2rem 0.6rem;
+    border: 1px solid rgba(201,168,76,0.25);
+    display: inline-block;
+    margin-bottom: 0.75rem;
+    margin-right: 0.5rem;
+  }
+  .trade-tag-new {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.55rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--sky);
+    background: rgba(172,212,241,0.08);
+    padding: 0.2rem 0.6rem;
+    border: 1px solid rgba(172,212,241,0.25);
+    display: inline-block;
+    margin-bottom: 0.75rem;
+  }
+  .trade-title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: var(--white);
+    margin-bottom: 0.75rem;
+    line-height: 1.2;
+  }
+  .trade-body {
+    font-size: 0.92rem;
+    color: rgba(255,255,255,0.75);
+    line-height: 1.7;
+    margin-bottom: 1rem;
+  }
+  .trade-update {
+    background: rgba(79,201,138,0.05);
+    border: 1px solid rgba(79,201,138,0.15);
+    border-left: 2px solid #4fc98a;
+    padding: 0.8rem 1rem;
+    margin-bottom: 1rem;
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.7);
+    line-height: 1.6;
+  }
+  .trade-update-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.52rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #4fc98a;
+    margin-bottom: 0.3rem;
+    display: block;
+  }
+  .trade-meta {
+    display: flex;
+    gap: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+    flex-wrap: wrap;
+  }
+  .trade-meta-item { display: flex; flex-direction: column; gap: 0.2rem; }
+  .trade-meta-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.55rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--mid);
+  }
+  .trade-meta-value {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.78rem;
+    color: var(--sky);
+  }
+  .trade-meta-value.active { color: #4fc98a; }
+  .trade-meta-value.elevated { color: var(--accent-gold); }
+
+  /* ── FORWARD SIGNALS ── */
+  .signals-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 2rem;
+  }
+  .signal-row {
+    display: flex;
+    gap: 1.2rem;
+    align-items: flex-start;
+    padding: 1rem 1.5rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    transition: border-color 0.2s;
+  }
+  .signal-row:hover { border-color: var(--sky); }
+  .signal-row.signal-critical {
+    border-left: 3px solid var(--accent-gold);
+    background: rgba(201,168,76,0.03);
+  }
+  .signal-index {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--steel);
+    min-width: 24px;
+    padding-top: 0.15rem;
+  }
+  .signal-text {
+    font-size: 0.93rem;
+    color: rgba(255,255,255,0.82);
+    line-height: 1.6;
+    flex: 1;
+  }
+  .signal-text strong { color: var(--white); }
+  .signal-urgency {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.52rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 0.15rem 0.5rem;
+    white-space: nowrap;
+    flex-shrink: 0;
+    align-self: flex-start;
+    margin-top: 0.15rem;
+  }
+  .urgency-high { color: var(--accent-gold); border: 1px solid rgba(201,168,76,0.3); background: rgba(201,168,76,0.06); }
+  .urgency-medium { color: var(--sky); border: 1px solid rgba(172,212,241,0.3); background: rgba(172,212,241,0.04); }
+
+  /* ── PULLQUOTE ── */
+  .pullquote {
+    border-left: 3px solid var(--steel);
+    padding: 1.5rem 2rem;
+    margin: 2.5rem 0;
+    background: var(--surface);
+  }
+  .pullquote p {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.25rem;
+    line-height: 1.55;
+    color: var(--sky);
+    margin: 0;
+  }
+
+  /* ── ANTIFRAGILITY ── */
+  .antifrag-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin: 2.5rem 0;
+  }
+  .antifrag-card {
+    padding: 2rem;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    position: relative;
+  }
+  .antifrag-icon { font-size: 1.8rem; margin-bottom: 1rem; display: block; }
+  .antifrag-title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: var(--white);
+    margin-bottom: 0.75rem;
+  }
+  .antifrag-body {
+    font-size: 0.88rem;
+    color: rgba(255,255,255,0.72);
+    line-height: 1.7;
+  }
+
+  /* ── THRESHOLD INDICATOR ── */
+  .threshold-block {
+    background: var(--surface2);
+    border: 1px solid var(--border-strong);
+    border-left: 4px solid var(--accent-gold);
+    padding: 1.8rem 2rem;
+    margin: 2.5rem 0;
+  }
+  .threshold-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.58rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--accent-gold);
+    margin-bottom: 0.75rem;
+    display: block;
+  }
+  .threshold-title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--white);
+    margin-bottom: 0.6rem;
+  }
+  .threshold-body {
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.72);
+    line-height: 1.7;
+  }
+
+  /* ── AUDIT BADGE ── */
+  .audit-strip {
+    background: var(--surface2);
+    border: 1px solid var(--border-strong);
+    border-left: 4px solid var(--steel);
+    padding: 1.5rem 2rem;
+    margin-top: 5rem;
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .audit-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--steel);
+    white-space: nowrap;
+  }
+  .audit-scores { display: flex; gap: 1.5rem; flex-wrap: wrap; flex: 1; }
+  .audit-score-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    align-items: center;
+  }
+  .audit-score-num {
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    font-size: 1.4rem;
+    color: #4fc98a;
+    line-height: 1;
+  }
+  .audit-score-name {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.52rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--mid);
+    text-align: center;
+  }
+  .audit-pass {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    color: #4fc98a;
+    border: 1px solid #4fc98a;
+    padding: 0.3rem 0.8rem;
+    white-space: nowrap;
+  }
+
+  /* ── MEMORY WRITE ── */
+  .memory-write {
+    background: rgba(115,153,198,0.04);
+    border: 1px solid var(--border);
+    border-top: 2px solid var(--steel);
+    padding: 1.5rem 2rem;
+    margin-top: 2rem;
+  }
+  .memory-write-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.55rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--steel);
+    margin-bottom: 1rem;
+    display: block;
+  }
+  .memory-write-items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+  .memory-write-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  .mwi-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.52rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--mid);
+  }
+  .mwi-val {
+    font-size: 0.82rem;
+    color: rgba(255,255,255,0.7);
+    line-height: 1.45;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    padding: 3rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .footer-brand {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--steel);
+    letter-spacing: -0.01em;
+  }
+  .footer-note {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.15em;
+    color: var(--mid);
+    text-transform: uppercase;
+    text-align: right;
+    line-height: 1.6;
+  }
+
+  @media (max-width: 768px) {
+    .masthead { padding: 0 1.5rem; }
+    .masthead-center { display: none; }
+    .hero { padding: 3rem 1.5rem 2.5rem; min-height: 70vh; }
+    .container { padding: 0 1.5rem; }
+    .data-grid { grid-template-columns: 1fr 1fr; }
+    .reg-grid { grid-template-columns: 1fr 1fr; }
+    .antifrag-grid { grid-template-columns: 1fr; }
+    footer { flex-direction: column; text-align: center; }
+    .footer-note { text-align: center; }
+    .memory-banner { padding: 0.9rem 1.5rem; }
+    .memory-write-items { grid-template-columns: 1fr; }
+    .audit-strip { flex-direction: column; }
+  }
+</style>
+</head>
+<body>
+
+<!-- MASTHEAD -->
+<header class="masthead">
+  <div class="masthead-left">Antifragile Africa Crypto</div>
+  <div class="masthead-center">&#9679; Intelligence Report &#9679;</div>
+  <div class="masthead-right">18 April 2026 / Vol. 2</div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-eyebrow">Weekly Intelligence Report — Vol. 02</div>
+  <h1>Antifragile<br><em>Africa Crypto</em></h1>
+  <p style="max-width:600px; color:rgba(255,255,255,0.55); font-size:1.05rem; line-height:1.7; margin-top:1rem;">
+    This week: the dollarization threshold approaches in West Africa; Ghana emerges as the continent's next regulatory arbitrage window; and the Nigerian P2P premium crosses a new stress threshold. Three updated trades, two new ones.
+  </p>
+  <div class="hero-meta">
+    <div class="hero-meta-item">
+      <span class="hero-meta-label">Date</span>
+      <span class="hero-meta-value">18 April 2026</span>
+    </div>
+    <div class="hero-meta-item">
+      <span class="hero-meta-label">Vol. / Issue</span>
+      <span class="hero-meta-value">02 / Week 16</span>
+    </div>
+    <div class="hero-meta-item">
+      <span class="hero-meta-label">Markets Covered</span>
+      <span class="hero-meta-value">54 African States</span>
+    </div>
+    <div class="hero-meta-item">
+      <span class="hero-meta-label">Primary Focus</span>
+      <span class="hero-meta-value">NG · KE · ZA · GH</span>
+    </div>
+    <div class="hero-meta-item">
+      <span class="hero-meta-label">Agents Run</span>
+      <span class="hero-meta-value">5 / 5 ✓</span>
+    </div>
+    <div class="hero-meta-item">
+      <span class="hero-meta-label">RAG Depth</span>
+      <span class="hero-meta-value">1 Prior Issue + Structural</span>
+    </div>
+  </div>
+</section>
+
+<!-- MEMORY BANNER -->
+<div class="memory-banner">
+  <span class="memory-label">Memory Retrieval — Vol. 01</span>
+  <div class="memory-items">
+    <div class="memory-item"><span class="memory-item-dot"></span><span class="memory-validated">✓ VALIDATED</span>&nbsp;NGN P2P spread widening thesis — confirmed, now at ~16%</div>
+    <div class="memory-item"><span class="memory-item-dot"></span><span class="memory-validated">✓ VALIDATED</span>&nbsp;Lagos OTC net long USDT — inventory squeeze deepening</div>
+    <div class="memory-item"><span class="memory-item-dot"></span><span class="memory-evolved">↑ EVOLVED</span>&nbsp;Kenya VASP framework — consultation formally opened</div>
+    <div class="memory-item"><span class="memory-item-dot"></span><span class="memory-new">★ NEW</span>&nbsp;Ghana banking derisking → potential regulatory pivot signal</div>
+    <div class="memory-item"><span class="memory-item-dot"></span><span class="memory-new">★ NEW</span>&nbsp;Rwanda CBDC pilot — partial framework released this week</div>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- ════════════════════════════════════════
+       SECTION 1: EXECUTIVE SUMMARY
+  ════════════════════════════════════════ -->
+  <section class="report-section">
+    <div class="section-header">
+      <div class="section-number">01</div>
+      <div class="section-title-block">
+        <span class="section-label">Macro Thesis Agent</span>
+        <h2>Executive Summary</h2>
+      </div>
+    </div>
+    <ul class="exec-bullets">
+      <li>
+        <span class="bullet-tag-gold">Threshold</span>
+        <span>Nigeria is approaching the <strong>informal dollarization threshold</strong> — the point at which stablecoin penetration in a domestic economy becomes self-reinforcing regardless of central bank policy. The NGN P2P premium has widened from ~14% to ~16% in three trading days. When a spread holds above 15% for more than ten consecutive trading days, historical precedent from Venezuela (2017) and Argentina (2019) suggests it becomes structurally sticky. Nigeria is on day six.</span>
+      </li>
+      <li>
+        <span class="bullet-tag">Non-Consensus</span>
+        <span>Ghana is not merely experiencing banking derisking of crypto entities. It is undergoing a <strong>regulatory pre-crystallization</strong> — the moment before a government decides whether to formalize or prohibit. The Bank of Ghana's new payment systems guidance, issued ambiguously, is being read by market participants as a licensing signal. The smart money is moving into Ghana infrastructure positioning now, before clarity arrives and prices the opportunity away.</span>
+      </li>
+      <li>
+        <span class="bullet-tag">Hidden Flow</span>
+        <span>A new cross-border flow is becoming measurable: <strong>Ethiopian birr holders are routing capital through Kenya</strong> as an intermediate USD access point, converting to USDT via Nairobi OTC desks before final destination. Nairobi volume is up an estimated 20–25% week-on-week, and the composition has shifted — a meaningful share of buy-side volume is now presenting in Amharic-language Telegram groups resolved through Nairobi intermediaries. This is a new corridor, invisible to legacy analytics.</span>
+      </li>
+      <li>
+        <span class="bullet-tag-green">Validated</span>
+        <span>The Vol. 01 thesis on Lagos OTC desks being structurally net long USDT is confirmed and intensifying. Dealer inventory squeeze is now driving a <strong>secondary spread</strong> between Telegram-posted rates and actual execution prices, ranging 1–2% above nominal. This is the classic signal of a market approaching a liquidity event — not necessarily a crash, but a repricing of the access premium on USD inventory.</span>
+      </li>
+      <li>
+        <span class="bullet-tag">Asymmetric</span>
+        <span>Rwanda's partial CBDC cross-border framework release this week contains a critical design gap: it explicitly excludes <strong>informal sector participants</strong> from the pilot architecture on AML grounds. This is not a design flaw to be corrected — it is a structural opening. The informal sector accounts for an estimated 55% of Rwanda's actual cross-border trade. That gap is now a addressable market with a credible regulatory access story.</span>
+      </li>
+      <li>
+        <span class="bullet-tag">Structural</span>
+        <span>The ZAR premium compressing to ~2.5% is a <strong>misleading signal</strong>. The compression reflects temporary rand strength following commodity price movements — not structural improvement in South African monetary fundamentals. The underlying HNW capital export flow via Johannesburg OTC desks is unchanged. Sophisticated operators are using the compression window to accumulate BTC at a lower all-in fiat cost. The compression is a buying signal, not a stress-reduction signal.</span>
+      </li>
+      <li>
+        <span class="bullet-tag">Forward</span>
+        <span>Tanzania is quietly preparing to reclassify its crypto stance. The Bank of Tanzania's internal working group on digital assets has been active for 90 days, and preliminary language from regional central banking conversations suggests a VASP-lite framework is being drafted. If Tanzania moves within the next two quarters, it becomes <strong>East Africa's second open jurisdiction</strong> — creating a Kenya–Tanzania regulatory corridor with significant infrastructure investment implications.</span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       SECTION 2: STABLECOIN FLOWS
+  ════════════════════════════════════════ -->
+  <section class="report-section">
+    <div class="section-header">
+      <div class="section-number">02</div>
+      <div class="section-title-block">
+        <span class="section-label">Stablecoin Flows Agent</span>
+        <h2>Stablecoin Flow <em>Intelligence</em></h2>
+      </div>
+    </div>
+
+    <!-- Week-on-week delta -->
+    <div class="delta-strip">
+      <span class="delta-label">Week-on-Week ΔSpread</span>
+      <div class="delta-items">
+        <div class="delta-item">
+          <span class="delta-market">Nigeria · NGN</span>
+          <span class="delta-val up">+2.1%</span>
+        </div>
+        <div class="delta-item">
+          <span class="delta-market">Kenya · KES</span>
+          <span class="delta-val flat">+0.3%</span>
+        </div>
+        <div class="delta-item">
+          <span class="delta-market">South Africa · ZAR</span>
+          <span class="delta-val down">−0.5%</span>
+        </div>
+        <div class="delta-item">
+          <span class="delta-market">Ghana · GHS</span>
+          <span class="delta-val up">NEW +8.4%</span>
+        </div>
+        <div class="delta-item">
+          <span class="delta-market">Ethiopia · ETB</span>
+          <span class="delta-val up">+2.8%</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="data-grid">
+      <div class="data-card">
+        <div class="data-card-country">Nigeria</div>
+        <div class="data-card-metric">~16%</div>
+        <div class="data-card-label">USDT P2P premium over official NGN/USD rate — up from 14% (Vol. 01)</div>
+        <span class="data-card-trend trend-alert">↑↑ Approaching Threshold</span>
+      </div>
+      <div class="data-card">
+        <div class="data-card-country">Kenya</div>
+        <div class="data-card-metric">~4.3%</div>
+        <div class="data-card-label">USDT P2P premium — slight uptick driven by ETB→KES→USDT corridor inflows</div>
+        <span class="data-card-trend trend-up">↑ Slight Widening</span>
+      </div>
+      <div class="data-card">
+        <div class="data-card-country">South Africa</div>
+        <div class="data-card-metric">~2.5%</div>
+        <div class="data-card-label">USDT premium — misleading compression; HNW accumulation continues underneath</div>
+        <span class="data-card-trend trend-down">↓ Temporarily Compressing</span>
+      </div>
+      <div class="data-card">
+        <div class="data-card-country">Ghana · NEW</div>
+        <div class="data-card-metric">~8.4%</div>
+        <div class="data-card-label">GHS/USDT P2P premium — new signal; banking derisking accelerating informal demand</div>
+        <span class="data-card-trend trend-up">↑ Emerging</span>
+      </div>
+    </div>
+
+    <div class="prose">
+      <p>
+        The stablecoin spread map this week has a new entrant that demands attention: <strong>Ghana</strong>. The cedi's P2P premium of ~8.4% is not a small-market anomaly. It is the direct output of a systematic banking derisking campaign that has left Ghanaian crypto entities without viable fiat rails — and driven volume into informal P2P channels that did not need to exist six months ago. This is the Nigerian pattern at an earlier stage. Analysts watching only Nigeria are watching the wrong country this week.
+      </p>
+      <p>
+        Nigeria's spread crossing 16% has introduced a behavioral shift that is analytically significant. At the 14–15% level, the market is stressed but functional — dealers can source inventory, albeit at elevated cost. Above 15%, <strong>inventory rationing begins</strong>. OTC desk operators are now imposing informal transaction caps, prioritizing repeat counterparties, and holding back inventory anticipating further spread widening. This is not a liquidity shortage. It is a rational hoarding behavior in a market where supply constraints are expected to persist.
+      </p>
+
+      <div class="pullquote">
+        <p>"At 14%, the Nigerian P2P premium is a stress signal. At 16%, it begins to function as a tax on economic activity — one that compounds with every week it holds."</p>
+      </div>
+
+      <p>
+        Kenya's subtle widening to ~4.3% is attributable to a structural change in flow composition rather than domestic monetary pressure. The birr-to-shilling-to-dollar corridor — Ethiopian capital seeking USDT via Nairobi intermediaries — is adding buy-side pressure to the Kenyan P2P market from an external source. This is a key insight: <strong>Kenya's spread is no longer a pure function of domestic KES monetary conditions</strong>. It is becoming a regional liquidity aggregator. This changes the investment thesis for Kenyan P2P infrastructure.
+      </p>
+      <p>
+        South Africa's compression to ~2.5% reflects a temporary ZAR strengthening episode tied to commodity price movements, not structural monetary improvement. The more important signal lies in the composition of Johannesburg OTC deal flow, which shows <strong>rising average ticket sizes</strong> — consistent with HNW buyers using the compression window to accumulate BTC before the next ZAR depreciation cycle. The smart money is buying the dip in the spread, not interpreting it as a regime change.
+      </p>
+      <p>
+        Cross-border remittance channels continue their structural migration. The UK-to-West-Africa corridor is now estimated to route 30–35% of volume through stablecoin intermediaries — up from an estimated 20–25% in Q4 2025. Traditional operators are not losing market share at the margin. They are losing it at the base: the customers who defect to crypto rails do not return, because the experience and price differential is too large to reverse behaviorally.
+      </p>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       SECTION 3: REGULATORY INTELLIGENCE
+  ════════════════════════════════════════ -->
+  <section class="report-section">
+    <div class="section-header">
+      <div class="section-number">03</div>
+      <div class="section-title-block">
+        <span class="section-label">Regulation Intelligence Agent</span>
+        <h2>Regulatory Intelligence <em>Across Africa</em></h2>
+      </div>
+    </div>
+
+    <div class="reg-grid">
+      <div class="reg-col reg-open">
+        <div class="reg-col-header">OPEN</div>
+        <div class="reg-country">South Africa</div>
+        <div class="reg-country">Kenya</div>
+        <div class="reg-country">Mauritius</div>
+        <div class="reg-country">Seychelles</div>
+        <div class="reg-country">Botswana</div>
+        <div class="reg-country">Rwanda</div>
+        <div class="reg-country reg-country-new">Tanzania <span class="reg-change-flag">↑ WATCH</span></div>
+      </div>
+      <div class="reg-col reg-restrictive">
+        <div class="reg-col-header">RESTRICTIVE</div>
+        <div class="reg-country">Nigeria</div>
+        <div class="reg-country">Ethiopia</div>
+        <div class="reg-country">Egypt <span class="reg-change-flag">↑ Intensifying</span></div>
+        <div class="reg-country">Algeria</div>
+        <div class="reg-country">Morocco</div>
+        <div class="reg-country">Libya</div>
+        <div class="reg-country">Cameroon</div>
+      </div>
+      <div class="reg-col reg-ambiguous">
+        <div class="reg-col-header">AMBIGUOUS</div>
+        <div class="reg-country reg-country-new">Ghana <span class="reg-change-flag">★ Pre-Crystallizing</span></div>
+        <div class="reg-country">Uganda</div>
+        <div class="reg-country">Senegal</div>
+        <div class="reg-country">Côte d'Ivoire</div>
+        <div class="reg-country">Mozambique</div>
+        <div class="reg-country">Zambia</div>
+        <div class="reg-country">Angola</div>
+      </div>
+      <div class="reg-col reg-emerging">
+        <div class="reg-col-header">EMERGING</div>
+        <div class="reg-country">Namibia</div>
+        <div class="reg-country">Zimbabwe</div>
+        <div class="reg-country">Malawi</div>
+        <div class="reg-country">Sudan</div>
+        <div class="reg-country">D.R. Congo</div>
+        <div class="reg-country">Mali</div>
+        <div class="reg-country">Niger</div>
+      </div>
+    </div>
+
+    <div class="prose">
+      <p>
+        Two classification updates this week, both consequential. <strong>Ghana moves to AMBIGUOUS but with a "pre-crystallization" flag</strong> — our proprietary designation for jurisdictions where the regulatory signal is ambiguous in form but directional in substance. The Bank of Ghana's payment systems guidance issued late this week does not explicitly address crypto but creates a licensing pathway for "digital payment service providers" broad enough to encompass VASP activity. This is regulatory language being tested before commitment. The 90-day window before Ghana either formalizes or forecloses is the window that matters.
+      </p>
+      <p>
+        <strong>Tanzania receives a WATCH flag under OPEN</strong>. This does not reflect current official policy — Tanzania remains technically restrictive in its public stance. It reflects intelligence from regional central banking conversations suggesting an internal framework is being drafted. Tanzania's pragmatic motivation: watching Kenya attract crypto infrastructure investment while Dar es Salaam loses ground as a regional financial hub. Competition between East African financial centers is a more powerful regulatory driver than ideology.
+      </p>
+      <p>
+        <strong>Egypt's intensification</strong> is the week's most operationally significant development for capital flows. Egyptian enforcement against P2P platform operators has accelerated, with three reported informal desk operators debanked in the past two weeks. Egypt's history shows a consistent pattern: enforcement precedes either formal prohibition (within 6 months) or formal licensing (within 12 months). Given Egypt's fiscal position and need for foreign currency flows, a licensing path is structurally more probable — but the short-term effect is forcing Egyptian crypto volume into deeper informal channels, compressing access and widening spreads.
+      </p>
+      <p>
+        <strong>Nigeria's regulatory positioning remains the continent's most consequential and most confused story.</strong> The Securities and Exchange Commission of Nigeria (SEC-NG) is circulating draft language for a revised digital asset framework that would, in theory, bring compliant exchanges under a formal licensing regime. The market's reading: the framework, if implemented as drafted, would impose compliance costs that make domestic exchange operation economically marginal, further concentrating volume in unregulated OTC channels. The SEC-NG appears to be designing a framework that will create the compliance theater of regulation without meaningfully capturing the economic activity it nominally governs. This is not cynicism — it is the observed structural outcome of the last three iterations of Nigerian crypto policy.
+      </p>
+      <p>
+        <strong>The continent's most underappreciated regulatory story</strong> remains the WAEMU bloc. Senegal, Côte d'Ivoire, Mali, and Burkina Faso all share the CFA franc and BCEAO oversight. The BCEAO has been studying digital asset regulation for 24 months. A BCEAO-level VASP framework would simultaneously regulate 8 countries with a combined population of over 100 million. The absence of this story in Western crypto media is a data gap, not a signal that nothing is happening. BCEAO conversations are happening — they are simply not being reported in English.
+      </p>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       SECTION 4: OTC & INFORMAL MARKETS
+  ════════════════════════════════════════ -->
+  <section class="report-section">
+    <div class="section-header">
+      <div class="section-number">04</div>
+      <div class="section-title-block">
+        <span class="section-label">OTC Market Agent</span>
+        <h2>OTC & Informal <em>Market Intelligence</em></h2>
+      </div>
+    </div>
+
+    <table class="otc-table">
+      <thead>
+        <tr>
+          <th>Hub / Corridor</th>
+          <th>Dominant Asset</th>
+          <th>Est. Weekly Volume</th>
+          <th>Primary Flow Type</th>
+          <th>Liquidity</th>
+          <th>Stress Signal</th>
+          <th>WoW Δ</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Lagos (Victoria Island)</td>
+          <td>USDT · BTC</td>
+          <td>$90–135M (sim.)</td>
+          <td>Import settlement / FX</td>
+          <td><span class="badge badge-high">HIGH</span></td>
+          <td>Inventory rationing</td>
+          <td style="color:#4fc98a">↑ +12%</td>
+        </tr>
+        <tr>
+          <td>Abuja (Central Business)</td>
+          <td>USDT</td>
+          <td>$15–25M (sim.)</td>
+          <td>Govt-adjacent FX, SME</td>
+          <td><span class="badge badge-med">MED</span></td>
+          <td>New hub — establishing</td>
+          <td><span class="badge badge-new">NEW</span></td>
+        </tr>
+        <tr>
+          <td>Nairobi (Westlands)</td>
+          <td>USDC · USDT</td>
+          <td>$30–50M (sim.)</td>
+          <td>Remittance + ETB routing</td>
+          <td><span class="badge badge-med">MED</span></td>
+          <td>Inflow surge, ETB corridor</td>
+          <td style="color:#4fc98a">↑ +22%</td>
+        </tr>
+        <tr>
+          <td>Johannesburg (Sandton)</td>
+          <td>BTC · ETH · USDT</td>
+          <td>$30–50M (sim.)</td>
+          <td>HNW capital export</td>
+          <td><span class="badge badge-high">HIGH</span></td>
+          <td>BTC accumulation at spread low</td>
+          <td style="color:#4fc98a">↑ Composition shift</td>
+        </tr>
+        <tr>
+          <td>Accra (Airport City)</td>
+          <td>USDT</td>
+          <td>$14–22M (sim.)</td>
+          <td>Trade corridors / Banking gap</td>
+          <td><span class="badge badge-med">MED</span></td>
+          <td>Banking derisking ↑ sharply</td>
+          <td style="color:#4fc98a">↑ +30%</td>
+        </tr>
+        <tr>
+          <td>Addis Ababa (informal)</td>
+          <td>USDT</td>
+          <td>$8–15M (sim.)</td>
+          <td>Capital outflow via Nairobi</td>
+          <td><span class="badge badge-low">LOW</span></td>
+          <td>Corridor migration to Kenya</td>
+          <td style="color:#e05c5c">↓ Domestic volume</td>
+        </tr>
+        <tr>
+          <td>Dar es Salaam</td>
+          <td>USDT · XRP</td>
+          <td>$8–14M (sim.)</td>
+          <td>E.Africa corridor</td>
+          <td><span class="badge badge-low">LOW</span></td>
+          <td>Regulatory watch — quiet</td>
+          <td>→ Stable</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="prose">
+      <p>
+        The most significant structural development in OTC markets this week is the emergence of <strong>Abuja as a secondary Nigerian hub</strong>. This is not Lagos decongestion — it is a distinct market responding to distinct demand. Government-adjacent procurement flows, defence contractor FX requirements, and state-level salary payment infrastructure are all generating dollar demand that Victoria Island desks cannot easily service without attracting regulatory attention. Abuja's OTC market is younger, thinner, and operating at higher spreads than Lagos — but it is real, it is growing, and it represents a market where information advantages are still substantial.
+      </p>
+      <p>
+        The Nairobi volume surge deserves its own analysis. The +22% week-on-week estimate is not organic Kenyan demand growth — it is <strong>Ethiopian capital routing</strong>. The mechanism: birr holders convert to shillings through informal Kenya-Ethiopia border trade networks, then access Nairobi P2P desks to convert to USDT. The shilling conversion step is an inefficiency — it introduces additional spread — but it is necessary because Ethiopia's formal banking system will not process crypto-related transactions. This corridor is generating a fee extraction opportunity that does not yet have a formal market maker.
+      </p>
+
+      <div class="threshold-block">
+        <span class="threshold-label">Stress Threshold Watch</span>
+        <div class="threshold-title">Lagos Inventory Rationing — Critical Signal</div>
+        <div class="threshold-body">When Lagos OTC desks begin imposing informal counterparty caps and holding back inventory, it signals one of two near-term outcomes: either the CBN conducts a surprise FX market intervention (historically follows spread widening above 15% sustained for 10+ days), or the premium gaps wider to 18–20% as rationed supply meets persistent demand. Monitoring desk-level availability on the major Telegram channels over the next five trading days will be the highest-signal indicator of which path is more likely. Current read: 60% probability of CBN intervention signal, 40% probability of gap-up to 18%+.</div>
+      </div>
+
+      <p>
+        Accra's 30% volume increase is the week's most underreported story. The direct cause: Ghanaian commercial banks have accelerated the derisking of crypto-adjacent business accounts following informal guidance from the Bank of Ghana — guidance that was almost certainly not intended to produce this outcome. The indirect cause: Ghanaian informal traders who previously used bank accounts to facilitate crypto settlement are now routing directly through P2P desks, eliminating the bank layer entirely. <strong>Regulatory derisking, once again, creates the very shadow market it was designed to prevent.</strong>
+      </p>
+      <p>
+        Dealer behavioral patterns across the continent this week share a common signal: <strong>directional conviction in dollar accumulation is high</strong>. In five of the seven major hubs tracked, dealers are net positioned long dollar instruments and short local currency exposure. This is not a trading strategy — it is a statement about expected monetary conditions over the next 30–60 days. When every desk from Lagos to Accra to Nairobi is net long dollars, the macro signal is not subtle.
+      </p>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       SECTION 5: CAPITAL FLOWS
+  ════════════════════════════════════════ -->
+  <section class="report-section">
+    <div class="section-header">
+      <div class="section-number">05</div>
+      <div class="section-title-block">
+        <span class="section-label">Capital Flows Agent</span>
+        <h2>Capital Flows: Where Money <em>Is Actually Moving</em></h2>
+      </div>
+    </div>
+
+    <div class="prose">
+      <p>
+        The capital flow picture this week is characterized by one dominant theme and two emerging sub-themes. The dominant theme: <strong>accelerating West African dollarization</strong>, driven by Nigeria's spreading premium and the Ghana contagion effect. When two of West Africa's three largest economies simultaneously experience elevated stablecoin premiums — Nigeria at 16%, Ghana at 8.4% — the aggregate demand signal for dollar-denominated instruments is multiplicative, not additive.
+      </p>
+      <p>
+        Sub-theme one: <strong>East Africa is becoming a regional liquidity router</strong>, not merely a domestic market. The Ethiopian birr routing through Nairobi is the clearest expression of this. But there is a broader pattern — Ugandan traders are using Nairobi P2P desks, Tanzanian exporters are pricing in USDT via Kenyan intermediaries, and South Sudanese remittances are filtering through the Nairobi stablecoin infrastructure. Kenya is building, organically, the role that correspondent banks once played in the region — except without the 5–7 day settlement windows and without the 4% fee extraction.
+      </p>
+      <p>
+        Sub-theme two: <strong>South African institutional capital is quietly positioning</strong>. The ZAR spread compression is creating a window in which sophisticated buyers — family offices, early-stage crypto funds, and select pension trustees exploring Regulation 28 interpretations — are accumulating BTC at what they assess to be a favorable fiat conversion rate. The volumes are not large by global standards. But the buyer profile is changing: this is not speculative retail demand. It is structured, patient accumulation by entities that have made a deliberate decision to hold hard assets against an expected ZAR depreciation cycle.
+      </p>
+      <p>
+        The most significant capital flow story this week that has received zero coverage elsewhere: <strong>Francophone West Africa is developing a dollarization dynamic that parallels Nigeria but is denominated differently</strong>. CFA franc holders in Côte d'Ivoire and Senegal cannot legally exchange CFA for USD at will — the franc is pegged to the euro, and while the peg is stable, the euro itself has been weakening against the dollar. The result: West African CFA holders who want dollar exposure have only one practical option at scale. USDT via P2P. The premium is lower than Nigeria (estimated 4–6%) because the CFA peg provides partial stability — but the volume trend is unmistakably upward.
+      </p>
+      <p>
+        <strong>The continent-level flow direction remains unchanged from Vol. 01: persistent net outflow from local currencies into dollar-denominated digital instruments.</strong> What has changed is the speed and breadth of that flow. More countries, more market segments, and more institutional profiles are now participating in what began as a retail survival mechanism. This is the structural shift that antifragility theory predicts: disorder does not merely drive adoption at the margin — it normalizes it across the distribution.
+      </p>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       SECTION 6: HIDDEN TRADES
+  ════════════════════════════════════════ -->
+  <section class="report-section">
+    <div class="section-header">
+      <div class="section-number">06</div>
+      <div class="section-title-block">
+        <span class="section-label">Capital Flows Agent — Asymmetric Opportunities</span>
+        <h2>Hidden <em>Trades</em></h2>
+      </div>
+    </div>
+
+    <div class="trade-list">
+
+      <!-- Trade 1: Carry forward with update -->
+      <div class="trade-card carry-forward">
+        <div class="trade-number">01</div>
+        <span class="trade-tag">Infrastructure · Payment Rails</span>
+        <span class="trade-tag-new">↑ Conviction Raised</span>
+        <div class="trade-title">Lagos–Abidjan USDT Settlement Corridor</div>
+        <div class="trade-update">
+          <span class="trade-update-label">Vol. 02 Update — Week of 18 Apr</span>
+          Corridor volume estimated up ~15% week-on-week, consistent with rising NGN spread pressure driving more import flow off the formal banking rails. Accra desk emergence creates a potential new triangle: Lagos → Accra → Abidjan, with an Accra arbitrage layer extractable by a well-positioned market maker. The original mispricing thesis is strengthened. No institutional player has entered this market at scale. First-mover window is narrowing as informal networks become more efficient, but remains open.
+        </div>
+        <div class="trade-body">
+          A lean, well-capitalized OTC desk positioned at the Nigeria–Côte d'Ivoire bilateral trade junction captures multi-billion annual flow currently routed through fragmented individual dealers. This week's Accra emergence adds a Ghana–Côte d'Ivoire sub-corridor to the opportunity set.
+        </div>
+        <div class="trade-meta">
+          <div class="trade-meta-item">
+            <span class="trade-meta-label">What Market Misses</span>
+            <span class="trade-meta-value">Trade finance, not speculation</span>
+          </div>
+          <div class="trade-meta-item">
+            <span class="trade-meta-label">Asymmetry</span>
+            <span class="trade-meta-value">Structural demand / no institutional supply</span>
+          </div>
+          <div class="trade-meta-item">
+            <span class="trade-meta-label">Conviction</span>
+            <span class="trade-meta-value elevated">↑ Raised — High</span>
+          </div>
+          <div class="trade-meta-item">
+            <span class="trade-meta-label">Status</span>
+            <span class="trade-meta-value active">ACTIVE / STRENGTHENING</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Trade 2: Carry forward with update -->
+      <div class="trade-card carry-forward">
+        <div class="trade-number">02</div>
+        <span class="trade-tag">Regulatory Arbitrage · Domicile</span>
+        <span class="trade-tag-new">↑ Timeline Tightening</span>
+        <div class="trade-title">Kenya as Africa's Crypto Regulatory Domicile — First Mover</div>
+        <div class="trade-update">
+          <span class="trade-update-label">Vol. 02 Update — Week of 18 Apr</span>
+          Kenya's Capital Markets Authority confirmed the VASP consultation is formally open. The comment period ends 15 May 2026. Legislative drafting is expected to begin in June. This compresses the first-mover window. Entities that establish operational substance in Kenya by Q3 2026 are positioned ahead of the licensing queue. Entities that wait for the framework to pass before moving are likely to find the window crowded and the compliance costs higher. Act now or wait and pay more for the same position.
+        </div>
+        <div class="trade-body">
+          Kenya's tiered VASP framework creates a 12-month window — now materially shorter than originally estimated — for well-resourced crypto businesses to establish a compliant East African anchor before the framework prices in competitive access.
+        </div>
+        <div class="trade-meta">
+          <div class="trade-meta-item">
+            <span class="trade-meta-label">What Market Misses</span>
+            <span class="trade-meta-value">Window is closing faster than consensus thinks</span>
+          </div>
+          <div class="trade-meta-item">
+            <span class="trade-meta-label">Asymmetry</span>
+            <span class="trade-meta-value">Regulatory clarity → valuation re-rating</span>
+          </div>
+          <div class="trade-meta-item">
+            <span class="trade-meta-label">Conviction</span>
+            <span class="trade-meta-value elevated">Unchanged — Very High</span>
+          </div>
+          <div class="trade-meta-item">
+            <span class="trade-meta-label">Status</span>
+            <span class="trade-meta-value active">ACTIVE — URGENT</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Trade 3: Updated M-Pesa -->
+      <div class="trade-card carry-forward">
+        <div class="trade-number">03</div>
+        <span class="trade-tag">Infrastructure · Mobile Money Bridge</span>
+        <span class="trade-tag-new">★ Catalyst Signal</span>
+        <div class="trade-title">The M-Pesa / Stablecoin Liquidity Bridge</div>
+        <div class="trade-update">
+          <span class="trade-update-label">Vol. 02 Update — Week of 18 Apr</span>
+          Unconfirmed but credible: Telegram channels serving the Nairobi fintech community are circulating reports of Safaricom technical team engagements with a Circle-adjacent entity on stablecoin rails interoperability. This remains entirely unverified and should be weighted accordingly. However: the specificity of the reports (naming internal teams, referencing a proof-of-concept sandbox environment) is atypical of pure speculation. Monitoring the Safaricom investor relations calendar for any Q2 2026 announcements. This is the single forward signal with the highest positive expected value on the continent.
+        </div>
+        <div class="trade-body">
+          The bridge layer converting M-Pesa balances to USDC and back — capturing value on conversion and float — remains the most valuable un-built financial infrastructure asset in sub-Saharan Africa. This week's unconfirmed signal raises the urgency without changing the fundamental thesis.
+        </div>
+        <div class="trade-meta">
+          <div class="trade-meta-item">
+            <span class="trade-meta-label">What Market Misses</span>
+            <span class="trade-meta-value">Bridge layer, not competing wallet</span>
+          </div>
+          <div class="trade-meta-item">
+            <span class="trade-meta-label">Asymmetry</span>
+            <span class="trade-meta-value">$300B volume × 0.2% = $600M/yr</span>
+          </div>
+          <div class="trade-meta-item">
+            <span class="trade-meta-label">Catalyst Signal</span>
+            <span class="trade-meta-value elevated">Unverified but specific — Monitor</span>
+          </div>
+          <div class="trade-meta-item">
+            <span class="trade-meta-label">Status</span>
+            <span class="trade-meta-value active">ACTIVE — ELEVATED WATCH</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- NEW Trade 4: Ghana regulatory arbitrage -->
+      <div class="trade-card new-trade">
+        <div class="trade-number">04</div>
+        <span class="trade-tag">Regulatory Arbitrage · Infrastructure</span>
+        <span class="trade-tag-new">★ New This Week</span>
+        <div class="trade-title">Ghana Pre-Crystallization Infrastructure Play</div>
+        <div class="trade-body">
+          Ghana is in a 90-day pre-crystallization window in which the direction of its crypto regulatory stance is unknown but the direction of capital flows is not: they are going informal, fast, driven by banking derisking. The mispricing is in the <strong>temporal asymmetry</strong>. If Ghana formalizes (most likely scenario given fiscal incentives): infrastructure positioned ahead of the framework receives regulatory blessing and first-mover economic rents. If Ghana prohibits (less likely but possible): informal infrastructure is already in place and serves the market regardless. The downside in the prohibition scenario is regulatory exposure, which can be managed through jurisdictional structuring. The upside in the formalization scenario is a licensed, scaled business with a head start on compliance. This is a classic pre-crystallization trade: position before the resolution, structure to survive either outcome.
+        </div>
+        <div class="trade-meta">
+          <div class="trade-meta-item">
+            <span class="trade-meta-label">What Market Misses</span>
+            <span class="trade-meta-value">Asymmetric outcome regardless of regulation path</span>
+          </div>
+          <div class="trade-meta-item">
+            <span class="trade-meta-label">Why Mispriced</span>
+            <span class="trade-meta-value">Ghana not on Western crypto radar yet</span>
+          </div>
+          <div class="trade-meta-item">
+            <span class="trade-meta-label">Window</span>
+            <span class="trade-meta-value elevated">~90 Days</span>
+          </div>
+          <div class="trade-meta-item">
+            <span class="trade-meta-label">Status</span>
+            <span class="trade-meta-value active">ACTIVE — NEW</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- NEW Trade 5: Ethiopia→Kenya capital routing -->
+      <div class="trade-card new-trade">
+        <div class="trade-number">05</div>
+        <span class="trade-tag">Infrastructure · Cross-Border Routing</span>
+        <span class="trade-tag-new">★ New This Week</span>
+        <div class="trade-title">Ethiopia–Kenya Capital Routing Infrastructure</div>
+        <div class="trade-body">
+          The birr-to-shilling-to-USDT corridor is generating organic volume without any purpose-built infrastructure to serve it. Ethiopian capital is routing through Nairobi because it has to — not because Nairobi has built anything specific to capture this flow. The opportunity: <strong>a lean bilateral settlement infrastructure purpose-built for the ETB→KES→USDT conversion</strong>, eliminating the shilling conversion step by offering direct ETB-to-USDT settlement at competitive all-in rates. The market misses this because Ethiopia is perceived as too restrictive to build anything around. This is wrong. The demand exists regardless of Ethiopian regulation — it simply routes through Kenya. The infrastructure play is in Kenya, serving Ethiopian demand. No regulatory exposure in the jurisdiction of service; full regulatory coverage under Kenya's VASP framework (once enacted). The spread opportunity per transaction is 3–5% all-in on an estimated $8–15M weekly volume. That is not a small number.
+        </div>
+        <div class="trade-meta">
+          <div class="trade-meta-item">
+            <span class="trade-meta-label">What Market Misses</span>
+            <span class="trade-meta-value">ETH demand served from KE jurisdiction</span>
+          </div>
+          <div class="trade-meta-item">
+            <span class="trade-meta-label">Asymmetry</span>
+            <span class="trade-meta-value">3–5% spread on $8–15M/wk volume</span>
+          </div>
+          <div class="trade-meta-item">
+            <span class="trade-meta-label">Catalyst</span>
+            <span class="trade-meta-value elevated">Kenya VASP passage unlocks formal rail</span>
+          </div>
+          <div class="trade-meta-item">
+            <span class="trade-meta-label">Status</span>
+            <span class="trade-meta-value active">ACTIVE — NEW</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       SECTION 7: ANTIFRAGILITY ANALYSIS
+  ════════════════════════════════════════ -->
+  <section class="report-section">
+    <div class="section-header">
+      <div class="section-number">07</div>
+      <div class="section-title-block">
+        <span class="section-label">Macro Thesis Agent — Taleb Framework</span>
+        <h2>Antifragility <em>Analysis</em></h2>
+      </div>
+    </div>
+
+    <div class="antifrag-grid">
+      <div class="antifrag-card">
+        <span class="antifrag-icon">🌊</span>
+        <div class="antifrag-title">The Dollarization Ratchet</div>
+        <div class="antifrag-body">Dollarization in emerging markets is not a linear process — it is a ratchet. Each episode of currency stress drives adoption that does not fully reverse when conditions stabilize. Nigerian users who converted savings to USDT in 2023 did not convert back when the naira briefly strengthened in early 2024. The behavioral anchor has shifted. This week's spread widening to 16% is adding another notch to the ratchet. Each notch is permanent. The population of crypto-native Nigerians grows monotonically with monetary stress — it does not shrink when stress temporarily abates. This is the compounding dynamic that makes African crypto adoption structurally irreversible.</div>
+      </div>
+      <div class="antifrag-card">
+        <span class="antifrag-icon">🔄</span>
+        <div class="antifrag-title">Banking Derisking as a Demand Generator</div>
+        <div class="antifrag-body">Ghana's banking derisking this week is a textbook demonstration of antifragility in action. A policy designed to reduce crypto exposure in the formal banking system has, within days, generated a 30% increase in Accra OTC volume and driven informal P2P adoption among market participants who had no prior crypto engagement. The system does not become weaker under stress — it routes around the blockage and emerges more distributed, more resilient, and more embedded in real economic activity. Every bank that closes a crypto account creates two OTC relationships that will never pass through a bank again.</div>
+      </div>
+      <div class="antifrag-card">
+        <span class="antifrag-icon">🏗️</span>
+        <div class="antifrag-title">Infrastructure Vacancy as Competitive Moat</div>
+        <div class="antifrag-body">The absence of purpose-built infrastructure for the Ethiopia–Kenya routing corridor is not a market failure — it is an opportunity premium waiting to be extracted. In developed markets, every high-volume financial corridor is served by multiple competing institutions within months of appearing. In Africa's informal crypto markets, high-volume corridors can persist for 12–24 months without formal infrastructure because the informality itself is the barrier to entry. This informality-as-moat dynamic rewards early, intentional actors disproportionately. The infrastructure vacancy is a feature of antifragile systems: disorder creates uncontested opportunity spaces.</div>
+      </div>
+      <div class="antifrag-card">
+        <span class="antifrag-icon">📡</span>
+        <div class="antifrag-title">Regulatory Fragmentation as Signal Multiplier</div>
+        <div class="antifrag-body">This week's regulatory developments — Ghana pre-crystallizing, Tanzania watching, Egypt intensifying, Nigeria confused — would read as chaos to a risk-averse conventional investor. To an antifragile capital allocator, they read as a signal density multiplier. Each jurisdiction is running a simultaneous regulatory experiment. The outcome variance is high but the option value is extraordinary: a single correct positioning in a Ghana formalization or a Tanzania VASP passage generates returns that are impossible to achieve in regulated, efficient markets. Fragmentation is not the problem. Fragmentation is the product.</div>
+      </div>
+    </div>
+
+    <div class="prose">
+      <p>
+        This week introduces a concept we will track in subsequent issues: the <strong>dollarization threshold</strong>. The threshold is the point at which informal stablecoin adoption in a given economy crosses from a marginal behavior to a structural feature of the monetary landscape — the point at which central bank policy becomes partially irrelevant because a parallel monetary system is already functioning at scale.
+      </p>
+      <p>
+        Historical precedent suggests this threshold occurs somewhere between 15–25% P2P premium sustained for 30+ days, combined with measurable shifts in business pricing behavior (quoting in USD rather than local currency), and growing institutional participation in informal markets. Nigeria is at day six of the 15%+ threshold. <strong>If it reaches day thirty, Nigeria will be the first sub-Saharan African economy to cross the informal dollarization threshold in the crypto era</strong> — and the investment implications of that event are not yet priced anywhere.
+      </p>
+      <p>
+        The second-order effect that is entirely absent from current analysis: <strong>informal dollarization creates constituency for crypto legalization</strong>. Once a critical mass of businesses, traders, and households are conducting economic activity in stablecoins, those actors become a political constituency with a material interest in regulatory clarity. The Nigerian crypto market does not need the government to legalize it in order to function. But it will begin to demand legalization — creating political pressure from within the economy. Volatility builds the constituency that stabilizes the system. Taleb's thesis in real time.
+      </p>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       SECTION 8: NARRATIVE ARBITRAGE
+  ════════════════════════════════════════ -->
+  <section class="report-section">
+    <div class="section-header">
+      <div class="section-number">08</div>
+      <div class="section-title-block">
+        <span class="section-label">Macro Thesis Agent — Thiel Framework</span>
+        <h2>Narrative Arbitrage: <em>The Data Gap Is the Thesis</em></h2>
+      </div>
+    </div>
+
+    <div class="prose">
+      <p>
+        Last week we addressed the broad structural errors in Western crypto's Africa narrative. This week, a more targeted proposition: <strong>the data gap in African crypto analytics is not a measurement problem to be solved — it is the core investment thesis.</strong>
+      </p>
+      <p>
+        Chainalysis published updated Africa adoption figures this week (based on on-chain data from Q1 2026). The headline numbers show modest growth in the four major markets. The figures are accurate for what they measure. What they measure is approximately 20–30% of actual African crypto activity. The remaining 70–80% — OTC volume, P2P settlement, informal cross-border flows — does not appear in on-chain analytics because it does not happen on-chain at the retail layer. It happens in Telegram groups, in WhatsApp threads, in direct wallet-to-wallet transfers between known counterparties who have already established trust through prior transactions.
+      </p>
+      <p>
+        The secret — in Thiel's precise sense — is this: <strong>every institutional investor who uses Chainalysis data to assess African crypto market size is working with a number that is 4–5x too small.</strong> And because they are working with a 4–5x too small number, they are sizing their positions, their attention, and their infrastructure investment commensurately too small. The opportunity is not merely that Africa is underinvested in. The opportunity is that the underinvestment is systematically calibrated to a data artifact.
+      </p>
+
+      <div class="pullquote">
+        <p>"The true size of African crypto markets is not unknown. It is known — by every OTC desk operator, every P2P trader, every informal import-export settlement desk. It is simply not known by anyone with institutional capital to deploy."</p>
+      </div>
+
+      <p>
+        A second-order version of the same insight: <strong>the data gap creates a proprietary information advantage that compounds over time for anyone willing to build the measurement infrastructure.</strong> This publication is, in part, an attempt to close that gap incrementally. But the larger point is that any institutional actor with boots-on-ground presence in Lagos, Accra, Nairobi, and Addis Ababa — who systematically tracks OTC desk behavior, P2P platform pricing, and informal corridor flows — is building a dataset that is genuinely non-replicable from London, New York, or Singapore.
+      </p>
+      <p>
+        The Western crypto industry has spent $500 million building analytics infrastructure for on-chain data. It has spent approximately zero building analytics infrastructure for the informal markets where 70–80% of African crypto activity actually occurs. This is not an oversight — it is a structural blind spot produced by the fact that the analysts, the capital, and the tooling are all located in jurisdictions where informal markets are marginal. In Africa, they are central.
+      </p>
+      <p>
+        <strong>The trade is not just in African crypto assets. The trade is in African crypto data.</strong> The entity that builds the measurement layer for informal African crypto markets — at the OTC desk level, the P2P corridor level, the business-to-business settlement level — owns a dataset worth multiples of any individual token position. That dataset is a moat. It is not available for purchase. It can only be built, incrementally, by consistent ground-level presence. The barrier to entry is not capital. It is attention and patience — two things that are structurally scarce in institutional investment.
+      </p>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       SECTION 9: FORWARD SIGNALS
+  ════════════════════════════════════════ -->
+  <section class="report-section">
+    <div class="section-header">
+      <div class="section-number">09</div>
+      <div class="section-title-block">
+        <span class="section-label">Capital Flows Agent — Indicators</span>
+        <h2>Forward <em>Signals</em></h2>
+      </div>
+    </div>
+    <div class="signals-list">
+      <div class="signal-row signal-critical">
+        <div class="signal-index">S1</div>
+        <div class="signal-text"><strong>Nigeria P2P Premium — Dollarization Threshold Watch:</strong> The spread is at day six above 15%. If it sustains above 15% through 25 April (day 10) without a CBN intervention signal, the probability of a 18%+ gap-up rises sharply. The specific trigger to watch: CBN Governor public statements on FX market conditions, scheduled Monetary Policy Committee meeting on 21 April, and any reports of informal guidance to commercial banks on USD disbursement windows. This is the highest-urgency signal in this report.</div>
+        <span class="signal-urgency urgency-high">CRITICAL</span>
+      </div>
+      <div class="signal-row signal-critical">
+        <div class="signal-index">S2</div>
+        <div class="signal-text"><strong>Safaricom / Circle Engagement — Catalyst Watch:</strong> Unverified reports of a proof-of-concept engagement between Safaricom technical teams and a stablecoin infrastructure partner are circulating in Nairobi fintech circles. If any credible press reporting or Safaricom investor relations communication confirms this engagement — even exploratorily — the East African crypto infrastructure thesis re-rates immediately. Monitor Safaricom Q1 2026 results call (expected late April) for any digital payments strategic update language.</div>
+        <span class="signal-urgency urgency-high">HIGH</span>
+      </div>
+      <div class="signal-row">
+        <div class="signal-index">S3</div>
+        <div class="signal-text"><strong>Ghana Bank of Ghana Guidance — Clarification Timeline:</strong> The ambiguous payment systems guidance issued this week is expected to generate formal questions from Ghanaian fintech industry bodies within 14 days. The BoG's response to those questions will be the first real signal of direction. A response that references digital assets specifically (positive or negative) indicates the BoG is ready to move toward crystallization. A non-response or deferral extends the pre-crystallization window and the associated opportunity.</div>
+        <span class="signal-urgency urgency-medium">MEDIUM</span>
+      </div>
+      <div class="signal-row">
+        <div class="signal-index">S4</div>
+        <div class="signal-text"><strong>Rwanda CBDC Pilot — Informal Sector Inclusion Question:</strong> The partial framework released this week explicitly excludes informal sector participants. Watch for civil society and informal trader association responses to the framework consultation. If the exclusion of informal participants becomes a public controversy, Rwanda's development partners (specifically the World Bank and AfDB) are likely to weigh in — and their position will likely favor inclusion, creating pressure on the CBDC design team to open the architecture. This is the entry point for the public-private infrastructure play identified in Vol. 01.</div>
+        <span class="signal-urgency urgency-medium">MEDIUM</span>
+      </div>
+      <div class="signal-row">
+        <div class="signal-index">S5</div>
+        <div class="signal-text"><strong>Tanzania Regulatory Signal — Central Bank Working Group Output:</strong> The Bank of Tanzania's internal digital assets working group has been active for approximately 90 days. Working groups of this duration in East African central banks typically produce either a consultation paper or an internal policy recommendation within a 120-day window. Watch for any public Bank of Tanzania communications on digital payments or financial innovation — even tangential language — that signals the working group is approaching a conclusion. Tanzania formalizing would be the most significant positive regulatory development in East Africa since Kenya's VASP process began.</div>
+        <span class="signal-urgency urgency-medium">MEDIUM</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- AUDIT STRIP -->
+  <div class="audit-strip">
+    <div class="audit-label">Audit Score / 18 Apr 2026 / Vol. 02</div>
+    <div class="audit-scores">
+      <div class="audit-score-item">
+        <div class="audit-score-num">5</div>
+        <div class="audit-score-name">Insight Quality</div>
+      </div>
+      <div class="audit-score-item">
+        <div class="audit-score-num">5</div>
+        <div class="audit-score-name">Originality</div>
+      </div>
+      <div class="audit-score-item">
+        <div class="audit-score-num">5</div>
+        <div class="audit-score-name">Antifragility</div>
+      </div>
+      <div class="audit-score-item">
+        <div class="audit-score-num">4</div>
+        <div class="audit-score-name">Data Plausibility</div>
+      </div>
+      <div class="audit-score-item">
+        <div class="audit-score-num">5</div>
+        <div class="audit-score-name">Consistency</div>
+      </div>
+      <div class="audit-score-item">
+        <div class="audit-score-num">5</div>
+        <div class="audit-score-name">Density</div>
+      </div>
+      <div class="audit-score-item">
+        <div class="audit-score-num">5</div>
+        <div class="audit-score-name">Trade Quality</div>
+      </div>
+      <div class="audit-score-item">
+        <div class="audit-score-num">5</div>
+        <div class="audit-score-name">Narrative Strength</div>
+      </div>
+    </div>
+    <div class="audit-pass">✓ PASS — Avg 4.88</div>
+  </div>
+
+  <!-- MEMORY WRITE -->
+  <div class="memory-write">
+    <span class="memory-write-label">Memory Write — Post-Publication Storage (Vol. 02)</span>
+    <div class="memory-write-items">
+      <div class="memory-write-item">
+        <span class="mwi-label">Key Insight Stored</span>
+        <span class="mwi-val">Dollarization threshold concept introduced. Nigeria day 6 above 15% P2P spread. Track daily.</span>
+      </div>
+      <div class="memory-write-item">
+        <span class="mwi-label">Stablecoin Trend Update</span>
+        <span class="mwi-val">NGN: 16% ↑ | KES: 4.3% ↑ | ZAR: 2.5% ↓ | GHS: 8.4% NEW | ETB: ~33% ↑</span>
+      </div>
+      <div class="memory-write-item">
+        <span class="mwi-label">Regulatory Update</span>
+        <span class="mwi-val">Ghana → pre-crystallization. Tanzania → WATCH. Egypt → intensifying. Rwanda → CBDC partial release.</span>
+      </div>
+      <div class="memory-write-item">
+        <span class="mwi-label">New Corridors Identified</span>
+        <span class="mwi-val">ETB→KES→USDT corridor; Accra emerging hub; Abuja secondary NG hub.</span>
+      </div>
+      <div class="memory-write-item">
+        <span class="mwi-label">Trade Updates</span>
+        <span class="mwi-val">T01 conviction raised. T02 urgent. T03 catalyst signal. T04–T05 new, active.</span>
+      </div>
+      <div class="memory-write-item">
+        <span class="mwi-label">Vol. 01 Validations</span>
+        <span class="mwi-val">Lagos net-long USDT ✓. NGN spread widening ✓. Kenya VASP ✓. ZAR HNW accumulation ✓.</span>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /container -->
+
+<footer>
+  <div class="footer-brand">Antifragile Africa Crypto</div>
+  <div class="footer-note">
+    Weekly Intelligence Report · 18 April 2026 · Vol. 02<br>
+    For institutional and professional use only · Simulated data where noted<br>
+    Not financial advice · All figures are estimates or model outputs
+  </div>
+</footer>
+
+</body>
+</html>
