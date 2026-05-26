@@ -1,4 +1,89 @@
 
+{# ── Derive latest issue metadata ── #}
+{% set lmeta = latest.meta if latest else {} %}
+{% set lc    = latest.components if latest else {} %}
+{% set lspreads = lc.get('spreads', []) %}
+{% set lbrief   = lc.get('executive_brief', {}) %}
+
+<nav>
+  <a href="index.html" class="nb">Antifragile <span>Africa</span></a>
+  <ul class="nl">
+    <li><a href="index.html" class="active">Reports</a></li>
+    <li><a href="about.html">About</a></li>
+    <li class="nd">
+      <span class="nd-t">Legal</span>
+      <div class="nd-m">
+        <a href="terms.html">Terms of Service</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="disclaimer.html">Disclaimer</a>
+      </div>
+    </li>
+    {% if lmeta.filename %}
+    <li><a href="{{ lmeta.filename }}" class="nav-cta">Latest Issue →</a></li>
+    {% endif %}
+  </ul>
+</nav>
+
+{# ── TICKER — built from latest issue spreads ── #}
+<div class="ticker">
+  <div class="tl">Live Signals</div>
+  <div class="tt">
+    {% for s in lspreads %}
+    <span class="ti"><span class="ti-l">{{ s.country | upper }}</span><span class="ti-v">{{ s.val }}</span><span class="{{ s.trend_cls }}">{{ s.trend }}</span></span>
+    <span class="t-sep">·</span>
+    {% endfor %}
+    {% if lmeta.audit %}
+    <span class="ti"><span class="ti-l">VOL. {{ lmeta.vol }} AUDIT</span><span class="ti-v">{{ lmeta.audit }} / 5.0</span><span class="t-up">{{ lmeta.agents }} AGENTS · {{ lmeta.layers }} LAYERS</span></span>
+    <span class="t-sep">·</span>
+    {% endif %}
+    {# duplicate for seamless loop #}
+    {% for s in lspreads %}
+    <span class="ti"><span class="ti-l">{{ s.country | upper }}</span><span class="ti-v">{{ s.val }}</span><span class="{{ s.trend_cls }}">{{ s.trend }}</span></span>
+    <span class="t-sep">·</span>
+    {% endfor %}
+    {% if lmeta.audit %}
+    <span class="ti"><span class="ti-l">VOL. {{ lmeta.vol }} AUDIT</span><span class="ti-v">{{ lmeta.audit }} / 5.0</span><span class="t-up">{{ lmeta.agents }} AGENTS · {{ lmeta.layers }} LAYERS</span></span>
+    <span class="t-sep">·</span>
+    {% endif %}
+  </div>
+</div>
+
+{# ── HERO ── #}
+<section class="hero">
+  <div class="hl">
+    <div class="hk fu fu1">Weekly Intelligence · Est. March 2026</div>
+    <h1 class="fu fu2">Where Disorder<br>Becomes <em>Advantage</em></h1>
+    <p class="htag fu fu3">Institutional-grade intelligence on African crypto markets. Capital flows, regulatory arbitrage, OTC signals, and hidden trades — for allocators who understand that Africa's monetary dysfunction is crypto's greatest growth engine.</p>
+    <div class="hcta fu fu4">
+      {% if lmeta.filename %}
+      <a href="{{ lmeta.filename }}" class="btn-p">Read Latest Issue →</a>
+      {% endif %}
+      <a href="about.html" class="btn-s">Our Thesis</a>
+    </div>
+  </div>
+  <div class="hr">
+    <div class="hs fu fu2">
+      <div class="hsr">
+        <div class="sn">54<em>+</em></div>
+        <div class="sd">African states tracked weekly across all regulatory classifications</div>
+      </div>
+      <div class="hsr">
+        <div class="sn">{{ lmeta.agents or '28' }}<em>AI</em></div>
+        <div class="sd">Specialist agents and {{ lmeta.layers or '7' }} analytical layers per issue</div>
+      </div>
+      <div class="hsr">
+        <div class="sn">$1<em>T+</em></div>
+        <div class="sd">Estimated annual informal crypto-adjacent capital flows on the continent</div>
+      </div>
+    </div>
+    <div class="hth fu fu3">
+      <span class="thl">Core Thesis</span>
+      <div class="tht">"Africa already has the world's most advanced crypto use case in production, at scale. It just doesn't look like what the Western industry built."</div>
+    </div>
+  </div>
+</section>
+
+<div class="container">
 {# ── FEATURED LATEST ISSUE ── #}
 {% if latest %}
 <section class="fi">
