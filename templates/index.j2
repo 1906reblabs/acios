@@ -184,6 +184,7 @@
 </style>
 </head>
 <body>
+
 {# ── Derive latest issue metadata ── #}
 {% set lmeta = latest.meta if latest else {} %}
 {% set lc    = latest.components if latest else {} %}
@@ -269,6 +270,7 @@
 </section>
 
 <div class="container">
+
 {# ── FEATURED LATEST ISSUE ── #}
 {% if latest %}
 <section class="fi">
@@ -368,6 +370,7 @@
     {% endfor %}
   </div>
 </section>
+
 {# ── THESIS PILLARS ── #}
 <section class="ps">
   <div class="s-ey">Core Framework</div>
@@ -474,4 +477,4 @@
 </footer>
 
 </body>
-</html
+</html>
