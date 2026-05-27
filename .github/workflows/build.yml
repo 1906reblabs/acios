@@ -45,4 +45,3 @@ jobs:
           folder: output          # the folder build.py writes to
           branch: gh-pages        # GitHub Pages source branch
           clean: true             # remove stale files from gh-pages
-          
