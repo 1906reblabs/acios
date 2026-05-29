@@ -10,38 +10,51 @@ on:
       - "afi_parser.py"
       - "build.py"
       - "requirements.txt"
-  workflow_dispatch:   # allows manual trigger from GitHub Actions tab
+
+  workflow_dispatch:
 
 permissions:
-  contents: write    # needed to push to gh-pages branch
+  contents: write
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
-      # 1. Check out the repository
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # 2. Set up Python
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
-      # 3. Install dependencies
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      # 4. Build all reports + index
+      - name: Create output directory
+        run: mkdir -p output
+
       - name: Build HTML reports
         run: python build.py all reports/
 
-      # 5. Deploy output/ to gh-pages branch
+      - name: Verify generated HTML
+        run: |
+          echo "Generated files:"
+          find output -maxdepth 1 -type f -name '*.html' -print | sort
+
+          test -n "$(find output -maxdepth 1 -type f -name '*.html' -print -quit)"
+
+      - name: Upload HTML artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: acios-html
+          path: output
+          if-no-files-found: error
+
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: output          # the folder build.py writes to
-          branch: gh-pages        # GitHub Pages source branch
-          clean: true             # remove stale files from gh-pages
+          folder: output
+          branch: gh-pages
+          clean: true
