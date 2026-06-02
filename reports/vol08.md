@@ -1,5 +1,5 @@
 ---
-vol: "09"
+vol: "08"
 vol_roman: "IX"
 date: "26 May 2026"
 filename: "antifragile_africa_weekly_26may2026.html"
@@ -10,7 +10,7 @@ audit: "4.91"
 agents: "28"
 layers: "7"
 new_signal: "Attijariwafa Bank Morocco Crypto Signal"
-next_vol: "10"
+next_vol: "09"
 badges:
   - text: "Latest"
     cls: "badge-vol"
