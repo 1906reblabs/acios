@@ -11,11 +11,16 @@ layers: "7"
 new_signal: "Morocco AMMC Draft Licensing Conditions — Correspondent Bank of Record Mechanism"
 next_vol: "12"
 badges:
-  - "Latest"
-  - "✓ P-10-01 Correct"
-  - "★ AMMC Draft Conditions Live"
-  - "★ M-Pesa API Schema Signal"
-  - "⚠ T-5 Safaricom AGM"
+  - text: "Latest"
+    cls: "badge-vol"
+  - text: "✓ P-10-01 Correct"
+    cls: "badge-confirmed"
+  - text: "★ AMMC Draft Conditions Live"
+    cls: "badge-gold"
+  - text: "★ M-Pesa API Schema Signal"
+    cls: "badge-gold"
+  - text: "⚠ T-5 Safaricom AGM"
+    cls: "badge-gold"
 ---
 
 # ANTIFRAGILE AFRICA WEEKLY — VOL. XI
