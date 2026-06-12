@@ -127,7 +127,25 @@ def validate_report_data(data: dict[str, Any], source: Path) -> None:
             f"{source.name} filename must end with .html"
         )
 
+# -----------------------------------------------------------------------------
+# Metadata normalization
+# -----------------------------------------------------------------------------
 
+def normalize_meta(meta: dict[str, Any]) -> dict[str, Any]:
+    defaults = {
+        "title": "",
+        "title_plain": "",
+        "standfirst": "",
+        "subtitle": "",
+        "summary": "",
+        "author": "",
+        "badges": [],
+    }
+
+    for key, value in defaults.items():
+        meta.setdefault(key, value)
+
+    return meta
 # -----------------------------------------------------------------------------
 # Rendering
 # -----------------------------------------------------------------------------
