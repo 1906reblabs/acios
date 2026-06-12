@@ -290,8 +290,8 @@
         <span class="fvol">Vol. {{ lmeta.vol }}</span>
       </div>
       <a href="{{ lmeta.filename or '#' }}" class="ftit">{{ lmeta.title | title_html }}</a>
-      {% if lmeta.standfirst %}
-      <p class="fdesc">{{ lmeta.standfirst }}</p>
+      {% if lmeta.get('standfirst') %}
+      <p class="fdesc">{{ lmeta.get('standfirst', '') }}</p>
       {% endif %}
       {# Key bullet points from exec brief paragraphs or standfirst #}
       {% set opps = lc.get('opportunities', []) %}
