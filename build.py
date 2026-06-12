@@ -212,8 +212,10 @@ def build_report(report_path: Path) -> dict[str, Any]:
 
     validate_report_data(data, report_path)
 
-    meta = data.get("meta", {})
-    components = data.get("components", {})
+    meta = normalize_meta(data.get("meta", {}))
+components = data.get("components", {})
+
+data["meta"] = meta
 
     output_name = meta.get("filename")
 
