@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title> Vol. {{ meta.vol }} — {{ meta.get('title_plain', meta.title) }} — Antifragile Africa Crypto</title>
-<meta name="description" content="{{ (meta.standfirst or '')[:160] }}">
+<meta name="description" content="{{ meta.get('standfirst', '')[:160] }}">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=IBM+Plex+Mono:wght@300;400;500&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
 <style>
   :root{--navy:#00355f;--steel:#7399c6;--sky:#acd4f1;--charcoal:#231f20;--mid:#58575a;--white:#ffffff;--gold:#c9a84c;--bg:#0a1a2a;--surface:#0f2236;--surface2:#162d46;--surface3:#1c3554;--border:rgba(115,153,198,0.18);--border-s:rgba(115,153,198,0.35);--green:#4fc98a;--red:#e05c5c;}
