@@ -316,9 +316,9 @@
 
     <div class="ih-date">{{ meta.date }} · Africa Crypto Intelligence OS</div>
     <h1 class="ih-title">{{ meta.title | title_html }}</h1>
-    {% if meta.standfirst %}
-    <p class="ih-sub">{{ meta.standfirst }}</p>
-    {% endif %}
+    {% if meta.get('standfirst') %}
+  <p>{{ meta.get('standfirst') }}</p>
+{% endif %}
     <nav class="ih-nav">
       <a href="#brief">01 Brief</a><a href="#insights">02 Insights</a>
       <a href="#heatmap">03 Heat Map</a><a href="#fullstack">04 Full Stack</a>
