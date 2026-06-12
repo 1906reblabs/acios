@@ -236,6 +236,12 @@ data["meta"] = meta
 # -----------------------------------------------------------------------------
 
 def build_index(issues: list[dict[str, Any]]) -> None:
+
+    for issue in issues:
+        issue["meta"] = normalize_meta(
+            issue.get("meta", {})
+        )
+
     latest = issues[-1] if issues else {}
 
     render(
