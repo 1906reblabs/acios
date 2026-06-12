@@ -345,7 +345,7 @@
           {{ 'Pilot / Vol. 00' if is_pilot else 'Vol. ' ~ imeta.vol }}
         </span>
       </div>
-      <div class="act">{{ imeta.title_plain or imeta.title }}</div>
+      <div class="act">{{ imeta.get('title_plain') or imeta.get('title', '') }}</div>
       {% if imeta.standfirst %}
       <div class="ace">{{ imeta.standfirst[:160] }}{% if imeta.standfirst | length > 160 %}…{% endif %}</div>
       {% endif %}
