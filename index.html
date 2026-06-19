@@ -15,6 +15,7 @@
   html{scroll-behavior:smooth;}
   body{background:var(--bg);color:var(--white);font-family:'Source Serif 4',Georgia,serif;font-weight:300;line-height:1.75;font-size:16px;overflow-x:hidden;}
   body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:1000;opacity:.4;}
+
   /* NAV */
   nav{position:sticky;top:0;z-index:200;background:rgba(10,26,42,.97);backdrop-filter:blur(14px);border-bottom:1px solid var(--border-s);height:58px;display:flex;align-items:center;justify-content:space-between;padding:0 3rem;}
   .nb{font-family:'Playfair Display',serif;font-weight:900;font-size:.95rem;color:var(--white);letter-spacing:-.01em;text-decoration:none;}
@@ -33,17 +34,7 @@
   .nd-m a:hover{color:var(--sky);background:var(--surface);}
   .nav-cta{font-family:'IBM Plex Mono',monospace;font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;color:var(--sky)!important;border:1px solid rgba(172,212,241,.35);padding:.3rem .9rem;transition:background .2s!important;}
   .nav-cta:hover{background:rgba(172,212,241,.1)!important;}
-  /* TICKER */
-  .ticker{background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border);height:40px;display:flex;align-items:center;overflow:hidden;}
-  .tl{font-family:'IBM Plex Mono',monospace;font-size:.55rem;letter-spacing:.2em;text-transform:uppercase;color:var(--bg);background:var(--steel);padding:0 1.2rem;height:100%;display:flex;align-items:center;white-space:nowrap;flex-shrink:0;z-index:2;}
-  .tt{display:flex;animation:tickerScroll 50s linear infinite;white-space:nowrap;padding-left:2rem;}
-  .tt:hover{animation-play-state:paused;}
-  @keyframes tickerScroll{from{transform:translateX(0);}to{transform:translateX(-50%);}}
-  .ti{font-family:'IBM Plex Mono',monospace;font-size:.65rem;letter-spacing:.08em;color:rgba(255,255,255,.5);padding:0 2.5rem;display:flex;align-items:center;gap:.5rem;}
-  .ti .ti-l{color:var(--steel);}
-  .ti .ti-v{color:rgba(255,255,255,.75);}
-  .t-up{color:var(--green);}.t-dn{color:var(--red);}.t-al{color:var(--red);font-weight:500;}.t-gd{color:var(--gold);}
-  .t-sep{color:var(--border-s);margin:0 .5rem;}
+
   /* HERO */
   .hero{min-height:92vh;display:grid;grid-template-columns:1fr 1fr;gap:0;position:relative;overflow:hidden;}
   .hl{display:flex;flex-direction:column;justify-content:flex-end;padding:6rem 3rem 5rem;position:relative;z-index:2;border-right:1px solid var(--border);}
@@ -68,6 +59,19 @@
   .hth{background:var(--surface);border:1px solid var(--border);border-left:3px solid var(--steel);padding:1.5rem;}
   .thl{font-family:'IBM Plex Mono',monospace;font-size:.55rem;letter-spacing:.22em;text-transform:uppercase;color:var(--steel);margin-bottom:.8rem;display:block;}
   .tht{font-family:'Playfair Display',serif;font-style:italic;font-size:1rem;color:var(--sky);line-height:1.55;}
+
+  /* TICKER */
+  .ticker{background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border);height:40px;display:flex;align-items:center;overflow:hidden;}
+  .tl{font-family:'IBM Plex Mono',monospace;font-size:.55rem;letter-spacing:.2em;text-transform:uppercase;color:var(--bg);background:var(--steel);padding:0 1.2rem;height:100%;display:flex;align-items:center;white-space:nowrap;flex-shrink:0;z-index:2;}
+  .tt{display:flex;animation:tickerScroll 56s linear infinite;white-space:nowrap;padding-left:2rem;}
+  .tt:hover{animation-play-state:paused;}
+  @keyframes tickerScroll{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+  .ti{font-family:'IBM Plex Mono',monospace;font-size:.65rem;letter-spacing:.08em;color:rgba(255,255,255,.5);padding:0 2.5rem;display:flex;align-items:center;gap:.5rem;}
+  .ti .ti-l{color:var(--steel);}
+  .ti .ti-v{color:rgba(255,255,255,.75);}
+  .t-up{color:var(--green);} .t-dn{color:var(--red);} .t-al{color:var(--red);font-weight:500;} .t-gd{color:var(--gold);}
+  .t-sep{color:var(--border-s);margin:0 .5rem;}
+
   /* CONTAINER */
   .container{max-width:1140px;margin:0 auto;padding:0 3rem;}
   .s-ey{font-family:'IBM Plex Mono',monospace;font-size:.6rem;letter-spacing:.28em;text-transform:uppercase;color:var(--steel);display:flex;align-items:center;gap:1rem;margin-bottom:1.2rem;}
@@ -75,11 +79,12 @@
   .s-t{font-family:'Playfair Display',serif;font-weight:700;font-size:clamp(1.8rem,3vw,2.6rem);line-height:1.1;letter-spacing:-.02em;color:var(--white);margin-bottom:.5rem;}
   .s-t em{color:var(--sky);font-style:italic;}
   .s-sub{font-size:.95rem;color:rgba(255,255,255,.45);margin-bottom:3rem;max-width:480px;}
+
   /* FEATURED ISSUE */
   .fi{padding:5rem 0;border-bottom:1px solid var(--border);}
   .fc{display:grid;grid-template-columns:1fr 380px;gap:3rem;background:var(--surface);border:1px solid var(--border);overflow:hidden;transition:border-color .2s;}
   .fc:hover{border-color:var(--steel);}
-  .fb-c{padding:3rem;}
+  .fb{padding:3rem;}
   .fmet{display:flex;gap:1.5rem;margin-bottom:1.5rem;align-items:center;flex-wrap:wrap;}
   .badge{font-family:'IBM Plex Mono',monospace;font-size:.55rem;letter-spacing:.2em;text-transform:uppercase;padding:.2rem .6rem;}
   .badge-vol{background:var(--steel);color:var(--bg);}
@@ -88,7 +93,7 @@
   .badge-confirmed{background:rgba(79,201,138,.15);color:var(--green);border:1px solid rgba(79,201,138,.3);}
   .fdate{font-family:'IBM Plex Mono',monospace;font-size:.62rem;letter-spacing:.1em;color:var(--mid);}
   .fvol{font-family:'IBM Plex Mono',monospace;font-size:.62rem;letter-spacing:.1em;color:var(--mid);}
-  .ftit{font-family:'Playfair Display',serif;font-weight:700;font-size:2rem;line-height:1.15;letter-spacing:-.02em;color:var(--white);margin-bottom:1rem;text-decoration:none;display:block;}
+  .ftit{font-family:'Playfair Display',serif;font-weight:700;font-size:1.85rem;line-height:1.15;letter-spacing:-.02em;color:var(--white);margin-bottom:1rem;text-decoration:none;display:block;}
   .ftit:hover{color:var(--sky);}
   .ftit em{color:var(--sky);font-style:italic;}
   .fdesc{font-size:.95rem;color:rgba(255,255,255,.6);line-height:1.7;margin-bottom:2rem;}
@@ -101,12 +106,13 @@
   .sm:last-child{border-bottom:none;padding-bottom:0;}
   .sc-l{font-family:'IBM Plex Mono',monospace;font-size:.62rem;color:var(--mid);letter-spacing:.1em;}
   .sv{font-family:'Playfair Display',serif;font-weight:700;font-size:1.6rem;color:var(--white);line-height:1;}
-  .sv.alert{color:var(--red);}.sv.gold{color:var(--gold);}.sv.green{color:var(--green);}
+  .sv.alert{color:var(--red);} .sv.gold{color:var(--gold);} .sv.green{color:var(--green);}
   .snote{font-size:.75rem;color:rgba(255,255,255,.4);line-height:1.4;}
   .s-tu{color:var(--green);font-size:.7rem;font-family:'IBM Plex Mono',monospace;}
   .s-td{color:var(--red);font-size:.7rem;font-family:'IBM Plex Mono',monospace;}
   .s-tg{color:var(--gold);font-size:.7rem;font-family:'IBM Plex Mono',monospace;}
   .s-tn{color:var(--sky);font-size:.7rem;font-family:'IBM Plex Mono',monospace;}
+
   /* ARCHIVE */
   .ar{padding:5rem 0;border-bottom:1px solid var(--border);}
   .ag{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:1rem;}
@@ -125,6 +131,7 @@
   .at{font-family:'IBM Plex Mono',monospace;font-size:.52rem;letter-spacing:.12em;text-transform:uppercase;color:var(--mid);border:1px solid var(--border);padding:.15rem .45rem;}
   .accoming{position:absolute;inset:0;background:rgba(10,26,42,.7);display:flex;align-items:center;justify-content:center;}
   .aclbl{font-family:'IBM Plex Mono',monospace;font-size:.6rem;letter-spacing:.25em;text-transform:uppercase;color:var(--mid);border:1px solid var(--border);padding:.4rem 1rem;}
+
   /* PILLARS */
   .ps{padding:5rem 0;border-bottom:1px solid var(--border);}
   .pg{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border:1px solid var(--border);margin-top:2.5rem;}
@@ -134,6 +141,7 @@
   .pi-i{font-size:1.5rem;margin-bottom:1rem;display:block;}
   .pi-t{font-family:'IBM Plex Mono',monospace;font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--steel);margin-bottom:.6rem;}
   .pi-d{font-size:.85rem;color:rgba(255,255,255,.6);line-height:1.65;}
+
   /* NEWSLETTER */
   .ns{padding:5rem 0;}
   .ni{background:var(--surface2);border:1px solid var(--border-s);padding:3.5rem;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;position:relative;overflow:hidden;}
@@ -150,6 +158,7 @@
   .nr button{font-family:'IBM Plex Mono',monospace;font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;background:var(--steel);color:var(--bg);border:none;padding:.75rem 1.5rem;cursor:pointer;font-weight:500;transition:background .2s;white-space:nowrap;}
   .nr button:hover{background:var(--sky);}
   .nd2{font-size:.72rem;color:rgba(255,255,255,.3);line-height:1.5;}
+
   /* FOOTER */
   footer{border-top:1px solid var(--border);padding:3rem;}
   .fg{display:grid;grid-template-columns:2fr 1fr 1fr 1fr 1fr;gap:3rem;max-width:1140px;margin:0 auto;padding-bottom:3rem;border-bottom:1px solid var(--border);}
@@ -160,32 +169,31 @@
   .fl{list-style:none;display:flex;flex-direction:column;gap:.6rem;}
   .fl a{font-size:.83rem;color:rgba(255,255,255,.4);text-decoration:none;transition:color .2s;}
   .fl a:hover{color:var(--steel);}
-  .fbot{display:flex;justify-content:space-between;align-items:center;max-width:1140px;margin:2rem auto 0;flex-wrap:wrap;gap:1rem;}
+  .fbot{display:flex;justify-content:space-between;align-items:center;max-width:1140px;margin:2rem auto 0;}
   .fc2{font-family:'IBM Plex Mono',monospace;font-size:.6rem;letter-spacing:.1em;color:var(--mid);text-transform:uppercase;}
   .fd2{font-family:'IBM Plex Mono',monospace;font-size:.58rem;letter-spacing:.08em;color:rgba(88,87,90,.6);text-align:right;max-width:480px;line-height:1.5;}
+
   @keyframes fadeUp{from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:translateY(0);}}
-  .fu{animation:fadeUp .7s ease both;}.fu1{animation-delay:.1s;}.fu2{animation-delay:.22s;}.fu3{animation-delay:.34s;}.fu4{animation-delay:.46s;}
+  .fu{animation:fadeUp .7s ease both;} .fu1{animation-delay:.1s;} .fu2{animation-delay:.22s;} .fu3{animation-delay:.34s;} .fu4{animation-delay:.46s;}
+
   @media(max-width:900px){
-    nav{padding:0 1.5rem;}.nl{gap:1.2rem;}
+    nav{padding:0 1.5rem;} .nl{gap:1.2rem;}
     .hero{grid-template-columns:1fr;min-height:auto;}
     .hl{padding:4rem 1.5rem 2.5rem;border-right:none;border-bottom:1px solid var(--border);}
     .hr{padding:2.5rem 1.5rem 3rem;}
     .container{padding:0 1.5rem;}
-    .fc{grid-template-columns:1fr;}.fsd{border-left:none;border-top:1px solid var(--border);flex-direction:row;flex-wrap:wrap;}
-    .ag{grid-template-columns:1fr 1fr;}.pg{grid-template-columns:1fr 1fr;}
-    .ni{grid-template-columns:1fr;gap:2rem;}.fg{grid-template-columns:1fr 1fr;}
+    .fc{grid-template-columns:1fr;} .fsd{border-left:none;border-top:1px solid var(--border);flex-direction:row;flex-wrap:wrap;}
+    .ag{grid-template-columns:1fr 1fr;} .pg{grid-template-columns:1fr 1fr;}
+    .ni{grid-template-columns:1fr;gap:2rem;} .fg{grid-template-columns:1fr 1fr;}
   }
   @media(max-width:600px){
-    .ag{grid-template-columns:1fr;}.pg{grid-template-columns:1fr;}
-    .fg{grid-template-columns:1fr;}
-    .fbot{flex-direction:column;align-items:flex-start;}
+    .ag{grid-template-columns:1fr;} .pg{grid-template-columns:1fr;}
+    .fg{grid-template-columns:1fr;} .fbot{flex-direction:column;gap:1rem;align-items:flex-start;}
     .fd2{text-align:left;}
   }
 </style>
 </head>
 <body>
-
-
 <nav>
   <a href="index.html" class="nb">Antifragile <span>Africa</span></a>
   <ul class="nl">
@@ -199,79 +207,87 @@
         <a href="disclaimer.html">Disclaimer</a>
       </div>
     </li>
-    <li><a href="antifragile_africa_weekly_10jun2026.html" class="nav-cta">Latest Issue →</a></li>
+    <li><a href="antifragile_africa_weekly_17jun2026.html" class="nav-cta">Latest Issue →</a></li>
   </ul>
 </nav>
 
+<!-- TICKER -->
 <div class="ticker">
   <div class="tl">Live Signals</div>
   <div class="tt">
-    <span class="ti"><span class="ti-l"></span><span class="ti-v">Market</span><span class="Δ">Day</span></span>
+    <span class="ti"><span class="ti-l">NGN/USDT PREM</span><span class="ti-v">~17.0%</span><span class="t-al">↓ DAY 54</span></span>
     <span class="t-sep">·</span>
-    <span class="ti"><span class="ti-l"></span><span class="ti-v">--------</span><span class="---">-----</span></span>
+    <span class="ti"><span class="ti-l">KES/USDT PREM</span><span class="ti-v">~3.6%</span><span class="t-dn">↓ M-PESA LIVE</span></span>
     <span class="t-sep">·</span>
-    <span class="ti"><span class="ti-l"></span><span class="ti-v">NGN (Nigeria)</span><span class="↓ floor">47</span></span>
+    <span class="ti"><span class="ti-l">XOF/USDT PREM</span><span class="ti-v">~10.1%</span><span class="t-gd">↓ IFC RESPONSE</span></span>
     <span class="t-sep">·</span>
-    <span class="ti"><span class="ti-l"></span><span class="ti-v">XOF (WAEMU)</span><span class="↑ +0.4%">—</span></span>
+    <span class="ti"><span class="ti-l">MAD/USDT PREM</span><span class="ti-v">~2.9%</span><span class="t-dn">↓ AMMC T-7</span></span>
     <span class="t-sep">·</span>
-    <span class="ti"><span class="ti-l"></span><span class="ti-v">KES (Kenya)</span><span class="↓ –0.3%">—</span></span>
+    <span class="ti"><span class="ti-l">ZAR/USDT PREM</span><span class="ti-v">~5.5%</span><span class="t-up">↑ ETF DAY 22</span></span>
     <span class="t-sep">·</span>
-    <span class="ti"><span class="ti-l"></span><span class="ti-v">ZAR (South Africa)</span><span class="↑ +0.3%">15</span></span>
+    <span class="ti"><span class="ti-l">ETB/USDT PREM</span><span class="ti-v">~31.0%</span><span class="t-al">↑ RFC T-14</span></span>
     <span class="t-sep">·</span>
-    <span class="ti"><span class="ti-l"></span><span class="ti-v">MAD (Morocco)</span><span class="↓ –0.4%">—</span></span>
+    <span class="ti"><span class="ti-l">ZMW/USDT PREM</span><span class="ti-v">~6.5%</span><span class="t-gd">↑ SECZ T-28</span></span>
     <span class="t-sep">·</span>
-    <span class="ti"><span class="ti-l"></span><span class="ti-v">ETB (Ethiopia)</span><span class="↑ +0.5%">—</span></span>
+    <span class="ti"><span class="ti-l">FRAGILITY IDX</span><span class="ti-v">2.9 / 10</span><span class="t-up">↓ DECLINING</span></span>
     <span class="t-sep">·</span>
-    <span class="ti"><span class="ti-l"></span><span class="ti-v">ZMW (Zambia)</span><span class="↑ +0.2%">—</span></span>
+    <span class="ti"><span class="ti-l">CMS LEADER</span><span class="ti-v">Kenya 92/100</span><span class="t-gd">↑ M-PESA LIVE</span></span>
     <span class="t-sep">·</span>
-    <span class="ti"><span class="ti-l">VOL. 11 AUDIT</span><span class="ti-v">4.90 / 5.0</span><span class="t-up">28 AGENTS · 7 LAYERS</span></span>
+    <span class="ti"><span class="ti-l">VOL. 12 AUDIT</span><span class="ti-v">4.91 / 5</span><span class="t-up">28 AGENTS · 7 LAYERS</span></span>
     <span class="t-sep">·</span>
-    <span class="ti"><span class="ti-l"></span><span class="ti-v">Market</span><span class="Δ">Day</span></span>
+    <span class="ti"><span class="ti-l">P-10-03 SAFARICOM</span><span class="ti-v">CONFIRMED</span><span class="t-gd">✓ CORRECT</span></span>
     <span class="t-sep">·</span>
-    <span class="ti"><span class="ti-l"></span><span class="ti-v">--------</span><span class="---">-----</span></span>
+    <span class="ti"><span class="ti-l">M-PESA STABLECOIN</span><span class="ti-v">40.2M USERS</span><span class="t-al">6 MARKETS LIVE</span></span>
     <span class="t-sep">·</span>
-    <span class="ti"><span class="ti-l"></span><span class="ti-v">NGN (Nigeria)</span><span class="↓ floor">47</span></span>
+    <span class="ti"><span class="ti-l">CBN H2 RFC</span><span class="ti-v">TIER 2</span><span class="t-gd">TECHCABAL CORROBORATED</span></span>
     <span class="t-sep">·</span>
-    <span class="ti"><span class="ti-l"></span><span class="ti-v">XOF (WAEMU)</span><span class="↑ +0.4%">—</span></span>
+    <span class="ti"><span class="ti-l">AMMC PORTAL</span><span class="ti-v">T-7 DAYS</span><span class="t-gd">JUNE 24 OPENING</span></span>
     <span class="t-sep">·</span>
-    <span class="ti"><span class="ti-l"></span><span class="ti-v">KES (Kenya)</span><span class="↓ –0.3%">—</span></span>
+    <span class="ti"><span class="ti-l">NGN/USDT PREM</span><span class="ti-v">~17.0%</span><span class="t-al">↓ DAY 54</span></span>
     <span class="t-sep">·</span>
-    <span class="ti"><span class="ti-l"></span><span class="ti-v">ZAR (South Africa)</span><span class="↑ +0.3%">15</span></span>
+    <span class="ti"><span class="ti-l">KES/USDT PREM</span><span class="ti-v">~3.6%</span><span class="t-dn">↓ M-PESA LIVE</span></span>
     <span class="t-sep">·</span>
-    <span class="ti"><span class="ti-l"></span><span class="ti-v">MAD (Morocco)</span><span class="↓ –0.4%">—</span></span>
+    <span class="ti"><span class="ti-l">XOF/USDT PREM</span><span class="ti-v">~10.1%</span><span class="t-gd">↓ IFC RESPONSE</span></span>
     <span class="t-sep">·</span>
-    <span class="ti"><span class="ti-l"></span><span class="ti-v">ETB (Ethiopia)</span><span class="↑ +0.5%">—</span></span>
+    <span class="ti"><span class="ti-l">MAD/USDT PREM</span><span class="ti-v">~2.9%</span><span class="t-dn">↓ AMMC T-7</span></span>
     <span class="t-sep">·</span>
-    <span class="ti"><span class="ti-l"></span><span class="ti-v">ZMW (Zambia)</span><span class="↑ +0.2%">—</span></span>
+    <span class="ti"><span class="ti-l">ZAR/USDT PREM</span><span class="ti-v">~5.5%</span><span class="t-up">↑ ETF DAY 22</span></span>
     <span class="t-sep">·</span>
-    <span class="ti"><span class="ti-l">VOL. 11 AUDIT</span><span class="ti-v">4.90 / 5.0</span><span class="t-up">28 AGENTS · 7 LAYERS</span></span>
+    <span class="ti"><span class="ti-l">ETB/USDT PREM</span><span class="ti-v">~31.0%</span><span class="t-al">↑ RFC T-14</span></span>
+    <span class="t-sep">·</span>
+    <span class="ti"><span class="ti-l">ZMW/USDT PREM</span><span class="ti-v">~6.5%</span><span class="t-gd">↑ SECZ T-28</span></span>
+    <span class="t-sep">·</span>
+    <span class="ti"><span class="ti-l">FRAGILITY IDX</span><span class="ti-v">2.9 / 10</span><span class="t-up">↓ DECLINING</span></span>
+    <span class="t-sep">·</span>
+    <span class="ti"><span class="ti-l">CMS LEADER</span><span class="ti-v">Kenya 92/100</span><span class="t-gd">↑ M-PESA LIVE</span></span>
     <span class="t-sep">·</span>
   </div>
 </div>
 
+<!-- HERO -->
 <section class="hero">
   <div class="hl">
     <div class="hk fu fu1">Weekly Intelligence · Est. March 2026</div>
     <h1 class="fu fu2">Where Disorder<br>Becomes <em>Advantage</em></h1>
     <p class="htag fu fu3">Institutional-grade intelligence on African crypto markets. Capital flows, regulatory arbitrage, OTC signals, and hidden trades — for allocators who understand that Africa's monetary dysfunction is crypto's greatest growth engine.</p>
     <div class="hcta fu fu4">
-      <a href="antifragile_africa_weekly_10jun2026.html" class="btn-p">Read Latest Issue →</a>
+      <a href="antifragile_africa_weekly_17jun2026.html" class="btn-p">Read Latest Issue →</a>
       <a href="about.html" class="btn-s">Our Thesis</a>
     </div>
   </div>
   <div class="hr">
     <div class="hs fu fu2">
       <div class="hsr">
-        <div class="sn">54<em>+</em></div>
-        <div class="sd">African states tracked weekly across all regulatory classifications</div>
+        <div class="sn">15<em>+</em></div>
+        <div class="sd">African markets tracked across 12 intelligence cycles</div>
+      </div>
+      <div class="hsr">
+        <div class="sn">40<em>M</em></div>
+        <div class="sd">M-Pesa users entering regulated stablecoin functionality — the largest single-event African crypto adoption announcement on record</div>
       </div>
       <div class="hsr">
         <div class="sn">28<em>AI</em></div>
         <div class="sd">Specialist agents and 7 analytical layers per issue</div>
-      </div>
-      <div class="hsr">
-        <div class="sn">$1<em>T+</em></div>
-        <div class="sd">Estimated annual informal crypto-adjacent capital flows on the continent</div>
       </div>
     </div>
     <div class="hth fu fu3">
@@ -283,187 +299,172 @@
 
 <div class="container">
 
+<!-- FEATURED LATEST ISSUE -->
 <section class="fi">
   <div class="s-ey">Latest Report</div>
   <div class="s-t">This Week's <em>Intelligence</em></div>
-  <p class="s-sub">Vol. 11 — 10 June 2026 — 28 agents, 7 layers</p>
+  <p class="s-sub">Vol. 12 — 17 June 2026 — The Tipping Point Has Been Crossed</p>
   <div class="fc">
-    <div class="fb-c">
+    <div class="fb">
       <div class="fmet">
         <span class="badge badge-vol">Latest</span>
-        <span class="badge badge-confirmed">✓ P-10-01 Correct</span>
-        <span class="badge badge-gold">★ AMMC Draft Conditions Live</span>
-        <span class="badge badge-gold">★ M-Pesa API Schema Signal</span>
-        <span class="badge badge-gold">⚠ T-5 Safaricom AGM</span>
-        <span class="fdate">10 June 2026</span>
-        <span class="fvol">Vol. 11</span>
+        <span class="badge badge-confirmed">✓ P-10-03 Correct</span>
+        <span class="badge badge-gold">★ CBN H2 RFC — Tier 2</span>
+        <span class="badge badge-gold">★ M-Pesa Stablecoin Live</span>
+        <span class="badge badge-alert">⚠ AMMC T-7 Days</span>
+        <span class="fdate">17 June 2026</span>
+        <span class="fvol">Vol. 12</span>
       </div>
-      <a href="antifragile_africa_weekly_10jun2026.html" class="ftit">Attijariwafa and the AMMC Moved on the Same Morning. Three License Candidates Are Named. The Safaricom Clock Is Five Days from Verdict.</a>
-      <a href="antifragile_africa_weekly_10jun2026.html" class="btn-p">Read Full Report →</a>
+      <a href="antifragile_africa_weekly_17jun2026.html" class="ftit">Safaricom Said Yes. Nigeria's CBN Is No Longer <em>Silent</em>. The AMMC Opens in Seven Days.</a>
+      <p class="fdesc">Safaricom confirmed M-Pesa stablecoin integration at the June 15 AGM — 40.2M active users across six East African markets entering a regulated stablecoin environment simultaneously, the largest single-event stablecoin adoption announcement in African history. Nigeria's CBN H2 VASP RFC has crossed from Tier 3 to Tier 2 via TechCabal's three-source investigation. Morocco's AMMC portal opens in seven days. The continent has not approached a tipping point — it has crossed one.</p>
+      <ul class="fhl">
+        <li>Safaricom M-Pesa stablecoin integration confirmed for 40.2M users across 6 East African markets — P-10-03 resolves CORRECT</li>
+        <li>Nigeria CBN H2 VASP RFC crosses from Tier 3 to Tier 2 — TechCabal investigation cites three CBN digital finance unit sources</li>
+        <li>Morocco AMMC portal opens June 24 (T-7 days) — duopoly banking structure confirmed between Attijariwafa and CIH Bank</li>
+        <li>IFC files first multilateral BCEAO consultation response, partially closing the civil society legitimacy gap</li>
+        <li>New fragility category introduced: Safaricom concentration risk — 40.2M users on a single operator's rails across six countries</li>
+        <li>6 new predictions logged across Morocco, Kenya, Nigeria, WAEMU, and Zimbabwe's emerging Bitcoin mining profile</li>
+      </ul>
+      <a href="antifragile_africa_weekly_17jun2026.html" class="btn-p">Read Full Report →</a>
     </div>
     <div class="fsd">
-      <span class="sbl">This Week's Spreads</span>
+      <span class="sbl">P2P Premium Tracker</span>
       <div class="sm">
-        <div class="sc-l"></div>
-        <div class="sv Spread">Market</div>
-        <div class="Δ">Day</div>
-<div class="snote">Signal</div>      </div>
+        <div class="sc-l">Nigeria · NGN/USDT</div>
+        <div class="sv alert">~17.0%</div>
+        <div class="s-td">↓ DAY 54 — CBN TIER 2</div>
+        <div class="snote">CBN H2 RFC Tier 2 corroborated. Strategic silence becomes confirmed pre-announcement intent.</div>
+      </div>
       <div class="sm">
-        <div class="sc-l"></div>
-        <div class="sv --------">--------</div>
-        <div class="---">-----</div>
-<div class="snote">--------</div>      </div>
+        <div class="sc-l">Kenya · KES/USDT</div>
+        <div class="sv green">~3.6%</div>
+        <div class="s-td">↓ M-PESA LIVE</div>
+        <div class="snote">Safaricom AGM stablecoin announcement. Premium compressing sharply toward licensed-market floor.</div>
+      </div>
       <div class="sm">
-        <div class="sc-l"></div>
-        <div class="sv ~17.2%">NGN (Nigeria)</div>
-        <div class="↓ floor">47</div>
-<div class="snote">Second Tier 3 CBN H2 source corroborated</div>      </div>
+        <div class="sc-l">WAEMU · XOF/USDT</div>
+        <div class="sv gold">~10.1%</div>
+        <div class="s-td">↓ IFC RESPONSE</div>
+        <div class="snote">IFC files BCEAO financial inclusion response. Civil society gap partially closed.</div>
+      </div>
       <div class="sm">
-        <div class="sc-l"></div>
-        <div class="sv ~10.3%">XOF (WAEMU)</div>
-        <div class="↑ +0.4%">—</div>
-<div class="snote">BCEAO T-36 days to consultation close; civil society gap active</div>      </div>
+        <div class="sc-l">Morocco · MAD/USDT</div>
+        <div class="sv green">~2.9%</div>
+        <div class="s-td">↓ AMMC T-7</div>
+        <div class="snote">Portal T-7 days. Duopoly banking structure confirmed. Operators pre-positioning.</div>
+      </div>
       <div class="sm">
-        <div class="sc-l"></div>
-        <div class="sv ~4.0%">KES (Kenya)</div>
-        <div class="↓ –0.3%">—</div>
-<div class="snote">CBK conditional stablecoin licensing signal; portal compressing</div>      </div>
-      <div class="sm">
-        <div class="sc-l"></div>
-        <div class="sv ~5.2%">ZAR (South Africa)</div>
-        <div class="↑ +0.3%">15</div>
-<div class="snote">ETF Day 15; sixth pension fund disclosure, R8B AUM aggregate</div>      </div>
-      <div class="sm">
-        <div class="sc-l"></div>
-        <div class="sv ~3.1%">MAD (Morocco)</div>
-        <div class="↓ –0.4%">—</div>
-<div class="snote">Post-Attijariwafa announcement compression; AMMC draft live</div>      </div>
-      <div class="sm">
-        <div class="sc-l"></div>
-        <div class="sv ~30.6%">ETB (Ethiopia)</div>
-        <div class="↑ +0.5%">—</div>
-<div class="snote">NBE RFC T-21 days; mining section (area c) uncontested</div>      </div>
-      <div class="sm">
-        <div class="sc-l"></div>
-        <div class="sv ~6.4%">ZMW (Zambia)</div>
-        <div class="↑ +0.2%">—</div>
-<div class="snote">SECZ T-35 days to mapping deadline; Yellow Card submission confirmed</div>      </div>
-      <div class="sm">
-        <div class="sc-l">Audit Score</div>
-        <div class="sv green">4.90</div>
-        <div class="snote">Out of 5.0 — PASS ✓</div>
+        <div class="sc-l">Ethiopia · ETB/USDT</div>
+        <div class="sv alert">~31.0%</div>
+        <div class="s-tg">↑ RFC T-14</div>
+        <div class="snote">NBE RFC T-14 days hard deadline. Mining section (area c) zero institutional submissions.</div>
       </div>
     </div>
   </div>
 </section>
 
+<!-- ARCHIVE -->
 <section class="ar">
   <div class="s-ey">Archive</div>
   <div class="s-t">All <em>Reports</em></div>
   <p class="s-sub">Every issue, permanently available. Intelligence compounds.</p>
   <div class="ag">
+    <a href="antifragile_africa_weekly_17jun2026.html" class="ac ">
+      <div class="acd">17 Jun 2026<span class="acv ">Vol. 12</span></div>
+      <div class="act">Safaricom Said Yes. Nigeria's CBN Is No Longer Silent. The AMMC Opens in Seven Days.</div>
+      <div class="ace">M-Pesa stablecoin integration confirmed for 40.2M users. CBN H2 RFC reaches Tier 2. AMMC portal opens in seven days. The tipping point has been crossed.</div>
+      <div class="ats"><span class="at">Kenya</span><span class="at">Nigeria</span><span class="at">Morocco</span><span class="at">WAEMU</span></div>
+    </a>
     <a href="antifragile_africa_weekly_10jun2026.html" class="ac ">
-      <div class="acd">
-        10 June 2026
-        <span class="acv ">
-          Vol. 11
-        </span>
-      </div>
-      <div class="act">Attijariwafa and the AMMC Moved on the Same Morning. Three License Candidates Are Named. The Safaricom Clock Is Five Days from Verdict.</div>
-      <div class="ats">
-        <span class="at"></span>
-        <span class="at"></span>
-        <span class="at"></span>
-        <span class="at"></span>
-        <span class="at"></span>
-        <span class="at">Morocco AMMC Draft Licensing Conditions — Correspondent Bank of Record Mechanism</span>
-      </div>
+      <div class="acd">10 Jun 2026<span class="acv ">Vol. 11</span></div>
+      <div class="act">Attijariwafa and the AMMC Moved on the Same Morning. Three License Candidates Are Named.</div>
+      <div class="ace">Morocco's AMMC publishes draft licensing conditions; Attijariwafa confirms the same morning. M-Pesa API schema signals builder behaviour. Rwanda commits to EAC harmonisation.</div>
+      <div class="ats"><span class="at">Morocco</span><span class="at">Kenya</span><span class="at">Nigeria</span><span class="at">Rwanda</span></div>
     </a>
     <a href="antifragile_africa_weekly_03jun2026.html" class="ac ">
-      <div class="acd">
-        3 June 2026
-        <span class="acv ">
-          Vol. 10
-        </span>
-      </div>
-      <div class="act">Kenya's VASP Race Crystallises in 48 Hours. Tether Blinked at the BCEAO. Morocco's Banking Window Is Now Measured in Days.</div>
-      <div class="ace">34 complete VASP applications arrived in Kenya within 48 hours of portal opening — Binance confirmed its Nairobi domicile, Yellow Card filed across all three ti…</div>
-      <div class="ats">
-        <span class="at">Nigeria</span>
-        <span class="at">WAEMU</span>
-        <span class="at">Kenya</span>
-        <span class="at">South Africa</span>
-        <span class="at">Morocco</span>
-        <span class="at">Zambia SECZ Digital Asset Mapping Exercise</span>
-      </div>
+      <div class="acd">3 Jun 2026<span class="acv ">Vol. 10</span></div>
+      <div class="act">Kenya's VASP Race Crystallises in 48 Hours. Tether Blinked at the BCEAO.</div>
+      <div class="ace">34 complete VASP applications arrive in Kenya within 48 hours. Tether files a defensive 4-page BCEAO response. CIH Bank enters Morocco's banking race. Zambia issues its first regulatory signal.</div>
+      <div class="ats"><span class="at">Kenya</span><span class="at">WAEMU</span><span class="at">Morocco</span><span class="at">Zambia</span></div>
     </a>
     <a href="antifragile_africa_weekly_26may2026.html" class="ac ">
-      <div class="acd">
-        26 May 2026
-        <span class="acv ">
-          Vol. 09
-        </span>
-      </div>
-      <div class="act">Morocco's Banking Wall Just Cracked. Kenya Opens in Six Days. The BCEAO Gets Its First Industry Push.</div>
-      <div class="ace">Attijariwafa Bank — Morocco's largest institution at $60B assets — has signalled internal willingness to serve AMMC-licensed crypto operators. The banking relat…</div>
-      <div class="ats">
-        <span class="at">Nigeria</span>
-        <span class="at">WAEMU</span>
-        <span class="at">Kenya</span>
-        <span class="at">South Africa</span>
-        <span class="at">Morocco</span>
-        <span class="at">Attijariwafa Bank Morocco Crypto Signal</span>
-      </div>
+      <div class="acd">26 May 2026<span class="acv ">Vol. 09</span></div>
+      <div class="act">Morocco's Banking Wall Just Cracked. Kenya Opens in Six Days.</div>
+      <div class="ace">Attijariwafa Bank signals willingness to serve AMMC-licensed operators. CBK publishes tiered VASP capital structure. Ethiopia's NBE issues its first Request for Comments.</div>
+      <div class="ats"><span class="at">Morocco</span><span class="at">Kenya</span><span class="at">Ethiopia</span><span class="at">South Africa</span></div>
     </a>
-    <a href="antifragile_africa_weekly_26may2026.html" class="ac ">
-      <div class="acd">
-        26 May 2026
-        <span class="acv ">
-          Vol. 08
-        </span>
-      </div>
-      <div class="act">Morocco's Banking Wall Just Cracked. Kenya Opens in Six Days. The BCEAO Gets Its First Industry Push.</div>
-      <div class="ace">Attijariwafa Bank — Morocco's largest institution at $60B assets — has signalled internal willingness to serve AMMC-licensed crypto operators. The banking relat…</div>
-      <div class="ats">
-        <span class="at">Nigeria</span>
-        <span class="at">WAEMU</span>
-        <span class="at">Kenya</span>
-        <span class="at">South Africa</span>
-        <span class="at">Morocco</span>
-        <span class="at">Attijariwafa Bank Morocco Crypto Signal</span>
-      </div>
+    <a href="antifragile_africa_weekly_19may2026.html" class="ac ">
+      <div class="acd">19 May 2026<span class="acv ">Vol. 07</span></div>
+      <div class="act">The CBN Held. The Ratchet Held. The Thesis Is Running Its Verdict.</div>
+      <div class="ace">BCEAO consultation paper. Kenya VASP gazetted. Old Mutual ETF. Morocco AMMC criteria. The 7:1 ratchet signature confirmed.</div>
+      <div class="ats"><span class="at">Nigeria</span><span class="at">WAEMU</span><span class="at">Kenya</span><span class="at">South Africa</span><span class="at">Morocco</span></div>
     </a>
+    <a href="antifragile_africa_weekly_12may2026.html" class="ac ">
+      <div class="acd">12 May 2026<span class="acv ">Vol. 06</span></div>
+      <div class="act">The BCEAO Blinked. The Fed Was in the Room. Prediction P-06-04 Filed at HIGH.</div>
+      <div class="ace">Dakar consultation confirmed Fed presence. BCEAO framework directional. Kenya VASP gazette imminent. P-06-03 and P-06-04 filed.</div>
+      <div class="ats"><span class="at">WAEMU</span><span class="at">Kenya</span><span class="at">Nigeria</span></div>
+    </a>
+    <a href="antifragile_africa_weekly_05may2026.html" class="ac ">
+      <div class="acd">5 May 2026<span class="acv ">Vol. 05</span></div>
+      <div class="act">The Sandton Signal: South Africa's Pension Wave Is No Longer a Prediction.</div>
+      <div class="ace">Four SA pension fund disclosures confirmed. VALR institutional custody signal. Lagos OTC supply squeeze resolving.</div>
+      <div class="ats"><span class="at">South Africa</span><span class="at">Nigeria</span><span class="at">Kenya</span></div>
+    </a>
+    <a href="antifragile_africa_weekly_28apr2026.html" class="ac ">
+      <div class="acd">28 Apr 2026<span class="acv ">Vol. 04</span></div>
+      <div class="act">The Lagos Supply Squeeze and the Hidden Beneficiary of Nigeria's Disinflation</div>
+      <div class="ace">Lagos OTC 48–72hr fill times. Sandton institutional demand identified. Nigeria ratchet floor analysis first published.</div>
+      <div class="ats"><span class="at">Nigeria</span><span class="at">South Africa</span><span class="at">OTC</span></div>
+    </a>
+    <a href="antifragile_africa_weekly_21apr2026.html" class="ac ">
+      <div class="acd">21 Apr 2026<span class="acv ">Vol. 03</span></div>
+      <div class="act">East Africa's Regulatory Race and What the WAEMU Silence Really Means</div>
+      <div class="ace">Kenya VASP draft framework published. Rwanda EAC masterplan signal. BCEAO institutional silence decoded as deliberate.</div>
+      <div class="ats"><span class="at">Kenya</span><span class="at">Rwanda</span><span class="at">WAEMU</span><span class="at">Regulation</span></div>
+    </a>
+    <a href="antifragile_africa_weekly_14apr2026.html" class="ac ">
+      <div class="acd">14 Apr 2026<span class="acv ">Vol. 02</span></div>
+      <div class="act">The Stablecoin Layer Is Already Africa's Largest Parallel Financial System</div>
+      <div class="ace">USDT-Tron dominance mapped across 12 markets. P2P volume estimates published. Tether opacity risk first quantified.</div>
+      <div class="ats"><span class="at">Stablecoins</span><span class="at">Nigeria</span><span class="at">Ghana</span><span class="at">Infrastructure</span></div>
+    </a>
+    <a href="antifragile_africa_weekly_pilot02.html" class="ac pilot">
+      <div class="acd">31 Mar 2026<span class="acv pilot">Pilot 02</span></div>
+      <div class="act">The Premium Is the Signal: Reading African Crypto Through FX Spreads</div>
+      <div class="ace">Framework for P2P premium tracking established. Ratchet thesis first stated. All 15 market baselines set.</div>
+      <div class="ats"><span class="at">Framework</span><span class="at">Nigeria</span><span class="at">Methodology</span></div>
+    </a>
+    <a href="antifragile_africa_weekly_pilot01.html" class="ac pilot">
+      <div class="acd">17 Mar 2026<span class="acv pilot">Pilot 01</span></div>
+      <div class="act">Africa Does Not Have a Crypto Adoption Problem. It Has a Western Analysis Problem.</div>
+      <div class="ace">Founding thesis established. The four structural roles of crypto in African monetary systems. Why disorder is the engine.</div>
+      <div class="ats"><span class="at">Thesis</span><span class="at">Founding</span><span class="at">Framework</span></div>
+    </a>
+    <div class="ac" style="pointer-events:none;opacity:0.4;">
+      <div class="acd">24 Jun 2026<span class="acv">Vol. 13</span></div>
+      <div class="act">Vol. 13 — Publishing 24 June 2026</div>
+      <div class="ace">AMMC portal opening. Ethiopia RFC hard deadline. Safaricom partner announcement. BCEAO consultation close watch.</div>
+      <div class="ats"><span class="at">Morocco</span><span class="at">Ethiopia</span><span class="at">Kenya</span><span class="at">WAEMU</span></div>
+      <div class="accoming"><span class="aclbl">Publishing 24 June 2026</span></div>
+    </div>
   </div>
 </section>
 
+<!-- THESIS PILLARS -->
 <section class="ps">
   <div class="s-ey">Core Framework</div>
   <div class="s-t">Crypto in Africa is <em>Not Speculation</em></div>
   <p class="s-sub">Four structural roles — enforced across every report, every week.</p>
   <div class="pg">
-    <div class="pi">
-      <span class="pi-n">1</span><span class="pi-i">🛡️</span>
-      <div class="pi-t">FX Hedge</div>
-      <div class="pi-d">In markets where currency depreciation exceeds 18% annually, holding stablecoins is not speculation. It is rational treasury management.</div>
-    </div>
-    <div class="pi">
-      <span class="pi-n">2</span><span class="pi-i">🔥</span>
-      <div class="pi-t">Inflation Hedge</div>
-      <div class="pi-d">Every percentage point of inflation above 15% correlates with measurable stablecoin adoption growth. Disorder is the engine, not the barrier.</div>
-    </div>
-    <div class="pi">
-      <span class="pi-n">3</span><span class="pi-i">✈️</span>
-      <div class="pi-t">Capital Flight Rail</div>
-      <div class="pi-d">High-net-worth capital, SME trade flows, and diaspora remittances are all migrating to crypto rails — not for ideology, but for efficiency.</div>
-    </div>
-    <div class="pi">
-      <span class="pi-n">4</span><span class="pi-i">🏗️</span>
-      <div class="pi-t">Shadow Banking</div>
-      <div class="pi-d">The real African crypto market is informal, P2P, and invisible to Western analytics. This is not a bug. It is the entire story.</div>
-    </div>
+    <div class="pi"><span class="pi-n">1</span><span class="pi-i">🛡️</span><div class="pi-t">FX Hedge</div><div class="pi-d">In markets where currency depreciation exceeds 18% annually, holding stablecoins is not speculation. It is rational treasury management.</div></div>
+    <div class="pi"><span class="pi-n">2</span><span class="pi-i">🔥</span><div class="pi-t">Inflation Hedge</div><div class="pi-d">Every percentage point of inflation above 15% correlates with measurable stablecoin adoption growth. Disorder is the engine, not the barrier.</div></div>
+    <div class="pi"><span class="pi-n">3</span><span class="pi-i">✈️</span><div class="pi-t">Capital Flight Rail</div><div class="pi-d">High-net-worth capital, SME trade flows, and diaspora remittances are all migrating to crypto rails — not for ideology, but for efficiency.</div></div>
+    <div class="pi"><span class="pi-n">4</span><span class="pi-i">🏗️</span><div class="pi-t">Shadow Banking</div><div class="pi-d">The real African crypto market is informal, P2P, and invisible to Western analytics. This is not a bug. It is the entire story.</div></div>
   </div>
 </section>
 
+<!-- NEWSLETTER -->
 <section class="ns">
   <div class="ni">
     <div>
@@ -482,7 +483,8 @@
   </div>
 </section>
 
-</div>
+</div><!-- /container -->
+
 <footer>
   <div class="fg">
     <div class="fb2">
@@ -492,10 +494,11 @@
     <div>
       <span class="fct">Reports</span>
       <ul class="fl">
-        <li><a href="antifragile_africa_weekly_10jun2026.html">Vol. 11 — 10 June 2026</a></li>
-        <li><a href="antifragile_africa_weekly_03jun2026.html">Vol. 10 — 3 June 2026</a></li>
+        <li><a href="antifragile_africa_weekly_17jun2026.html">Vol. 12 — 17 Jun 2026</a></li>
+        <li><a href="antifragile_africa_weekly_10jun2026.html">Vol. 11 — 10 Jun 2026</a></li>
+        <li><a href="antifragile_africa_weekly_03jun2026.html">Vol. 10 — 3 Jun 2026</a></li>
         <li><a href="antifragile_africa_weekly_26may2026.html">Vol. 09 — 26 May 2026</a></li>
-        <li><a href="antifragile_africa_weekly_26may2026.html">Vol. 08 — 26 May 2026</a></li>
+        <li><a href="antifragile_africa_weekly_19may2026.html">Vol. 07 — 19 May 2026</a></li>
       </ul>
     </div>
     <div>
@@ -509,11 +512,16 @@
     <div>
       <span class="fct">Coverage</span>
       <ul class="fl">
-        <li><a href="#">Nigeria · Lagos OTC</a></li>
-        <li><a href="#">Kenya · East Africa</a></li>
-        <li><a href="#">South Africa · ZAR</a></li>
-        <li><a href="#">WAEMU · CFA Bloc</a></li>
-        <li><a href="#">54 African States</a></li>
+        <li><a href="#">Nigeria</a></li>
+        <li><a href="#">Kenya</a></li>
+        <li><a href="#">South Africa</a></li>
+        <li><a href="#">Ghana</a></li>
+        <li><a href="#">Ethiopia</a></li>
+        <li><a href="#">WAEMU Bloc</a></li>
+        <li><a href="#">Morocco</a></li>
+        <li><a href="#">Egypt</a></li>
+        <li><a href="#">Rwanda</a></li>
+        <li><a href="#">Zambia</a></li>
       </ul>
     </div>
     <div>
@@ -533,10 +541,9 @@
         <a href="privacy.html" style="font-family:'IBM Plex Mono',monospace;font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;color:var(--mid);text-decoration:none;" onmouseover="this.style.color='var(--steel)'" onmouseout="this.style.color='var(--mid)'">Privacy</a>
         <a href="disclaimer.html" style="font-family:'IBM Plex Mono',monospace;font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;color:var(--mid);text-decoration:none;" onmouseover="this.style.color='var(--steel)'" onmouseout="this.style.color='var(--mid)'">Disclaimer</a>
       </div>
-      <span class="fd2">For institutional and professional use only. Not financial advice. Simulated data where noted. All figures are estimates or model outputs. Past signals do not guarantee future accuracy.</span>
+      <span class="fd2">For institutional and professional use only. Not financial advice. Simulated data where noted. All figures are estimates or model outputs.</span>
     </div>
   </div>
 </footer>
-
 </body>
 </html>
