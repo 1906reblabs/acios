@@ -58,7 +58,6 @@ h1.hero-title em{color:var(--sky);font-style:italic;}
 .s-t{font-family:'Playfair Display',serif;font-weight:700;font-size:clamp(1.75rem,2.8vw,2.4rem);line-height:1.1;letter-spacing:-.02em;color:var(--white);margin-bottom:.45rem;}
 .s-t em{color:var(--sky);font-style:italic;}
 .s-sub{font-size:.93rem;color:rgba(255,255,255,.43);margin-bottom:2.8rem;max-width:460px;}
-/* Featured */
 .fi{padding:5rem 0;border-bottom:1px solid var(--border);}
 .fc{display:grid;grid-template-columns:1fr 370px;gap:0;background:var(--surface);border:1px solid var(--border);overflow:hidden;transition:border-color .2s;}
 .fc:hover{border-color:var(--steel);}
@@ -68,6 +67,7 @@ h1.hero-title em{color:var(--sky);font-style:italic;}
 .badge-vol{background:var(--steel);color:var(--bg);}
 .badge-gold{background:rgba(201,168,76,.15);color:var(--gold);border:1px solid rgba(201,168,76,.3);}
 .badge-confirmed{background:rgba(79,201,138,.15);color:var(--green);border:1px solid rgba(79,201,138,.3);}
+.badge-alert{background:rgba(224,92,92,.15);color:var(--red);border:1px solid rgba(224,92,92,.3);}
 .fdate{font-family:'IBM Plex Mono',monospace;font-size:.6rem;letter-spacing:.1em;color:var(--mid);}
 .ftit{font-family:'Playfair Display',serif;font-weight:700;font-size:1.78rem;line-height:1.14;letter-spacing:-.02em;color:var(--white);margin-bottom:.95rem;text-decoration:none;display:block;}
 .ftit:hover{color:var(--sky);}
@@ -87,7 +87,6 @@ h1.hero-title em{color:var(--sky);font-style:italic;}
 .s-tu{color:var(--green);font-size:.68rem;font-family:'IBM Plex Mono',monospace;}
 .s-td{color:var(--red);font-size:.68rem;font-family:'IBM Plex Mono',monospace;}
 .s-tg{color:var(--gold);font-size:.68rem;font-family:'IBM Plex Mono',monospace;}
-/* Archive */
 .ar{padding:5rem 0;border-bottom:1px solid var(--border);}
 .ag{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;margin-top:.5rem;}
 .ac{background:var(--surface);border:1px solid var(--border);padding:1.9rem;text-decoration:none;display:block;transition:border-color .2s,transform .2s;position:relative;overflow:hidden;}
@@ -106,7 +105,6 @@ h1.hero-title em{color:var(--sky);font-style:italic;}
 .ac-coming{position:relative;}
 .accoming{position:absolute;inset:0;background:rgba(10,26,42,.72);display:flex;align-items:center;justify-content:center;}
 .aclbl{font-family:'IBM Plex Mono',monospace;font-size:.58rem;letter-spacing:.24em;text-transform:uppercase;color:var(--mid);border:1px solid var(--border);padding:.38rem .95rem;}
-/* Pillars */
 .ps{padding:5rem 0;border-bottom:1px solid var(--border);}
 .pg{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border:1px solid var(--border);margin-top:2.3rem;}
 .pi{background:var(--surface);padding:2.3rem 1.7rem;transition:background .2s;position:relative;overflow:hidden;}
@@ -115,7 +113,6 @@ h1.hero-title em{color:var(--sky);font-style:italic;}
 .pi-i{font-size:1.45rem;margin-bottom:.95rem;display:block;}
 .pi-t{font-family:'IBM Plex Mono',monospace;font-size:.58rem;letter-spacing:.19em;text-transform:uppercase;color:var(--steel);margin-bottom:.55rem;}
 .pi-d{font-size:.84rem;color:rgba(255,255,255,.58);line-height:1.62;}
-/* Newsletter */
 .ns{padding:5rem 0;}
 .ni{background:var(--surface2);border:1px solid var(--border-s);padding:3.2rem;display:grid;grid-template-columns:1fr 1fr;gap:3.8rem;align-items:center;position:relative;overflow:hidden;}
 .ni::before{content:'&#x2709;';position:absolute;right:1.9rem;bottom:-.95rem;font-size:9.5rem;color:rgba(115,153,198,.04);pointer-events:none;line-height:1;}
@@ -170,33 +167,33 @@ footer{border-top:1px solid var(--border);padding:2.8rem 3rem;}
     <li><a href="index.html" class="active">Reports</a></li>
     <li><a href="about.html">About</a></li>
     <li><a href="terms.html" style="font-family:'IBM Plex Mono',monospace;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--mid);text-decoration:none;">Legal</a></li>
-    <li><a href="antifragile_africa_weekly_08jul2026.html" class="nav-cta">Latest Issue &#x2192;</a></li>
+    <li><a href="antifragile_africa_weekly_22jul2026.html" class="nav-cta">Latest Issue &#x2192;</a></li>
   </ul>
 </nav>
 
 <div class="ticker">
   <div class="tl">Live Signals</div>
   <div class="tt">
-    <span class="ti"><span class="ti-l">FSCA ETF</span><span class="ti-v">APPROVED</span><span class="t-gd">&#x2605; OLD MUTUAL LIVE</span></span><span class="t-sep">&#xB7;</span>
-    <span class="ti"><span class="ti-l">SAFARICOM PARTNER</span><span class="ti-v">CIRCLE / USDC</span><span class="t-gd">&#x2605; CONFIRMED EXCLUSIVE</span></span><span class="t-sep">&#xB7;</span>
-    <span class="ti"><span class="ti-l">ZAR/USDT PREM</span><span class="ti-v">~4.2%</span><span class="t-dn">&#x2193; -170BPS IN 4 DAYS</span></span><span class="t-sep">&#xB7;</span>
-    <span class="ti"><span class="ti-l">NGN/USDT PREM</span><span class="ti-v">~16.2%</span><span class="t-al">&#x2193; DAY 75 SLOW GRIND</span></span><span class="t-sep">&#xB7;</span>
-    <span class="ti"><span class="ti-l">KES/USDT PREM</span><span class="ti-v">~2.7%</span><span class="t-dn">&#x2193; M-PESA DAY 23</span></span><span class="t-sep">&#xB7;</span>
-    <span class="ti"><span class="ti-l">MAD/USDT PREM</span><span class="ti-v">~2.0%</span><span class="t-dn">&#x2193; LICENCE T-3&#x2013;7</span></span><span class="t-sep">&#xB7;</span>
-    <span class="ti"><span class="ti-l">XOF/USDT PREM</span><span class="ti-v">~9.7%</span><span class="t-gd">&#x2193; BCEAO T-8</span></span><span class="t-sep">&#xB7;</span>
-    <span class="ti"><span class="ti-l">ZMW/USDT PREM</span><span class="ti-v">~6.6%</span><span class="t-gd">&#x2191; SECZ T-7</span></span><span class="t-sep">&#xB7;</span>
-    <span class="ti"><span class="ti-l">FRAGILITY IDX</span><span class="ti-v">2.5/10</span><span class="t-up">&#x2193; 9TH CONSECUTIVE DECREASE</span></span><span class="t-sep">&#xB7;</span>
-    <span class="ti"><span class="ti-l">KENYA CMS</span><span class="ti-v">95/100</span><span class="t-gd">&#x2191; CEILING SCORE</span></span><span class="t-sep">&#xB7;</span>
-    <span class="ti"><span class="ti-l">SOUTH AFRICA CMS</span><span class="ti-v">92/100</span><span class="t-gd">&#x2191; +4 HIGHEST EVER</span></span><span class="t-sep">&#xB7;</span>
-    <span class="ti"><span class="ti-l">BUILDERS &amp; VOICES</span><span class="ti-v">NEW SECTION</span><span class="t-gd">&#x2605; DEBUTS VOL. 15</span></span><span class="t-sep">&#xB7;</span>
-    <span class="ti"><span class="ti-l">VOL 15 AUDIT</span><span class="ti-v">4.93/5</span><span class="t-up">28 AGENTS &#xB7; 7 LAYERS</span></span><span class="t-sep">&#xB7;</span>
+    <span class="ti"><span class="ti-l">BCEAO</span><span class="ti-v">PERMISSIVE</span><span class="t-gd">&#x2605; DIRECTION CONFIRMED</span></span><span class="t-sep">&#xB7;</span>
+    <span class="ti"><span class="ti-l">YELLOW CARD</span><span class="ti-v">KENYA CLEARED</span><span class="t-gd">&#x2605; PAYMENT TIER LIVE</span></span><span class="t-sep">&#xB7;</span>
+    <span class="ti"><span class="ti-l">MAD/USDT PREM</span><span class="ti-v">~1.3%</span><span class="t-dn">&#x2193; SECOND LICENCE T-24</span></span><span class="t-sep">&#xB7;</span>
+    <span class="ti"><span class="ti-l">KES/USDT PREM</span><span class="ti-v">~2.3%</span><span class="t-dn">&#x2193; PAYMENT TIER CLEARED</span></span><span class="t-sep">&#xB7;</span>
+    <span class="ti"><span class="ti-l">NGN/USDT PREM</span><span class="ti-v">~15.8%</span><span class="t-al">&#x2193; DAY 89 &#x2014; 3RD SILENT CYCLE</span></span><span class="t-sep">&#xB7;</span>
+    <span class="ti"><span class="ti-l">ZAR/USDT PREM</span><span class="ti-v">~3.8%</span><span class="t-dn">&#x2193; ETF DAY 15</span></span><span class="t-sep">&#xB7;</span>
+    <span class="ti"><span class="ti-l">XOF/USDT PREM</span><span class="ti-v">~9.1%</span><span class="t-dn">&#x2193; DIRECTION CONFIRMED</span></span><span class="t-sep">&#xB7;</span>
+    <span class="ti"><span class="ti-l">TETHER ANNEX</span><span class="ti-v">DISCONFIRMED</span><span class="t-gd">&#x2605; 5-CYCLE ITEM CLOSED</span></span><span class="t-sep">&#xB7;</span>
+    <span class="ti"><span class="ti-l">MTN MOMO</span><span class="ti-v">FEASIBILITY STUDY</span><span class="t-gd">&#x2191; 20% PROBABILITY</span></span><span class="t-sep">&#xB7;</span>
+    <span class="ti"><span class="ti-l">FRAGILITY IDX</span><span class="ti-v">2.3/10</span><span class="t-up">&#x2193; 11TH CONSECUTIVE DECREASE</span></span><span class="t-sep">&#xB7;</span>
+    <span class="ti"><span class="ti-l">KENYA CMS</span><span class="ti-v">95/100</span><span class="t-gd">&#x2192; CEILING, SECOND-MOVER SHIFT</span></span><span class="t-sep">&#xB7;</span>
+    <span class="ti"><span class="ti-l">WAEMU CMS</span><span class="ti-v">93/100</span><span class="t-gd">&#x2191; +2 STRONGEST SIGNAL SINCE VOL.07</span></span><span class="t-sep">&#xB7;</span>
+    <span class="ti"><span class="ti-l">VOL 17 AUDIT</span><span class="ti-v">4.93/5</span><span class="t-up">28 AGENTS &#xB7; 7 LAYERS</span></span><span class="t-sep">&#xB7;</span>
     <!-- duplicate for loop -->
-    <span class="ti"><span class="ti-l">FSCA ETF</span><span class="ti-v">APPROVED</span><span class="t-gd">&#x2605; OLD MUTUAL LIVE</span></span><span class="t-sep">&#xB7;</span>
-    <span class="ti"><span class="ti-l">SAFARICOM PARTNER</span><span class="ti-v">CIRCLE / USDC</span><span class="t-gd">&#x2605; CONFIRMED EXCLUSIVE</span></span><span class="t-sep">&#xB7;</span>
-    <span class="ti"><span class="ti-l">ZAR/USDT PREM</span><span class="ti-v">~4.2%</span><span class="t-dn">&#x2193; -170BPS IN 4 DAYS</span></span><span class="t-sep">&#xB7;</span>
-    <span class="ti"><span class="ti-l">NGN/USDT PREM</span><span class="ti-v">~16.2%</span><span class="t-al">&#x2193; DAY 75</span></span><span class="t-sep">&#xB7;</span>
-    <span class="ti"><span class="ti-l">FRAGILITY IDX</span><span class="ti-v">2.5/10</span><span class="t-up">&#x2193; 9TH DECREASE</span></span><span class="t-sep">&#xB7;</span>
-    <span class="ti"><span class="ti-l">KENYA CMS</span><span class="ti-v">95/100</span><span class="t-gd">&#x2605; CEILING SCORE</span></span><span class="t-sep">&#xB7;</span>
+    <span class="ti"><span class="ti-l">BCEAO</span><span class="ti-v">PERMISSIVE</span><span class="t-gd">&#x2605; DIRECTION CONFIRMED</span></span><span class="t-sep">&#xB7;</span>
+    <span class="ti"><span class="ti-l">YELLOW CARD</span><span class="ti-v">KENYA CLEARED</span><span class="t-gd">&#x2605; PAYMENT TIER LIVE</span></span><span class="t-sep">&#xB7;</span>
+    <span class="ti"><span class="ti-l">MAD/USDT PREM</span><span class="ti-v">~1.3%</span><span class="t-dn">&#x2193; SECOND LICENCE T-24</span></span><span class="t-sep">&#xB7;</span>
+    <span class="ti"><span class="ti-l">NGN/USDT PREM</span><span class="ti-v">~15.8%</span><span class="t-al">&#x2193; DAY 89</span></span><span class="t-sep">&#xB7;</span>
+    <span class="ti"><span class="ti-l">FRAGILITY IDX</span><span class="ti-v">2.3/10</span><span class="t-up">&#x2193; 11TH DECREASE</span></span><span class="t-sep">&#xB7;</span>
+    <span class="ti"><span class="ti-l">KENYA CMS</span><span class="ti-v">95/100</span><span class="t-gd">&#x2605; SECOND-MOVER SHIFT</span></span><span class="t-sep">&#xB7;</span>
   </div>
 </div>
 
@@ -206,15 +203,15 @@ footer{border-top:1px solid var(--border);padding:2.8rem 3rem;}
     <h1 class="hero-title fu fu2">Where Disorder<br>Becomes <em>Advantage</em></h1>
     <p class="htag fu fu3">Institutional-grade intelligence on African crypto markets. Capital flows, regulatory arbitrage, OTC signals, and hidden trades &#x2014; for allocators who understand that Africa&#x2019;s monetary dysfunction is crypto&#x2019;s greatest growth engine.</p>
     <div class="hcta fu fu4">
-      <a href="antifragile_africa_weekly_08jul2026.html" class="btn-p">Read Latest Issue &#x2192;</a>
+      <a href="antifragile_africa_weekly_22jul2026.html" class="btn-p">Read Latest Issue &#x2192;</a>
       <a href="about.html" class="btn-s">Our Thesis</a>
     </div>
   </div>
   <div class="hr">
     <div class="hs fu fu2">
-      <div class="hsr"><div class="sn">170<em>bps</em></div><div class="sd">ZAR/USDT premium compression in four trading days following FSCA's ETF approval &#x2014; the sharpest single-week repricing in the South Africa dataset.</div></div>
-      <div class="hsr"><div class="sn">40.2<em>M</em></div><div class="sd">M-Pesa users now on a confirmed, exclusive Circle/USDC stablecoin rail &#x2014; Africa's largest single stablecoin distribution commitment.</div></div>
-      <div class="hsr"><div class="sn">4<em>voices</em></div><div class="sd">New this cycle: ACIOS profiles the operators and independent researchers actually building African crypto infrastructure.</div></div>
+      <div class="hsr"><div class="sn">1<em>st</em></div><div class="sd">Credible second-mover clearance against a single-incumbent African crypto market: Yellow Card's Kenya payment tier, cleared one cycle after the concentration pattern was named.</div></div>
+      <div class="hsr"><div class="sn">5<em>cycles</em></div><div class="sd">The Tether BCEAO supplementary annex rumour survived five cycles as UNRESOLVED before closing cleanly as disconfirmed noise this issue.</div></div>
+      <div class="hsr"><div class="sn">11<em>th</em></div><div class="sd">Consecutive cycle of Fragility Index decline &#x2014; the longest sustained systemic de-risking run in the ACIOS dataset.</div></div>
     </div>
     <div class="hth fu fu3">
       <span class="thl">Core Thesis</span>
@@ -228,36 +225,36 @@ footer{border-top:1px solid var(--border);padding:2.8rem 3rem;}
 <section class="fi">
   <div class="s-ey">Latest Report</div>
   <div class="s-t">This Week&#x2019;s <em>Intelligence</em></div>
-  <p class="s-sub">Vol. 15 &#x2014; 8 July 2026 &#x2014; FSCA Approves. Safaricom Names Its Partner. The Builders Take the Stage.</p>
+  <p class="s-sub">Vol. 17 &#x2014; 22 July 2026 &#x2014; The Second-Mover Question Gets Its First Test</p>
   <div class="fc">
     <div class="fb">
       <div class="fmet">
         <span class="badge badge-vol">Latest</span>
-        <span class="badge badge-confirmed">&#x2713; P-14-02 Correct</span>
-        <span class="badge badge-confirmed">&#x2713; P-13-04 Correct</span>
-        <span class="badge badge-gold">&#x2605; FSCA ETF Approved</span>
-        <span class="badge badge-alert">&#x26A0; Morocco Licence T-3&#x2013;7</span>
-        <span class="fdate">8 July 2026</span>
+        <span class="badge badge-confirmed">&#x2713; P-16-01 On Track</span>
+        <span class="badge badge-gold">&#x2605; BCEAO Direction Confirmed</span>
+        <span class="badge badge-gold">&#x2605; Yellow Card Kenya Payment Tier Cleared</span>
+        <span class="badge badge-alert">&#x26A0; Nigeria &#x2014; 3rd Cycle No New Signal</span>
+        <span class="fdate">22 July 2026</span>
       </div>
-      <a href="antifragile_africa_weekly_08jul2026.html" class="ftit">FSCA Approves. Safaricom Names Its Partner. <em>The Builders Take the Stage.</em></a>
-      <p class="fdesc">South Africa&#x2019;s FSCA formally approved Old Mutual Wealth&#x2019;s crypto ETF on 7 July, and Old Mutual named its institutional custody consortium the same day &#x2014; the ZAR/USDT premium compressed 170bps in four trading days, the sharpest single-week move in the ACIOS South Africa dataset. Safaricom confirmed Circle&#x2019;s USDC as the exclusive M-Pesa stablecoin partner across all six deployment markets, twelve days ahead of its own deadline. Morocco&#x2019;s first AMMC licence is now days away. This cycle, ACIOS introduces a new component: <strong>Builders &amp; Voices</strong>, profiling the operators, executive teams, and independent researchers who are converting fourteen volumes of regulatory tracking into commercial and analytical outcomes.</p>
+      <a href="antifragile_africa_weekly_22jul2026.html" class="ftit">The BCEAO Confirms Permissive. Yellow Card Clears Kenya&#x2019;s Payment Tier. <em>The Second-Mover Question Gets Its First Test.</em></a>
+      <p class="fdesc">The BCEAO published a post-consultation summary confirming a permissive-with-guardrails direction for WAEMU &#x2014; and closed the five-cycle Tether supplementary annex question as noise, disconfirmed. Yellow Card&#x2019;s Kenya payment-provider tier cleared CBK technical review, giving it a legal, non-M-Pesa route to Kenyan stablecoin consumers for the first time. Morocco&#x2019;s second AMMC applicant clears documentation ahead of its August 15 target. Atlas Digital Assets completes nine incident-free operating days. MTN MoMo begins an internal stablecoin feasibility study. The single-incumbent concentration pattern flagged in Vol. 16 gets its first real challenger.</p>
       <ul class="fhl">
-        <li>FSCA formally approves Old Mutual&#x2019;s crypto ETF, three days ahead of schedule &#x2014; P-14-02 resolves CORRECT</li>
-        <li>Safaricom confirms Circle/USDC as exclusive M-Pesa stablecoin partner, twelve days early &#x2014; P-13-04 resolves CORRECT</li>
-        <li>New Component 05, &#x201C;Builders &amp; Voices,&#x201D; profiles Yellow Card, VALR, Circle, and independent research house Ubuntu Capital Research</li>
-        <li>Morocco&#x2019;s AMMC clears a second applicant; Attijariwafa&#x2019;s correspondent-bank concentration is now confirmed, not inferred</li>
-        <li>Contrarian flag: Africa&#x2019;s regulated and informal crypto layers are diverging in sophistication at very different speeds</li>
-        <li>Five new predictions P-15-01 through P-15-05 logged to prediction memory</li>
+        <li>BCEAO post-consultation summary confirms permissive-with-guardrails direction; final framework targeted ~15 October</li>
+        <li>Tether BCEAO supplementary annex rumour, unresolved for five cycles, closes definitively as disconfirmed noise</li>
+        <li>Yellow Card clears Kenya&#x2019;s CBK payment-provider tier &#x2014; the first credible second-mover clearance against a Vol. 16 single-incumbent position</li>
+        <li>Morocco&#x2019;s second AMMC applicant (CIH Bank correspondent) clears documentation, on track for an August 15 grant</li>
+        <li>Nigeria&#x2019;s CBN produces no new language for a third consecutive cycle &#x2014; the longest silent stretch since the RFC signal first surfaced</li>
+        <li>Five new predictions P-17-01 through P-17-05 logged to prediction memory</li>
       </ul>
-      <a href="antifragile_africa_weekly_08jul2026.html" class="btn-p">Read Full Report &#x2192;</a>
+      <a href="antifragile_africa_weekly_22jul2026.html" class="btn-p">Read Full Report &#x2192;</a>
     </div>
     <div class="fsd">
       <span class="sbl">P2P Premium Tracker</span>
-      <div class="sm"><div class="sc-l">South Africa &#xB7; ZAR/USDT</div><div class="sv green">~4.2%</div><div class="s-td">&#x2193; ETF APPROVED</div><div class="snote">FSCA formal approval July 7. Sharpest single-week compression in the dataset.</div></div>
-      <div class="sm"><div class="sc-l">Kenya &#xB7; KES/USDT</div><div class="sv green">~2.7%</div><div class="s-td">&#x2193; PARTNER NAMED</div><div class="snote">Circle/USDC confirmed exclusive. M-Pesa deployment Day 23 of 90.</div></div>
-      <div class="sm"><div class="sc-l">Nigeria &#xB7; NGN/USDT</div><div class="sv alert">~16.2%</div><div class="s-td">&#x2193; DAY 75 &#x2014; SLOW GRIND</div><div class="snote">Compressing on anticipation alone. No new Tier 1 corroboration this cycle.</div></div>
-      <div class="sm"><div class="sc-l">Morocco &#xB7; MAD/USDT</div><div class="sv green">~2.0%</div><div class="s-td">&#x2193; LICENCE T-3&#x2013;7</div><div class="snote">Second applicant clears review. First formal grant expected within the week.</div></div>
-      <div class="sm"><div class="sc-l">WAEMU &#xB7; XOF/USDT</div><div class="sv gold">~9.7%</div><div class="s-tg">&#x2193; BCEAO T-8</div><div class="snote">Consultation closes ~16 July. No new submissions this cycle.</div></div>
+      <div class="sm"><div class="sc-l">Morocco &#xB7; MAD/USDT</div><div class="sv green">~1.3%</div><div class="s-td">&#x2193; SECOND LICENCE T-24</div><div class="snote">CIH-correspondent applicant clears documentation. Atlas clean at 9 operating days.</div></div>
+      <div class="sm"><div class="sc-l">Kenya &#xB7; KES/USDT</div><div class="sv green">~2.3%</div><div class="s-td">&#x2193; PAYMENT TIER CLEARED</div><div class="snote">Yellow Card CBK clearance. First credible second-mover data point.</div></div>
+      <div class="sm"><div class="sc-l">Nigeria &#xB7; NGN/USDT</div><div class="sv alert">~15.8%</div><div class="s-td">&#x2193; DAY 89 &#x2014; SLOW GRIND</div><div class="snote">Third consecutive silent cycle. Compression continuing without new signal.</div></div>
+      <div class="sm"><div class="sc-l">South Africa &#xB7; ZAR/USDT</div><div class="sv green">~3.8%</div><div class="s-td">&#x2193; ETF DAY 15</div><div class="snote">Old Mutual placement continues. Q3 flow disclosure awaited.</div></div>
+      <div class="sm"><div class="sc-l">WAEMU &#xB7; XOF/USDT</div><div class="sv gold">~9.1%</div><div class="s-tg">&#x2193; DIRECTION CONFIRMED</div><div class="snote">Post-consultation summary permissive-leaning. Final framework ~15 October.</div></div>
     </div>
   </div>
 </section>
@@ -267,6 +264,18 @@ footer{border-top:1px solid var(--border);padding:2.8rem 3rem;}
   <div class="s-t">All <em>Reports</em></div>
   <p class="s-sub">Every issue, permanently available. Intelligence compounds.</p>
   <div class="ag">
+    <a href="antifragile_africa_weekly_22jul2026.html" class="ac">
+      <div class="acd">22 Jul 2026<span class="acv">Vol. 17</span></div>
+      <div class="act">The BCEAO Confirms Permissive. Yellow Card Clears Kenya&#x2019;s Payment Tier. The Second-Mover Question Gets Its First Test.</div>
+      <div class="ace">BCEAO confirms permissive direction, closes the Tether annex as noise. Yellow Card clears Kenya&#x2019;s payment tier &#x2014; the first credible second-mover challenge to Vol. 16&#x2019;s concentration thesis. Nigeria&#x2019;s silence enters a third cycle.</div>
+      <div class="ats"><span class="at">WAEMU</span><span class="at">Kenya</span><span class="at">Morocco</span><span class="at">Nigeria</span></div>
+    </a>
+    <a href="antifragile_africa_weekly_15jul2026.html" class="ac">
+      <div class="acd">15 Jul 2026<span class="acv">Vol. 16</span></div>
+      <div class="act">Morocco Grants Its First Licence. Builders &amp; Voices Expands.</div>
+      <div class="ace">AMMC grants Atlas Digital Assets Morocco&#x2019;s first digital asset licence. BCEAO consultation closes. Builders &amp; Voices expands to six profiles as the regulatory storyline matures from crystallisation to competition.</div>
+      <div class="ats"><span class="at">Morocco</span><span class="at">WAEMU</span><span class="at">South Africa</span><span class="at">Builders</span></div>
+    </a>
     <a href="antifragile_africa_weekly_08jul2026.html" class="ac">
       <div class="acd">8 Jul 2026<span class="acv">Vol. 15</span></div>
       <div class="act">FSCA Approves. Safaricom Names Its Partner. The Builders Take the Stage.</div>
@@ -358,11 +367,11 @@ footer{border-top:1px solid var(--border);padding:2.8rem 3rem;}
       <div class="ats"><span class="at">Thesis</span><span class="at">Founding</span><span class="at">Framework</span></div>
     </a>
     <div class="ac ac-coming" style="pointer-events:none;opacity:.42;">
-      <div class="acd">~15 Jul 2026<span class="acv">Vol. 16</span></div>
-      <div class="act">Vol. 16 &#x2014; Publishing ~15 July 2026</div>
-      <div class="ace">Morocco first licence grant verdict. BCEAO consultation close. Old Mutual ETF placement launch. Zambia SECZ mapping deadline. Builders &amp; Voices expands.</div>
-      <div class="ats"><span class="at">Morocco</span><span class="at">WAEMU</span><span class="at">South Africa</span><span class="at">Zambia</span></div>
-      <div class="accoming"><span class="aclbl">Publishing ~15 July 2026</span></div>
+      <div class="acd">~29 Jul 2026<span class="acv">Vol. 18</span></div>
+      <div class="act">Vol. 18 &#x2014; Publishing ~29 July 2026</div>
+      <div class="ace">Yellow Card Kenya payment-tier commercial launch. Rwanda licensing window opens. Uganda draft framework watch. MTN MoMo feasibility follow-up. Nigeria CBN silence enters a fourth cycle, if unresolved.</div>
+      <div class="ats"><span class="at">Kenya</span><span class="at">Rwanda</span><span class="at">Uganda</span><span class="at">Nigeria</span></div>
+      <div class="accoming"><span class="aclbl">Publishing ~29 July 2026</span></div>
     </div>
   </div>
 </section>
@@ -408,12 +417,11 @@ footer{border-top:1px solid var(--border);padding:2.8rem 3rem;}
     <div>
       <span class="fct">Reports</span>
       <ul class="fl">
+        <li><a href="antifragile_africa_weekly_22jul2026.html">Vol. 17 &#x2014; 22 Jul 2026</a></li>
+        <li><a href="antifragile_africa_weekly_15jul2026.html">Vol. 16 &#x2014; 15 Jul 2026</a></li>
         <li><a href="antifragile_africa_weekly_08jul2026.html">Vol. 15 &#x2014; 8 Jul 2026</a></li>
         <li><a href="antifragile_africa_weekly_01jul2026.html">Vol. 14 &#x2014; 1 Jul 2026</a></li>
         <li><a href="antifragile_africa_weekly_24jun2026.html">Vol. 13 &#x2014; 24 Jun 2026</a></li>
-        <li><a href="antifragile_africa_weekly_17jun2026.html">Vol. 12 &#x2014; 17 Jun 2026</a></li>
-        <li><a href="antifragile_africa_weekly_10jun2026.html">Vol. 11 &#x2014; 10 Jun 2026</a></li>
-        <li><a href="antifragile_africa_weekly_26may2026.html">Vol. 09 &#x2014; 26 May 2026</a></li>
       </ul>
     </div>
     <div>
