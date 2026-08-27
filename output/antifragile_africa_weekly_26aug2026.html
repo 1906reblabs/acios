@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vol. 22 — Nigeria's SEC Drafts a Residency Test for Every Exchange That Wants Its Users. The ARIP Count Is Finally Resolved. — Antifragile Africa Crypto</title>
+<meta name="description" content="Nigeria's SEC publishes draft prudential rules requiring crypto exchanges serving Nigerians to incorporate locally, post up to $1.49 million in capital, and base their CEO in-country — the third piece of a framework assembled in five weeks. The Vol. 21 ARIP cohort-count discrepancy (12 vs. 14) is resolved at 14. Kenya, South Africa, Morocco, Rwanda and Zimbabwe are re-verified with no material change.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=IBM+Plex+Mono:wght@300;400;500&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#00355f;--steel:#7399c6;--sky:#acd4f1;--mid:#58575a;--white:#fff;--gold:#c9a84c;--bg:#0a1a2a;--surface:#0f2236;--surface2:#162d46;--surface3:#1c3554;--border:rgba(115,153,198,.18);--border-s:rgba(115,153,198,.35);--green:#4fc98a;--red:#e05c5c;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--white);font-family:'Source Serif 4',Georgia,serif;font-weight:300;line-height:1.75;font-size:16px;overflow-x:hidden;}
+body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:1000;opacity:.4;}
+nav{position:sticky;top:0;z-index:200;background:rgba(10,26,42,.97);backdrop-filter:blur(14px);border-bottom:1px solid var(--border-s);height:58px;display:flex;align-items:center;justify-content:space-between;padding:0 3rem;}
+.nb{font-family:'Playfair Display',serif;font-weight:900;font-size:.95rem;color:var(--white);letter-spacing:-.01em;text-decoration:none;}
+.nb span{color:var(--sky);font-style:italic;}
+.nl{display:flex;gap:2.5rem;align-items:center;list-style:none;}
+.nl a{font-family:'IBM Plex Mono',monospace;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--mid);text-decoration:none;transition:color .2s;}
+.nl a:hover{color:var(--steel);}
+.nav-cta{color:var(--sky)!important;border:1px solid rgba(172,212,241,.35);padding:.3rem .9rem;}
+.ih{background:var(--surface);border-bottom:1px solid var(--border-s);padding:5rem 3rem 4rem;position:relative;overflow:hidden;}
+.ih::before{content:'XXII';position:absolute;right:-.02em;top:-.12em;font-family:'Playfair Display',serif;font-weight:900;font-size:clamp(6rem,14vw,12rem);color:transparent;-webkit-text-stroke:1px rgba(115,153,198,.06);line-height:1;pointer-events:none;user-select:none;}
+.ih-inner{max-width:1140px;margin:0 auto;position:relative;z-index:2;}
+.chips{display:flex;gap:2rem;margin-bottom:1.8rem;flex-wrap:wrap;align-items:center;}
+.chip{font-family:'IBM Plex Mono',monospace;font-size:.57rem;letter-spacing:.18em;text-transform:uppercase;display:flex;flex-direction:column;gap:.1rem;}
+.chip-l{color:var(--mid);}
+.chip-v{color:var(--sky);}
+.chip-div{width:1px;height:28px;background:var(--border);}
+.badge{font-family:'IBM Plex Mono',monospace;font-size:.55rem;letter-spacing:.18em;text-transform:uppercase;padding:.2rem .6rem;display:inline-block;}
+.badge-vol{background:var(--steel);color:var(--bg);}
+.badge-gold{background:rgba(201,168,76,.15);color:var(--gold);border:1px solid rgba(201,168,76,.3);}
+.badge-confirmed{background:rgba(79,201,138,.15);color:var(--green);border:1px solid rgba(79,201,138,.3);}
+.badge-alert{background:rgba(224,92,92,.15);color:var(--red);border:1px solid rgba(224,92,92,.3);}
+.badges{display:flex;gap:.55rem;flex-wrap:wrap;margin-bottom:1.4rem;}
+.ih-date{font-family:'IBM Plex Mono',monospace;font-size:.67rem;letter-spacing:.1em;color:var(--mid);margin-bottom:1.1rem;}
+.ih-title{font-family:'Playfair Display',serif;font-weight:900;font-size:clamp(1.9rem,4vw,3.4rem);line-height:1.1;letter-spacing:-.025em;color:var(--white);margin-bottom:1.1rem;max-width:860px;}
+.ih-title em{color:var(--sky);font-style:italic;}
+.ih-sub{font-size:1rem;color:rgba(255,255,255,.5);line-height:1.68;max-width:660px;margin-bottom:2.2rem;}
+.ih-nav{display:flex;gap:.45rem;flex-wrap:wrap;}
+.ih-nav a{font-family:'IBM Plex Mono',monospace;font-size:.54rem;letter-spacing:.14em;text-transform:uppercase;color:var(--mid);text-decoration:none;border:1px solid var(--border);padding:.26rem .62rem;transition:color .15s,border-color .15s;}
+.ih-nav a:hover{color:var(--sky);border-color:var(--steel);}
+.sb{background:var(--surface2);border-bottom:1px solid var(--border);}
+.sb-inner{max-width:1140px;margin:0 auto;padding:0 3rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));}
+.sc{padding:1.1rem 1.1rem;border-right:1px solid var(--border);}
+.sc:last-child{border-right:none;}
+.sc-country{font-family:'IBM Plex Mono',monospace;font-size:.51rem;letter-spacing:.17em;text-transform:uppercase;color:var(--mid);margin-bottom:.28rem;}
+.sc-val{font-family:'Playfair Display',serif;font-weight:700;font-size:1.4rem;line-height:1;color:var(--white);}
+.sc-val.alert{color:var(--red);}.sc-val.gold{color:var(--gold);}.sc-val.green{color:var(--green);}
+.sc-trend{font-family:'IBM Plex Mono',monospace;font-size:.53rem;}
+.sc-note{font-size:.67rem;color:rgba(255,255,255,.33);line-height:1.33;margin-top:.18rem;}
+.t-up{color:var(--green);}.t-down{color:var(--red);}.t-gold{color:var(--gold);}.t-neutral{color:var(--sky);}
+.container{max-width:1140px;margin:0 auto;padding:0 3rem;}
+.rs{padding:4.5rem 0;border-bottom:1px solid var(--border);}
+.rs:last-of-type{border-bottom:none;}
+.s-num{font-family:'IBM Plex Mono',monospace;font-size:.51rem;letter-spacing:.22em;text-transform:uppercase;color:var(--steel);background:rgba(115,153,198,.08);border:1px solid var(--border);padding:.17rem .52rem;display:inline-block;margin-bottom:.7rem;}
+.s-ey{font-family:'IBM Plex Mono',monospace;font-size:.57rem;letter-spacing:.27em;text-transform:uppercase;color:var(--steel);display:flex;align-items:center;gap:.9rem;margin-bottom:.9rem;}
+.s-ey::after{content:'';flex:1;height:1px;background:var(--border);max-width:80px;}
+h2{font-family:'Playfair Display',serif;font-weight:700;font-size:clamp(1.65rem,2.6vw,2.2rem);line-height:1.1;letter-spacing:-.02em;color:var(--white);margin-bottom:1.8rem;}
+h2 em{color:var(--sky);font-style:italic;}
+.eb{background:var(--surface);border:1px solid var(--border-s);border-left:5px solid var(--sky);padding:2.8rem;margin-bottom:1.2rem;}
+.eb-hl{font-family:'Playfair Display',serif;font-weight:900;font-size:clamp(1.05rem,1.7vw,1.5rem);line-height:1.2;color:var(--white);margin-bottom:1.7rem;text-transform:uppercase;letter-spacing:.01em;}
+.eb-body p{font-size:1rem;color:rgba(255,255,255,.82);line-height:1.87;margin-bottom:1.25rem;}
+.eb-body p:last-child{margin-bottom:0;}
+.eb-body strong{color:var(--white);font-weight:600;}
+.eb-sum{font-family:'IBM Plex Mono',monospace;font-size:.74rem;letter-spacing:.07em;color:var(--sky);border-top:1px solid var(--border);padding-top:1.1rem;margin-top:1.7rem;line-height:1.62;}
+.eb-risk{font-family:'IBM Plex Mono',monospace;font-size:.66rem;letter-spacing:.06em;color:var(--mid);border-top:1px solid var(--border);padding-top:.85rem;margin-top:.95rem;line-height:1.58;}
+.eb-risk strong{color:rgba(255,255,255,.52);}
+.ins-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem;}
+.ins-card{background:var(--surface);border:1px solid var(--border);padding:1.75rem 1.9rem;position:relative;overflow:hidden;transition:border-color .2s;}
+.ins-card:hover{border-color:var(--steel);}
+.ins-card::after{content:attr(data-n);position:absolute;bottom:-.4em;right:.4rem;font-family:'Playfair Display',serif;font-weight:900;font-size:7.5rem;color:rgba(115,153,198,.04);line-height:1;pointer-events:none;}
+.conf{font-family:'IBM Plex Mono',monospace;font-size:.49rem;letter-spacing:.19em;text-transform:uppercase;padding:.14rem .48rem;border:1px solid;display:inline-block;margin-bottom:.7rem;}
+.conf-h{color:var(--green);border-color:rgba(79,201,138,.3);background:rgba(79,201,138,.07);}
+.conf-m{color:var(--gold);border-color:rgba(201,168,76,.3);background:rgba(201,168,76,.07);}
+.conf-l{color:var(--mid);border-color:var(--border);}
+.ins-head{font-family:'Playfair Display',serif;font-weight:700;font-size:1rem;color:var(--white);margin-bottom:.65rem;line-height:1.28;}
+.ins-body{font-size:.87rem;color:rgba(255,255,255,.63);line-height:1.7;}
+.ins-body strong{color:var(--white);font-weight:600;}
+.ins-src{font-family:'IBM Plex Mono',monospace;font-size:.49rem;letter-spacing:.14em;text-transform:uppercase;color:var(--mid);margin-top:.85rem;padding-top:.7rem;border-top:1px solid var(--border);}
+.mv-alert{background:rgba(201,168,76,.07);border:1px solid rgba(201,168,76,.25);padding:.9rem 1.4rem;margin-bottom:.75rem;display:flex;gap:1.1rem;}
+.mv-label{font-family:'IBM Plex Mono',monospace;font-size:.51rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);white-space:nowrap;padding-top:.06rem;}
+.mv-body{font-size:.86rem;color:rgba(255,255,255,.7);line-height:1.62;}
+.mv-body strong{color:var(--white);}
+.hm-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--border);border:1px solid var(--border);margin-bottom:1.4rem;}
+.hm-cell{background:var(--surface);padding:.95rem;transition:background .15s;}
+.hm-cell:hover{background:var(--surface2);}
+.l-red{border-left:3px solid var(--red);}.l-gold{border-left:3px solid var(--gold);}
+.l-steel{border-left:3px solid var(--steel);}.l-dim{border-left:3px solid rgba(115,153,198,.25);}.l-green{border-left:3px solid var(--green);}
+.hm-country{font-family:'IBM Plex Mono',monospace;font-size:.5rem;letter-spacing:.14em;text-transform:uppercase;color:var(--mid);margin-bottom:.25rem;}
+.hm-score{font-family:'Playfair Display',serif;font-weight:900;font-size:1.6rem;line-height:1;}
+.c-r{color:var(--red);}.c-g{color:var(--gold);}.c-s{color:var(--steel);}.c-gr{color:var(--green);}
+.hm-trend{font-family:'IBM Plex Mono',monospace;font-size:.54rem;}
+.hm-note{font-size:.66rem;color:rgba(255,255,255,.36);line-height:1.33;margin-top:.18rem;}
+.hm-caption{background:var(--surface);border:1px solid var(--border);border-left:3px solid var(--steel);padding:1.4rem 1.9rem;margin-bottom:1.4rem;}
+.hm-caption p{font-size:.91rem;color:rgba(255,255,255,.7);line-height:1.72;}
+.hm-caption strong{color:var(--white);}
+.sw{display:grid;grid-template-columns:195px 1fr;gap:3.2rem;align-items:start;}
+.st{position:sticky;top:78px;}
+.toc-l{font-family:'IBM Plex Mono',monospace;font-size:.51rem;letter-spacing:.21em;text-transform:uppercase;color:var(--steel);margin-bottom:.95rem;display:block;}
+.toc-list{list-style:none;border-left:1px solid var(--border);}
+.toc-list a{display:block;font-family:'IBM Plex Mono',monospace;font-size:.56rem;letter-spacing:.07em;color:var(--mid);text-decoration:none;padding:.4rem .78rem;border-left:2px solid transparent;margin-left:-1px;transition:color .15s,border-color .15s;line-height:1.38;}
+.toc-list a:hover{color:var(--sky);border-left-color:var(--steel);}
+.sl{margin-bottom:2.8rem;padding-bottom:2.8rem;border-bottom:1px solid var(--border);scroll-margin-top:78px;}
+.sl:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0;}
+.lb{font-family:'IBM Plex Mono',monospace;font-size:.51rem;letter-spacing:.21em;text-transform:uppercase;color:var(--steel);background:rgba(115,153,198,.09);border:1px solid var(--border);padding:.13rem .48rem;display:inline-block;margin-bottom:.6rem;}
+.lt{font-family:'Playfair Display',serif;font-weight:700;font-size:1.15rem;color:var(--white);margin-bottom:.95rem;letter-spacing:-.01em;}
+.lbody p{font-size:.95rem;color:rgba(255,255,255,.77);line-height:1.82;margin-bottom:1.1rem;}
+.lbody p:last-child{margin-bottom:0;}
+.lbody strong{color:var(--white);font-weight:600;}
+.ob{background:var(--surface2);border:1px solid var(--border);padding:1.15rem 1.4rem;margin:1.1rem 0;display:grid;grid-template-columns:76px 1fr;gap:.9rem;}
+.ot{font-family:'IBM Plex Mono',monospace;font-size:.5rem;letter-spacing:.14em;text-transform:uppercase;color:var(--steel);padding-top:.09rem;}
+.od{font-size:.87rem;color:rgba(255,255,255,.7);line-height:1.66;}
+.od p{margin-bottom:.6rem;}.od p:last-child{margin-bottom:0;}
+.od strong{color:var(--white);font-weight:600;}
+.cross-box{background:var(--surface2);border:1px solid var(--border-s);border-left:4px solid var(--steel);padding:1.9rem 2.3rem;margin-top:2.3rem;}
+.cross-lbl{font-family:'IBM Plex Mono',monospace;font-size:.51rem;letter-spacing:.21em;text-transform:uppercase;color:var(--steel);display:block;margin-bottom:1.4rem;}
+.ci{margin-bottom:1.7rem;padding-bottom:1.7rem;border-bottom:1px solid var(--border);}
+.ci:last-child{margin-bottom:0;padding-bottom:0;border-bottom:none;}
+.ci-t{font-family:'Playfair Display',serif;font-style:italic;font-size:.99rem;color:var(--sky);margin-bottom:.6rem;}
+.ci-b{font-size:.89rem;color:rgba(255,255,255,.63);line-height:1.7;}
+.ci-b strong{color:var(--white);font-weight:600;}
+.ft{display:grid;grid-template-columns:auto 1fr;gap:2.8rem;background:var(--surface);border:1px solid var(--border);padding:1.9rem 2.3rem;margin-bottom:1.4rem;align-items:center;}
+.fs-num{font-family:'Playfair Display',serif;font-weight:900;font-size:4.8rem;line-height:1;color:var(--green);}
+.fm{display:flex;flex-direction:column;gap:.45rem;}
+.fst{font-family:'IBM Plex Mono',monospace;font-size:.6rem;letter-spacing:.17em;text-transform:uppercase;color:var(--green);}
+.fd{font-size:.88rem;color:rgba(255,255,255,.6);line-height:1.62;}
+.fbars{background:var(--surface);border:1px solid var(--border);padding:1.9rem 2.3rem;margin-bottom:1.9rem;}
+.fbars-lbl{font-family:'IBM Plex Mono',monospace;font-size:.51rem;letter-spacing:.21em;text-transform:uppercase;color:var(--steel);margin-bottom:1.1rem;display:block;}
+.fr{display:flex;align-items:center;gap:1.1rem;padding:.65rem 0;border-bottom:1px solid var(--border);}
+.fr:last-child{border-bottom:none;padding-bottom:0;}
+.frl{font-family:'IBM Plex Mono',monospace;font-size:.57rem;letter-spacing:.09em;color:var(--mid);flex:1;}
+.fbw{flex:2;height:5px;background:rgba(115,153,198,.13);}
+.fb{height:100%;}
+.fb-low{background:var(--steel);}.fb-med{background:var(--gold);}.fb-high{background:var(--red);}
+.fv{font-family:'Playfair Display',serif;font-weight:700;font-size:1rem;color:var(--white);min-width:38px;text-align:right;}
+.risks{display:flex;flex-direction:column;gap:.95rem;}
+.ri{background:var(--surface);border:1px solid var(--border);padding:1.4rem 1.9rem;display:grid;grid-template-columns:auto 1fr auto;gap:1.4rem;align-items:flex-start;}
+.rr{font-family:'Playfair Display',serif;font-weight:900;font-size:1.9rem;color:rgba(115,153,198,.28);line-height:1;}
+.rn{font-family:'IBM Plex Mono',monospace;font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--steel);margin-bottom:.45rem;}
+.rd{font-size:.87rem;color:rgba(255,255,255,.63);line-height:1.62;}
+.rl{font-family:'IBM Plex Mono',monospace;font-size:.53rem;letter-spacing:.14em;text-transform:uppercase;padding:.18rem .48rem;white-space:nowrap;}
+.risk-low{background:rgba(115,153,198,.1);color:var(--steel);border:1px solid var(--border);}
+.risk-med{background:rgba(201,168,76,.1);color:var(--gold);border:1px solid rgba(201,168,76,.22);}
+.opp-list{display:flex;flex-direction:column;gap:1.9rem;}
+.oc{background:var(--surface);border:1px solid var(--border);overflow:hidden;transition:border-color .2s;}
+.oc:hover{border-color:var(--steel);}
+.oh{background:var(--surface2);border-bottom:1px solid var(--border);padding:1.4rem 1.9rem;display:flex;gap:1.8rem;align-items:flex-start;flex-wrap:wrap;}
+.otb{font-family:'IBM Plex Mono',monospace;font-size:.51rem;letter-spacing:.19em;text-transform:uppercase;background:var(--steel);color:var(--bg);padding:.19rem .58rem;white-space:nowrap;flex-shrink:0;}
+.ott{font-family:'Playfair Display',serif;font-weight:700;font-size:1.25rem;color:var(--white);flex:1;min-width:200px;line-height:1.22;}
+.os-box{text-align:right;}
+.osn{font-family:'Playfair Display',serif;font-weight:900;font-size:2.1rem;color:var(--green);line-height:1;}
+.osl{font-family:'IBM Plex Mono',monospace;font-size:.49rem;letter-spacing:.14em;text-transform:uppercase;color:var(--mid);}
+.ob2{padding:1.9rem;display:grid;grid-template-columns:1fr 255px;gap:1.9rem;}
+.oth p{font-size:.93rem;color:rgba(255,255,255,.73);line-height:1.78;margin-bottom:1.05rem;}
+.oth p:last-child{margin-bottom:0;}
+.oth strong{color:var(--white);font-weight:600;}
+.omc{display:flex;flex-direction:column;gap:.75rem;}
+.oml{font-family:'IBM Plex Mono',monospace;font-size:.49rem;letter-spacing:.17em;text-transform:uppercase;color:var(--mid);display:block;margin-bottom:.18rem;}
+.omv{font-size:.8rem;color:var(--sky);line-height:1.48;}
+.oi{border-top:1px solid var(--border);padding:.85rem 1.9rem;font-family:'IBM Plex Mono',monospace;font-size:.6rem;letter-spacing:.06em;color:var(--mid);}
+.oi strong{color:rgba(255,255,255,.48);}
+.pm-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem;margin-bottom:1.9rem;}
+.pb{background:var(--surface);border:1px solid var(--border);padding:1.75rem 1.9rem;}
+.pb-title{font-family:'Playfair Display',serif;font-weight:700;font-size:1.01rem;color:var(--white);margin-bottom:1.1rem;border-bottom:1px solid var(--border);padding-bottom:.75rem;line-height:1.32;}
+.pb-status{display:block;font-family:'IBM Plex Mono',monospace;font-size:.5rem;letter-spacing:.14em;text-transform:uppercase;color:var(--steel);margin-top:.38rem;font-weight:400;}
+.pr{display:flex;justify-content:space-between;padding:.5rem 0;border-bottom:1px solid rgba(115,153,198,.07);align-items:flex-start;gap:.9rem;}
+.pr:last-child{border-bottom:none;padding-bottom:0;}
+.p-lbl{font-family:'IBM Plex Mono',monospace;font-size:.54rem;letter-spacing:.09em;text-transform:uppercase;color:var(--mid);white-space:nowrap;flex-shrink:0;}
+.p-val{font-family:'IBM Plex Mono',monospace;font-size:.58rem;letter-spacing:.07em;text-align:right;line-height:1.4;}
+.p-state{color:var(--red);}.p-contested{color:var(--gold);}.p-crypto{color:var(--green);}
+.psa{background:var(--surface);border:1px solid var(--border);border-left:4px solid var(--gold);padding:1.4rem 1.9rem;margin-bottom:.95rem;}
+.psa.green-border{border-left-color:var(--green);}
+.psa-lbl{font-family:'IBM Plex Mono',monospace;font-size:.51rem;letter-spacing:.19em;text-transform:uppercase;color:var(--gold);margin-bottom:.45rem;display:block;}
+.psa-lbl.green{color:var(--green);}
+.psa-title{font-family:'Playfair Display',serif;font-weight:700;font-size:.98rem;color:var(--white);margin-bottom:.45rem;}
+.psa-desc{font-size:.87rem;color:rgba(255,255,255,.63);line-height:1.62;}
+.psa-desc strong{color:var(--white);font-weight:600;}
+.bs-list{display:flex;flex-direction:column;gap:1.1rem;}
+.bsc{background:var(--surface);border:1px solid var(--border);border-left:3px solid;display:grid;grid-template-columns:155px 1fr;}
+.bsc.s-low{border-left-color:var(--steel);}.bsc.s-med{border-left-color:var(--gold);}
+.bsc.s-pos{border-left-color:var(--green);}
+.bs-pc{padding:1.4rem 1.15rem;background:var(--surface2);border-right:1px solid var(--border);display:flex;flex-direction:column;gap:.28rem;}
+.bs-pl{font-family:'IBM Plex Mono',monospace;font-size:.49rem;letter-spacing:.19em;text-transform:uppercase;color:var(--mid);}
+.bs-pv{font-family:'Playfair Display',serif;font-weight:700;font-size:1.15rem;color:var(--white);line-height:1;}
+.bs-bc{padding:1.4rem 1.9rem;}
+.bs-bc h4{font-family:'Playfair Display',serif;font-weight:700;font-size:.99rem;color:var(--white);margin-bottom:.55rem;}
+.bs-bc p{font-size:.86rem;color:rgba(255,255,255,.63);line-height:1.68;margin-bottom:.75rem;}
+.bs-bc p:last-child{margin-bottom:0;}
+.bs-bc strong{color:var(--white);font-weight:600;}
+.bs-tr{font-family:'IBM Plex Mono',monospace;font-size:.54rem;letter-spacing:.07em;color:var(--mid);margin-top:.65rem;padding-top:.65rem;border-top:1px solid var(--border);}
+.bs-tr strong{color:var(--sky);}
+.new-tag{font-family:'IBM Plex Mono',monospace;font-size:.5rem;letter-spacing:.15em;text-transform:uppercase;color:var(--green);background:rgba(79,201,138,.08);border:1px solid rgba(79,201,138,.2);padding:.1rem .35rem;margin-left:.5rem;}
+.sn-table{width:100%;border-collapse:collapse;margin-bottom:1.4rem;}
+.sn-table th{text-align:left;padding:.58rem .95rem;font-family:'IBM Plex Mono',monospace;font-size:.51rem;letter-spacing:.19em;text-transform:uppercase;color:var(--steel);font-weight:400;border-bottom:1px solid var(--border-s);}
+.sn-table td{padding:.85rem .95rem;color:rgba(255,255,255,.7);border-bottom:1px solid var(--border);font-size:.86rem;line-height:1.53;vertical-align:top;}
+.sn-table tr:last-child td{border-bottom:none;}
+.sn-table tr:hover td{background:var(--surface);}
+.sn-b{font-family:'IBM Plex Mono',monospace;font-size:.49rem;letter-spacing:.14em;text-transform:uppercase;padding:.13rem .4rem;border:1px solid;display:inline-block;}
+.sn-ss{color:var(--sky);border-color:rgba(172,212,241,.28);background:rgba(172,212,241,.07);}
+.sn-s{color:var(--green);border-color:rgba(79,201,138,.28);background:rgba(79,201,138,.07);}
+.sn-n{color:var(--mid);border-color:var(--border);}
+.sn-u{color:var(--gold);border-color:rgba(201,168,76,.28);background:rgba(201,168,76,.07);}
+.un-box{background:var(--surface);border:1px solid var(--border-s);border-left:3px solid var(--gold);padding:1.9rem;}
+.un-lbl{font-family:'IBM Plex Mono',monospace;font-size:.53rem;letter-spacing:.21em;text-transform:uppercase;color:var(--gold);margin-bottom:1.1rem;display:block;}
+.un-item{margin-bottom:1.1rem;padding-bottom:1.1rem;border-bottom:1px solid var(--border);}
+.un-item:last-child{margin-bottom:0;padding-bottom:0;border-bottom:none;}
+.un-title{font-family:'IBM Plex Mono',monospace;font-size:.6rem;letter-spacing:.09em;text-transform:uppercase;color:var(--sky);margin-bottom:.32rem;}
+.un-cond{font-size:.84rem;color:rgba(255,255,255,.58);line-height:1.58;}
+.un-time{font-family:'IBM Plex Mono',monospace;font-size:.53rem;letter-spacing:.09em;color:var(--mid);margin-top:.32rem;display:block;}
+.rec-list{border:1px solid var(--border);}
+.rec-row{display:grid;grid-template-columns:56px 1fr;border-bottom:1px solid var(--border);transition:background .15s;}
+.rec-row:last-child{border-bottom:none;}
+.rec-row:hover{background:var(--surface);}
+.rec-num{font-family:'IBM Plex Mono',monospace;font-size:.58rem;color:var(--steel);padding:1.4rem;border-right:1px solid var(--border);display:flex;align-items:flex-start;padding-top:1.7rem;}
+.rec-body{padding:1.4rem 1.9rem;}
+.rec-action{font-family:'Playfair Display',serif;font-weight:700;font-size:1.02rem;color:var(--white);margin-bottom:.7rem;line-height:1.26;}
+.rec-specs{display:flex;gap:1.8rem;flex-wrap:wrap;margin-bottom:.45rem;}
+.rec-spec{font-family:'IBM Plex Mono',monospace;font-size:.55rem;letter-spacing:.09em;color:var(--mid);}
+.rec-spec strong{color:var(--sky);}
+.rec-risk{font-size:.81rem;color:rgba(255,255,255,.48);line-height:1.55;margin-top:.55rem;padding-top:.55rem;border-top:1px solid var(--border);}
+.mw{background:var(--surface);border:1px solid var(--border);border-top:3px solid var(--steel);padding:2.3rem;margin-top:2.8rem;}
+.ms{margin-bottom:1.9rem;padding-bottom:1.9rem;border-bottom:1px solid var(--border);}
+.ms:last-child{margin-bottom:0;padding-bottom:0;border-bottom:none;}
+.mt{font-family:'IBM Plex Mono',monospace;font-size:.53rem;letter-spacing:.21em;text-transform:uppercase;color:var(--steel);display:block;margin-bottom:.8rem;}
+.mi{list-style:none;display:flex;flex-direction:column;gap:.45rem;}
+.mi li{font-size:.86rem;color:rgba(255,255,255,.62);display:flex;gap:.65rem;line-height:1.55;}
+.mi li::before{content:'\25B8';color:var(--steel);flex-shrink:0;font-size:.6rem;padding-top:.17rem;}
+.mi li strong{color:var(--white);}
+.pred-log{display:flex;flex-direction:column;border:1px solid var(--border);}
+.pl-row{display:grid;grid-template-columns:68px 1fr 80px;gap:.9rem;padding:.72rem .95rem;border-bottom:1px solid var(--border);align-items:start;}
+.pl-row:last-child{border-bottom:none;}
+.pl-row.resolved{background:rgba(79,201,138,.04);}
+.pl-id{font-family:'IBM Plex Mono',monospace;font-size:.53rem;color:var(--mid);}
+.pl-text{font-size:.83rem;color:rgba(255,255,255,.68);line-height:1.58;}
+.pl-meta{display:block;font-family:'IBM Plex Mono',monospace;font-size:.53rem;color:var(--mid);margin-top:.32rem;letter-spacing:.04em;}
+.pl-conf{font-family:'IBM Plex Mono',monospace;font-size:.5rem;letter-spacing:.11em;text-transform:uppercase;text-align:right;}
+.pc-h{color:var(--green);}.pc-m{color:var(--gold);}.pc-l{color:var(--mid);}
+.country-grid{display:grid;grid-template-columns:1fr 1fr;gap:.9rem;}
+.cc{background:var(--surface2);border:1px solid var(--border);padding:1.1rem 1.3rem;}
+.cc-name{font-family:'Playfair Display',serif;font-weight:700;font-size:.9rem;color:var(--sky);margin-bottom:.35rem;}
+.cc-cms{font-family:'IBM Plex Mono',monospace;font-size:.56rem;letter-spacing:.09em;color:var(--gold);margin-bottom:.45rem;display:block;}
+.cc p{font-size:.79rem;color:rgba(255,255,255,.58);line-height:1.58;}
+.ec{background:var(--surface2);border:1px solid var(--border);border-left:3px solid var(--steel);padding:1.1rem 1.3rem;margin-bottom:.85rem;}
+.ec:last-child{margin-bottom:0;}
+.ec-name{font-family:'Playfair Display',serif;font-weight:700;font-size:.93rem;color:var(--white);margin-bottom:.35rem;}
+.ec p{font-size:.8rem;color:rgba(255,255,255,.6);line-height:1.62;}
+.watch-table{width:100%;border-collapse:collapse;}
+.watch-table th{text-align:left;padding:.48rem .78rem;font-family:'IBM Plex Mono',monospace;font-size:.49rem;letter-spacing:.17em;text-transform:uppercase;color:var(--steel);font-weight:400;border-bottom:1px solid var(--border-s);}
+.watch-table td{padding:.62rem .78rem;font-size:.79rem;color:rgba(255,255,255,.65);border-bottom:1px solid var(--border);vertical-align:top;line-height:1.5;}
+.watch-table tr:last-child td{border-bottom:none;}
+.pri-c{color:var(--red);font-family:'IBM Plex Mono',monospace;font-size:.56rem;letter-spacing:.11em;font-weight:500;}
+.pri-h{color:var(--gold);font-family:'IBM Plex Mono',monospace;font-size:.56rem;letter-spacing:.11em;}
+.pri-m{color:var(--steel);font-family:'IBM Plex Mono',monospace;font-size:.56rem;letter-spacing:.11em;}
+.closing-note{font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.04em;color:rgba(255,255,255,.37);line-height:1.78;text-align:center;padding:2.8rem 0 0;font-style:italic;}
+.method-box{background:var(--surface2);border:1px solid var(--border-s);border-left:4px solid var(--sky);padding:1.8rem 2.1rem;margin-bottom:1.4rem;}
+.method-lbl{font-family:'IBM Plex Mono',monospace;font-size:.53rem;letter-spacing:.21em;text-transform:uppercase;color:var(--sky);margin-bottom:.8rem;display:block;}
+.method-box p{font-size:.92rem;color:rgba(255,255,255,.75);line-height:1.78;margin-bottom:1rem;}
+.method-box p:last-child{margin-bottom:0;}
+.method-box strong{color:var(--white);}
+.method-table{width:100%;border-collapse:collapse;margin-top:1rem;}
+.method-table th{text-align:left;padding:.5rem .8rem;font-family:'IBM Plex Mono',monospace;font-size:.5rem;letter-spacing:.15em;text-transform:uppercase;color:var(--sky);border-bottom:1px solid var(--border-s);}
+.method-table td{padding:.55rem .8rem;font-size:.82rem;color:rgba(255,255,255,.68);border-bottom:1px solid var(--border);}
+footer{border-top:1px solid var(--border);padding:2.8rem 3rem;}
+.foot-bot{display:flex;justify-content:space-between;align-items:center;max-width:1140px;margin:0 auto;flex-wrap:wrap;gap:1.4rem;}
+.fb-brand{font-family:'Playfair Display',serif;font-weight:700;font-size:.98rem;color:var(--steel);}
+.fb-brand em{font-style:italic;color:var(--sky);}
+.fl-row{display:flex;gap:1.8rem;flex-wrap:wrap;}
+.fl-row a{font-family:'IBM Plex Mono',monospace;font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:var(--mid);text-decoration:none;transition:color .2s;}
+.fl-row a:hover{color:var(--steel);}
+.fn{font-family:'IBM Plex Mono',monospace;font-size:.56rem;color:rgba(88,87,90,.58);letter-spacing:.07em;}
+@media(max-width:960px){
+  nav,.ih,footer{padding-left:1.5rem;padding-right:1.5rem;}
+  .container{padding:0 1.5rem;}
+  .sb-inner{grid-template-columns:repeat(3,1fr);padding:0 1.5rem;}
+  .sw{grid-template-columns:1fr;}.st{position:static;}
+  .ins-grid{grid-template-columns:1fr;}
+  .hm-grid{grid-template-columns:repeat(3,1fr);}
+  .ob2{grid-template-columns:1fr;}
+  .pm-grid{grid-template-columns:1fr;}
+  .bsc{grid-template-columns:1fr;}
+  .ft{grid-template-columns:1fr;}
+  .country-grid{grid-template-columns:1fr;}
+}
+@media(max-width:600px){
+  .hm-grid{grid-template-columns:repeat(2,1fr);}
+  .sb-inner{grid-template-columns:repeat(2,1fr);}
+}
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nb">Antifragile <span>Africa</span></a>
+  <ul class="nl">
+    <li><a href="index.html">Reports</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="antifragile_africa_weekly_19aug2026.html" class="nav-cta">Latest Issue</a></li>
+  </ul>
+</nav>
+
+<div class="ih">
+  <div class="ih-inner">
+    <div class="chips">
+      <div class="chip"><span class="chip-l">Volume</span><span class="chip-v">22 of Series</span></div>
+      <div class="chip-div"></div>
+      <div class="chip"><span class="chip-l">Date</span><span class="chip-v">26 August 2026</span></div>
+      <div class="chip-div"></div>
+      <div class="chip"><span class="chip-l">Audit</span><span class="chip-v">ARIP Count Resolved: 14 ✓</span></div>
+      <div class="chip-div"></div>
+      <div class="chip"><span class="chip-l">Agents</span><span class="chip-v">28 · 7 Layers</span></div>
+      <div class="chip-div"></div>
+      <div class="chip"><span class="chip-l">New Signal</span><span class="chip-v">Nigeria's SEC Publishes Draft Prudential Rules — Local CEO, Local Incorporation, Up to $1.49M Capital</span></div>
+    </div>
+    <div class="badges">
+      <span class="badge badge-vol">Latest</span>
+      <span class="badge badge-gold">★ Nigeria: SEC Publishes Draft Digital Asset Rules, 20 Aug — Comments Close 3 Sep</span>
+      <span class="badge badge-confirmed">✓ Nigeria: ARIP Cohort Count Resolved at 14 Firms</span>
+      <span class="badge badge-alert">⚠ Nigeria: Harmonised Implementation Framework Still Unconfirmed, Now 10 Days Overdue</span>
+    </div>
+    <div class="ih-date">26 August 2026 · Africa Crypto Intelligence OS · Vol. 22</div>
+    <h1 class="ih-title">Nigeria's SEC Drafts a Residency Test for Every Exchange That Wants Its Users. <em>The ARIP Count Is Finally Resolved.</em></h1>
+    <p class="ih-sub">Nigeria's Securities and Exchange Commission published draft prudential rules on 20 August 2026 that would require any digital-asset exchange or custodian serving Nigerian residents to incorporate locally, keep a resident chief executive, and hold up to ₦2 billion (about $1.49 million) in capital — with comments closing 3 September. This is the third piece of a framework assembled in five weeks, after July's Executive Order and August's tax guidance, and it moves forward regardless of whether the Order's own Harmonised Implementation Framework — now roughly ten days overdue — ever appears. Separately, this cycle resolves a discrepancy Vol. 21 flagged rather than guessed at: Nigeria's ARIP sandbox holds 14 admitted firms, not 12 or 14 as a live dispute, once the counting methods behind each figure are reconciled. Kenya, South Africa, Morocco, Rwanda, Zimbabwe and WAEMU were re-verified this cycle with fresh, dated sourcing and show no material change from Vol. 21. Flutterwave's East African bank acquisition remains confirmed in intent, unconfirmed in target.</p>
+    <nav class="ih-nav">
+      <a href="#brief">01 Brief</a><a href="#insights">02 Insights</a><a href="#heatmap">03 Status Map</a><a href="#fullstack">04 Full Stack</a>
+      <a href="#fragility">05 Fragility</a><a href="#opps">06 Opportunities</a><a href="#powermap">07 Power Map</a>
+      <a href="#blackswan">08 Black Swan</a><a href="#snoise">09 Signal/Noise</a><a href="#recs">10 Recommendations</a>
+    </nav>
+  </div>
+</div>
+
+<div class="sb">
+  <div class="sb-inner">
+    <div class="sc"><div class="sc-country">Nigeria</div><div class="sc-val gold">ARIP: 14 FIRMS</div><div class="sc-trend t-gold">✓ 12-VS-14 COUNT RESOLVED</div><div class="sc-note">SEC publishes draft prudential rules, 20 Aug; comments close 3 Sep. Harmonised Implementation Framework still unconfirmed.</div></div>
+    <div class="sc"><div class="sc-country">Kenya</div><div class="sc-val alert">0 LICENSED</div><div class="sc-trend t-neutral">→ RE-VERIFIED, NO CHANGE</div><div class="sc-note">VASP Regulations, 2026 in force since 22 Jul; still no provider licensed as of this cycle.</div></div>
+    <div class="sc"><div class="sc-country">South Africa</div><div class="sc-val alert">SPLIT RULING</div><div class="sc-trend t-neutral">→ RE-VERIFIED, NO CHANGE</div><div class="sc-note">SCA's Standard Bank v SARB appeal remains the likelier resolution route. No hearing date confirmed.</div></div>
+    <div class="sc"><div class="sc-country">Morocco</div><div class="sc-val">PRE-ENACTMENT</div><div class="sc-trend t-neutral">→ RE-VERIFIED, NO CHANGE</div><div class="sc-note">Bill 42.25 still undated; no licences exist.</div></div>
+    <div class="sc"><div class="sc-country">Rwanda</div><div class="sc-val green">LAW GAZETTED</div><div class="sc-trend t-neutral">→ RE-VERIFIED, NO CHANGE</div><div class="sc-note">Implementing regulations still being drafted by CMA; no licensing window confirmed.</div></div>
+    <div class="sc"><div class="sc-country">Zimbabwe</div><div class="sc-val">SANDBOX, 7 FIRMS</div><div class="sc-trend t-neutral">→ RE-VERIFIED, NO CHANGE</div><div class="sc-note">SECZ cohort (27 Jul) unchanged this cycle; still short of a full licensing framework.</div></div>
+    <div class="sc"><div class="sc-country">WAEMU</div><div class="sc-val">NO FRAMEWORK</div><div class="sc-trend t-neutral">→ RE-VERIFIED 26 AUG</div><div class="sc-note">BCEAO Governor reaffirmed cautious stance, no timeline, in reporting as fresh as 26 Aug.</div></div>
+  </div>
+</div>
+
+<div class="container">
+
+<section class="rs" id="brief">
+  <div class="s-num">Component 01</div>
+  <div class="s-ey">Executive Brief</div>
+  <h2>Sovereign-Grade <em>Weekly Assessment</em></h2>
+  <div class="eb">
+    <div class="eb-hl">NIGERIA'S SEC HAS STOPPED WAITING FOR ITS OWN COORDINATION FRAMEWORK. A DRAFT RULEBOOK NOW SETS THE TERMS OF ENTRY DIRECTLY — LOCAL INCORPORATION, A RESIDENT CEO, AND UP TO $1.49 MILLION IN CAPITAL.</div>
+    <div class="eb-body">
+      <p><strong>On 20 August 2026, Nigeria's SEC published "Proposed Rules on Digital and Virtual Asset Operations, Custody and Markets" for public comment, closing 3 September.</strong> The document sets out a full prudential regime across six licence categories — DAX (exchange), DAC (custodian), DAPO (platform operator), DAOP (offering platform), RATOP (real-world-asset tokenisation platform) and VASP — replacing the lighter registration approach Nigeria has run to date. Minimum capital is tiered: ₦2 billion (about $1.49 million at the CBN's 21 August rate) for exchanges and custodians, ₦500 million (~$371,000) for platform operators and offering platforms, and ₦200 million (~$148,500) for VASPs. Registration itself costs ₦30 million (~$22,300) for the five main classes. One category quietly disappears: the "ancillary VASP" tier carrying a ₦300 million floor under the SEC's January 2026 capital circular does not appear in the new draft at all.</p>
+      <p><strong>The rules' most consequential provision is a localisation test with real extraterritorial reach.</strong> Any exchange or custodian serving Nigerian residents would need to incorporate in Nigeria, keep a registered office there, and have its chief executive or managing director resident in the country — "except where otherwise approved by the Commission." Foreign stablecoin issuers face a parallel demand: a local representative, authorisation in an acceptable foreign jurisdiction, and Nigeria-specific reserve, liquidity and redemption conditions. The core prohibition applies to "business targeted at people resident in Nigeria," with or without a Nigerian office — easy to write, and, as several legal commentators note this cycle, hard to enforce against a platform with no local presence at all.</p>
+      <p><strong>This is the third piece of a framework Nigeria has assembled in five weeks — and it did not wait for the first piece to finish.</strong> President Tinubu's Executive Order (17 July) directed the new Virtual Asset Council to produce a Harmonised Implementation Framework within 30 days, a deadline that fell around 16 August. As of this cycle, no source confirms that Framework has been published — it is now roughly ten days overdue. In the same window, the Council's other member agencies delivered on schedule: the Nigeria Revenue Service published its virtual-asset tax guidance on 3 August, and the CBN opened Cohort 2 of its own Regulatory Sandbox Programme, with a dedicated VASP track, applications running 12–31 August. The SEC's draft rules are a fourth, separate action again — not commissioned by the Council, not waiting on it. Read together, three of Nigeria's four regulatory bodies are visibly moving on their own timelines while the one document meant to harmonise them has not appeared.</p>
+      <p><strong>This cycle also resolves a discrepancy Vol. 21 flagged rather than guessed at.</strong> Nigeria's ARIP sandbox cohort is confirmed at <strong>14 firms total</strong>: Busha and Quidax as the original two participants, seven admitted 2 July, GIGX and KuCoin admitted 3 July, and Pisi Payments, BC Access (Blockchain.com) and Yellow Card admitted 14 August — 2 + 7 + 2 + 3 = 14. TechCabal's "12 since July" figure is not a competing count; it is the same total minus Busha and Quidax, whose admission predates July. Both figures were correct under their own counting convention. The cohort-size discrepancy Vol. 21 declined to resolve by assumption is resolved this cycle by arithmetic, once the two conventions are made explicit.</p>
+      <p><strong>Flutterwave's East African bank acquisition carries no new information this cycle.</strong> CEO Olugbenga Agboola's confirmation of intent, and the six named candidate markets (Kenya, Ghana, Rwanda, Tanzania, South Africa, Egypt), stand exactly as reported in Vol. 21 — no target, no country, no closing has been disclosed as of 26 August.</p>
+    </div>
+    <div class="eb-risk"><strong>Key risk:</strong> These are draft rules open for comment until 3 September 2026, not rules in force — the capital floors, the residency test and even the licence categories themselves could change before finalisation, and ACIOS treats every specific figure above as provisional until a final rule is gazetted. The Harmonised Implementation Framework could still appear before this issue is read; its absence is reported as a negative data point as of 26 August, not as a permanent failure. The ARIP-14 reconciliation rests on TechCabal's own account of the SEC's July circulars; ACIOS has not seen the SEC's admission notices directly and would revise this figure if the Commission publishes a conflicting official list.</div>
+    <div class="eb-sum">Nigeria's SEC has published draft prudential rules (comments close 3 Sep) requiring local incorporation, a resident CEO and up to $1.49 million in capital for firms serving Nigerian crypto users — moving ahead of, not in sequence with, the Executive Order's own coordination framework, which remains unconfirmed roughly ten days after its deadline. Nigeria's ARIP cohort-size discrepancy (12 vs. 14) is resolved this cycle: both figures were correct under different starting points, and the true total is 14. Kenya, South Africa, Morocco, Rwanda, Zimbabwe and WAEMU show no material change on fresh re-verification. Flutterwave's bank acquisition remains an unconfirmed intent.</div>
+  </div>
+
+  <div class="method-box">
+    <span class="method-lbl">Methodology Note — Resolving a Flagged Discrepancy Without Guessing</span>
+    <p>Vol. 21 flagged the ARIP cohort-size discrepancy rather than resolving it by assumption, consistent with the standing rule that unresolved factual gaps should be surfaced, not silently picked. This cycle's resolution did not come from picking the more-cited figure — it came from locating a source (a company-facing legal briefing) that itemised the SEC's admission circulars firm-by-firm, which is the standard ACIOS now applies before closing any flagged discrepancy: a reconciling breakdown, not a vote count across outlets.</p>
+    <p>A second point of discipline carried forward from Vol. 21: draft or proposed rules are reported with their comment-period status attached in the same sentence as their substantive terms, not as a caveat appended afterward. Every capital figure and residency requirement in this issue's Component 01 and Component 04 is a proposal, not a rule in force, and is labelled as such at first mention.</p>
+  </div>
+</section>
+
+<section class="rs" id="insights">
+  <div class="s-num">Component 02</div>
+  <div class="s-ey">Top Non-Obvious Insights</div>
+  <h2>What the Verified Record <em>Actually Shows</em></h2>
+  <div class="ins-grid">
+    <div class="ins-card" data-n="01">
+      <span class="conf conf-h">HIGH CONFIDENCE</span>
+      <div class="ins-head">Nigeria's SEC is no longer waiting on the Virtual Asset Council it nominally answers to</div>
+      <div class="ins-body">The SEC's 20 August draft rules constitute a complete, independent prudential regime — licence categories, capital tiers, residency tests, fee schedules — published while the Council's own Harmonised Implementation Framework remains unconfirmed roughly ten days past its deadline. <strong>Third order:</strong> the coordination architecture Nigeria built in July may be structurally unable to out-pace its own vice-chair. If the SEC's rulebook is substantively finalised before the Framework appears, the "harmonisation" the Executive Order promised will have been achieved, if at all, by one agency moving alone rather than by the Council coordinating anyone.</div>
+      <div class="ins-src">Sources: Rio Times, TechCabal, TheRadar, Nairametrics — 20–23 Aug 2026 [Tier 1/2]</div>
+    </div>
+    <div class="ins-card" data-n="02">
+      <span class="conf conf-h">HIGH CONFIDENCE</span>
+      <div class="ins-head">The Vol. 21 ARIP discrepancy was never a factual dispute — it was two correct answers to two different questions</div>
+      <div class="ins-body">"12 firms since July" and "14 firms total" are not competing claims; they are the same admission history counted from different start points, one including Busha and Quidax's pre-July admission and one excluding it. <strong>Third order:</strong> a source discrepancy that looks like a factual conflict is sometimes a definitional one — the correction was not choosing which outlet to believe, but finding the itemised admission list that made both conventions visible at once.</div>
+      <div class="ins-src">Sources: cryip.co (itemised SEC circular breakdown), TechCabal, Nairametrics, Tribune Online — 14–18 Aug 2026 [Tier 2]</div>
+    </div>
+    <div class="ins-card" data-n="03">
+      <span class="conf conf-m">MEDIUM CONFIDENCE</span>
+      <div class="ins-head">A residency requirement with a discretionary carve-out is a negotiation, not a wall</div>
+      <div class="ins-body">The draft rules require a Nigeria-resident CEO for exchanges and custodians — "except where otherwise approved by the Commission." <strong>Third order:</strong> a hard rule with an explicit discretionary exception functions less as a bright-line barrier to entry and more as a point of leverage the SEC can grant or withhold case by case, which shifts the real question for global exchanges from "can we comply" to "can we get the Commission's favour" — a materially different, and more relationship-dependent, market-entry calculation.</div>
+      <div class="ins-src">Sources: Rio Times (draft rule text, 20 Aug), TheRadar — 23 Aug 2026 [Tier 2]</div>
+    </div>
+    <div class="ins-card" data-n="04">
+      <span class="conf conf-l">CARRIED FORWARD — RE-VERIFIED, NO CHANGE</span>
+      <div class="ins-head">South Africa's legal conflict still runs through a case that isn't the one making headlines</div>
+      <div class="ins-body">Re-verified this cycle with no new development: the more consequential pending event remains SARB's own appeal of the Standard Bank v. SARB ruling before the Supreme Court of Appeal, not any direct challenge to the Mangundhla judgment. <strong>Third order (unchanged from Vol. 21):</strong> because the two rulings answer the same legal question in opposite directions, an SCA ruling on Standard Bank remains the more likely resolution mechanism for both — no hearing date has been located this cycle either.</div>
+      <div class="ins-src">Sources: Clyde &amp; Co, Bizcommunity, Polity.org.za — re-verified 26 Aug 2026, no new developments found [Tier 2]</div>
+    </div>
+    <div class="ins-card" data-n="05">
+      <span class="conf conf-l">CARRIED FORWARD — RE-VERIFIED, NO CHANGE</span>
+      <div class="ins-head">WAEMU's central bank is still choosing caution over a deadline, and now says so in fresher language</div>
+      <div class="ins-body">A 26 August analysis piece re-confirms BCEAO's July position nearly verbatim: crypto-assets are "not a currency, not regulated, so be careful," with no publication timeline attached despite an active drafting committee (C-CRYPTO) and exploratory e-CFA work. <strong>Third order:</strong> the fact that BCEAO's own language is being re-quoted five weeks later without amendment is itself a signal — the bloc's institutional position has not moved even as pressure from Chainalysis-documented transaction volume continues to build.</div>
+      <div class="ins-src">Sources: Financial Afrik (26 Aug 2026), Ecofin Agency, Togo First — re-verified 26 Aug 2026 [Tier 2]</div>
+    </div>
+  </div>
+</section>
+<section class="rs" id="heatmap">
+  <div class="s-num">Component 03</div>
+  <div class="s-ey">Africa Regulatory Status Map</div>
+  <h2>Qualitative Status — <em>Cycle 22, Re-Verified</em></h2>
+  <div class="hm-caption" style="margin-bottom:1.4rem;">
+    <p><strong>No numeric score is used, continuing the standing methodology.</strong> Every market below was re-searched this cycle, not carried forward by assumption. Nigeria is the only market with new, sourced developments this cycle; the remaining ten show no material change from Vol. 21, several with fresher re-verification dates than last cycle's search produced.</p>
+  </div>
+  <div class="hm-grid">
+    <div class="hm-cell l-gold"><div class="hm-country">Nigeria</div><div class="hm-score c-g" style="font-size:1rem;">Active Rulemaking</div><div class="hm-trend t-gold">↑ Draft SEC rules published 20 Aug</div><div class="hm-note">ARIP count resolved at 14. Harmonised Framework still unconfirmed, ~10 days overdue.</div></div>
+    <div class="hm-cell l-steel"><div class="hm-country">Kenya</div><div class="hm-score c-s" style="font-size:1rem;">Regulated, Inactive</div><div class="hm-trend t-neutral">→ Re-verified, no change</div><div class="hm-note">Complete legal framework; zero confirmed licences as of this cycle.</div></div>
+    <div class="hm-cell l-green"><div class="hm-country">South Africa</div><div class="hm-score c-gr" style="font-size:.95rem;">Mature but Contested</div><div class="hm-trend t-neutral">→ Re-verified, no change</div><div class="hm-note">SCA appeal of Standard Bank v. SARB remains the likely resolver; no hearing date confirmed.</div></div>
+    <div class="hm-cell l-dim"><div class="hm-country">Morocco</div><div class="hm-score c-s" style="font-size:1rem;">Pre-Enactment</div><div class="hm-trend t-neutral">→ Re-verified, no change</div><div class="hm-note">Bill 42.25 undated; no licences exist.</div></div>
+    <div class="hm-cell l-gold"><div class="hm-country">Rwanda</div><div class="hm-score c-g" style="font-size:1rem;">Enacted, Not Operational</div><div class="hm-trend t-neutral">→ Re-verified, no change</div><div class="hm-note">Licensing/capital rules still being drafted by CMA; sandbox to be jointly run with BNR.</div></div>
+    <div class="hm-cell l-dim"><div class="hm-country">Uganda</div><div class="hm-score c-s" style="font-size:1rem;">No Law</div><div class="hm-trend t-neutral">→ Re-verified, no change</div><div class="hm-note">P-19-04 remains resolved false; bill stalled since 2023, no new activity found.</div></div>
+    <div class="hm-cell l-dim"><div class="hm-country">Zambia</div><div class="hm-score c-s" style="font-size:1rem;">Registration Only</div><div class="hm-trend t-neutral">→ Carried, not re-searched this cycle</div><div class="hm-note">BoZ registration directive stood as of Vol. 21; no new search conducted this cycle.</div></div>
+    <div class="hm-cell l-steel"><div class="hm-country">Zimbabwe</div><div class="hm-score c-s" style="font-size:.92rem;">AML Registration + Sandbox</div><div class="hm-trend t-neutral">→ Re-verified, no change</div><div class="hm-note">SECZ's 27 Jul cohort (7 firms, 5 tokenisation-focused) unchanged; still short of full licensing.</div></div>
+    <div class="hm-cell l-red"><div class="hm-country">Ethiopia</div><div class="hm-score c-r" style="font-size:1rem;">Prohibition Broadened</div><div class="hm-trend t-neutral">→ Carried, not re-searched this cycle</div><div class="hm-note">NBE's Jul notice stood as of Vol. 21; no new search conducted this cycle.</div></div>
+    <div class="hm-cell l-dim"><div class="hm-country">WAEMU (8 states)</div><div class="hm-score c-s" style="font-size:1rem;">No Framework</div><div class="hm-trend t-neutral">→ Re-verified 26 Aug</div><div class="hm-note">BCEAO reaffirms cautious stance, no timeline, in reporting as fresh as this cycle's date.</div></div>
+    <div class="hm-cell l-green"><div class="hm-country">Ghana</div><div class="hm-score c-gr" style="font-size:1rem;">Enacted, Licensing Underway</div><div class="hm-trend t-neutral">→ Re-verified, no change</div><div class="hm-note">Act 1154 in force; BoG guidelines still in drafting, some expected "later this year" per July comment.</div></div>
+  </div>
+  <div class="hm-caption"><p>Nigeria supplies this cycle's only new movement, and it complicates rather than simplifies the "enactment is not licensing" pattern flagged across recent cycles: the SEC's draft rules are a fifth distinct position on the enactment-to-activation ladder, sitting alongside an Executive Order, a stalled coordination framework, a 14-firm sandbox and a separate CBN sandbox track — four parallel processes inside one country, three of them moving and one of them stalled. <strong>The continental pattern holds regardless: legislative or administrative activity should never be read as a proxy for market access without checking which specific mechanism, and whose, a given development actually belongs to.</strong></p></div>
+</section>
+
+<section class="rs" id="fullstack">
+  <div class="s-num">Component 04</div>
+  <div class="s-ey">Full Stack Analysis</div>
+  <h2>12 Analytical Layers — <em>Cycle 22, Verified</em></h2>
+  <div class="sw">
+    <aside class="st">
+      <span class="toc-l">Layers</span>
+      <ul class="toc-list">
+        <li><a href="#sl1">L01 · Monetary Competition</a></li>
+        <li><a href="#sl2">L02 · Blockchain Infrastructure</a></li>
+        <li><a href="#sl3">L03 · Mining &amp; Energy</a></li>
+        <li><a href="#sl4">L04 · Trading &amp; Liquidity</a></li>
+        <li><a href="#sl5">L05 · DeFi Shadow Banking</a></li>
+        <li><a href="#sl6">L06 · Governance &amp; Power</a></li>
+        <li><a href="#sl7">L07 · Macro</a></li>
+        <li><a href="#sl8">L08 · Network Effects</a></li>
+        <li><a href="#sl9">L09 · Fragility</a></li>
+        <li><a href="#sl10">L10 · Power Dynamics</a></li>
+        <li><a href="#sl11">L11 · Contrarian</a></li>
+        <li><a href="#sl12">L12 · Strategy</a></li>
+        <li><a href="#scross">Cross-Layer</a></li>
+      </ul>
+    </aside>
+    <div>
+      <div class="sl" id="sl1">
+        <div class="lb">Layer 01</div><div class="lt">Monetary Competition</div>
+        <div class="lbody">
+          <p>Nigeria's draft SEC rules restate and extend the capital-floor picture: the ₦2 billion exchange/custodian floor is unchanged from January 2026, but the draft adds explicit ₦500 million and ₦200 million tiers beneath it and drops the ₦300 million "ancillary VASP" category entirely. Kenya's CBK/CMA split (KES 300 million top tier for stablecoin issuers) remains the clearest comparator. WAEMU's BCEAO reaffirmed its non-engagement this cycle with fresher sourcing (26 Aug) but no monetary-competition substance beyond the position already on record.</p>
+        </div>
+      </div>
+      <div class="sl" id="sl2">
+        <div class="lb">Layer 02</div><div class="lt">Blockchain Infrastructure</div>
+        <div class="lbody">
+          <p>No new infrastructure partnership was found this cycle. Flutterwave's Caliza partnership (13 Aug) and its East African bank acquisition intent, both reported in Vol. 21, stand unchanged — no target bank, country, or additional integration has been disclosed. The more consequential infrastructure-adjacent development this cycle sits in Layer 6: Nigeria's SEC draft rules define six licence categories (DAX, DAC, DAPO, DAOP, RATOP, VASP) that function as a de facto map of which infrastructure roles the state intends to supervise directly.</p>
+        </div>
+      </div>
+      <div class="sl" id="sl3">
+        <div class="lb">Layer 03</div><div class="lt">Mining &amp; Energy</div>
+        <div class="lbody">
+          <p>Not re-searched this cycle. Ethiopia's mining/prohibition tension, last re-verified in Vol. 21 with no change found, is carried forward without a fresh search — flagged here rather than silently re-asserted as re-verified, per this cycle's methodology note.</p>
+        </div>
+      </div>
+      <div class="sl" id="sl4">
+        <div class="lb">Layer 04</div><div class="lt">Trading &amp; Liquidity</div>
+        <div class="lbody">
+          <p>No new trading-volume data was located this cycle. ACIOS continues to hold its standing position: without a verified, current P2P FX-premium data feed, no such figure is estimated or printed. The most recent verifiable trading data remains the Chainalysis-sourced Sub-Saharan Africa figures cited in prior cycles (~$205 billion regional on-chain value, July 2024–June 2025; stablecoins ~43% of that activity per Benzinga's April 2026 reporting).</p>
+        </div>
+      </div>
+      <div class="sl" id="sl5">
+        <div class="lb">Layer 05</div><div class="lt">DeFi Shadow Banking</div>
+        <div class="lbody">
+          <p>No new development found this cycle. USDT's role as an informal bridge asset for WAEMU-zone trade settlement, and MoneyGram's MGUSD as a formalised counter-example, are carried forward from prior cycles unchanged, having been re-searched rather than assumed static.</p>
+        </div>
+      </div>
+      <div class="sl" id="sl6">
+        <div class="lb">Layer 06</div><div class="lt">Governance &amp; Power</div>
+        <div class="lbody">
+          <p>Nigeria's SEC published a complete, independent prudential rulebook on 20 August — six licence categories, tiered capital, a residency test — while the Virtual Asset Council's own Harmonised Implementation Framework remains unconfirmed roughly ten days past its 16 August deadline. This is the clearest governance-fragmentation data point yet: the body meant to harmonise Nigeria's regulators has been outpaced by one of the regulators it is meant to harmonise. Kenya, South Africa, Morocco, Rwanda, Zimbabwe and WAEMU show no governance-structure change this cycle on re-verification.</p>
+        </div>
+      </div>
+      <div class="sl" id="sl7">
+        <div class="lb">Layer 07</div><div class="lt">Macro</div>
+        <div class="lbody">
+          <p>No new macro figures were located this cycle. ACIOS continues to withhold NGN/USD, NGN/USDT and comparable premium figures absent a verified, current, named data source, per the standing methodology change introduced in Vol. 20. The one macro-adjacent figure used this cycle — Nigeria's ₦2 billion capital floor converted at roughly $1.49 million using the CBN's 21 August rate — is sourced to a specific, dated exchange rate, not estimated.</p>
+        </div>
+      </div>
+      <div class="sl" id="sl8">
+        <div class="lb">Layer 08</div><div class="lt">Network Effects</div>
+        <div class="lbody">
+          <p>Yellow Card and Blockchain.com's ARIP admissions (14 Aug), carried forward from Vol. 21, remain the cycle's clearest network-effects data point: both now hold formal regulatory standing in Africa's largest crypto market by transaction value. No new funding or volume figures were located this cycle for Yellow Card, so the FinSMEs-vs.-Vanguard funding-total discrepancy ($120m vs. $145m) flagged in Vol. 21 is carried forward unresolved rather than re-asserted as settled. Nigeria's SEC draft rules add a structural network-effects variable: a resident-CEO requirement raises the fixed cost of serving Nigerian users for any exchange without existing local leadership, which favours firms — like Yellow Card — that already operate on the ground.</p>
+        </div>
+      </div>
+      <div class="sl" id="sl9">
+        <div class="lb">Layer 09</div><div class="lt">Fragility</div>
+        <div class="lbody">
+          <p>The Nigeria VARC coordination-execution gap flagged in Vol. 21 has sharpened rather than resolved: the Harmonised Implementation Framework is now roughly ten days overdue, and the SEC has proceeded with its own rulebook regardless. This narrows the fragility signal from "will VARC coordinate" to a more falsifiable question — see Component 05 for the full, ranked list, now including this cycle's escalation.</p>
+        </div>
+      </div>
+      <div class="sl" id="sl10">
+        <div class="lb">Layer 10</div><div class="lt">Power Dynamics</div>
+        <div class="lbody">
+          <p>The power shift this cycle is institutional, not corporate: Nigeria's SEC has demonstrated it can set the terms of market entry — capital, residency, licensing categories — without the Virtual Asset Council's coordination document, and without waiting for it. That is a meaningful reallocation of practical authority within Nigeria's regulatory architecture, regardless of what the Council eventually produces. No new corporate power shift was located this cycle; Flutterwave's bank-acquisition intent, reported in Vol. 21, carries forward unchanged.</p>
+        </div>
+      </div>
+      <div class="sl" id="sl11">
+        <div class="lb">Layer 11</div><div class="lt">Contrarian</div>
+        <div class="lbody">
+          <p>The consensus reading of Nigeria's SEC draft rules is that they represent regulatory progress — a clear rulebook replacing ambiguity. The contrarian read: a residency requirement with an explicit "except where otherwise approved by the Commission" carve-out is not a bright-line rule at all; it is a discretionary licensing gate dressed in rule-like language. Firms should not read the draft as a fixed compliance checklist so much as an invitation to negotiate for the exception — a materially different, and more relationship-dependent, strategic posture than the rules' text alone suggests.</p>
+        </div>
+      </div>
+      <div class="sl" id="sl12">
+        <div class="lb">Layer 12</div><div class="lt">Strategy</div>
+        <div class="lbody">
+          <p>For firms evaluating Nigeria market entry: the comment period (closing 3 September) is the actionable window — submissions on the residency test's discretionary carve-out, and on the capital tiers, can still shape the final rule. Firms without a Nigeria-resident executive should begin identifying one now rather than waiting for finalisation; the lead time on relocating or hiring a resident CEO is longer than the likely gap between comment closure and a final rule. For firms already inside ARIP: sandbox admission should not be treated as a proxy for the eventual licence terms, which the SEC's own draft rules suggest will be materially more demanding than ARIP's incubation-stage requirements.</p>
+        </div>
+      </div>
+      <div class="cross-box" id="scross">
+        <span class="cross-lbl">Cross-Layer Insights — Visible Only From the Synthesised View</span>
+        <div class="ci">
+          <div class="ci-t">A "harmonisation" body can be outpaced by the very regulator it was created to harmonise</div>
+          <div class="ci-b">Vol. 21's Layer 06 noted Nigeria's Council had met adjacent deadlines (tax guidance, sandbox launch) while its own coordination-framework deadline slipped. This cycle shows what happens next: the SEC did not wait. It published a complete, independent rulebook covering exactly the territory the Framework was meant to harmonise. If the Framework appears after the SEC's rules are substantially finalised, "harmonisation" in Nigeria will have been achieved retroactively, if at all — by one agency setting the terms first and the others reconciling to it, rather than a coordinating body setting terms for all of them.</div>
+        </div>
+        <div class="ci">
+          <div class="ci-t">Resolving a flagged discrepancy by reconciliation, not by choosing a side, is a repeatable method — and it just worked twice in two cycles</div>
+          <div class="ci-b">Vol. 21 declined to pick between "12" and "14" ARIP firms without a reconciling source. This cycle found one: an itemised breakdown of the SEC's own admission circulars, which showed both numbers were correct under different starting conventions. That is the same discipline the Fragility Analyst and Skeptic Agent apply to their own claims — a discrepancy is a signal to look for a better source, not a coin flip between existing ones — now demonstrated on a live, external, verifiable fact rather than only asserted as a principle.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="rs" id="fragility">
+  <div class="s-num">Component 05</div>
+  <div class="s-ey">Fragility Index</div>
+  <h2>Systemic Risk Assessment — <em>Cycle 22, Qualitative</em></h2>
+  <div class="method-box" style="margin-bottom:1.4rem;">
+    <span class="method-lbl">No Numeric Index This Cycle</span>
+    <p>Continuing the methodology introduced in Vol. 20: no reconstructed numeric score is fabricated. Four concrete, sourced fragility signals are ranked below by how directly each is evidenced. The Nigeria coordination-execution gap escalates this cycle; the other three carry forward with their status re-verified, not assumed.</p>
+  </div>
+  <div class="risks">
+    <div class="ri"><div class="rr">01</div><div><div class="rn">Nigeria — VARC Coordination-Execution Gap</div><div class="rd"><span class="new-tag">Escalated</span> The Virtual Asset Council's Harmonised Implementation Framework is now roughly ten days overdue against its own 30-day deadline, and the SEC has proceeded to publish an independent, comprehensive rulebook rather than wait for it. This moves from a "missed deadline" risk to a "the coordinating body may be structurally superseded by its own member agency" risk. Trigger: publication of the Framework in a form that meaningfully constrains or supersedes the SEC's draft rules (risk recedes), or the SEC's rules being finalised with no Framework in sight (risk crystallises as institutional design failure).</div></div><div class="rl risk-med">MEDIUM</div></div>
+    <div class="ri"><div class="rr">02</div><div><div class="rn">South Africa — Regulator/Court Conflict on Bitcoin's Legal Status</div><div class="rd">Unchanged and re-verified this cycle: the Joint Communication (28 May 2026) and the Mangundhla judgment (1 June 2026) remain in unresolved tension, with the pending SCA appeal of the separate Standard Bank v. SARB ruling still the likelier resolution path and still without a hearing date. Trigger: an SCA ruling on Standard Bank, an appeal of Mangundhla itself, or a formal SARB/FSCA response.</div></div><div class="rl risk-med">MEDIUM</div></div>
+    <div class="ri"><div class="rr">03</div><div><div class="rn">Kenya — Licence-Issuance Gap Producing Real Consumer Exposure</div><div class="rd">Unchanged from Vol. 21, re-verified this cycle: zero providers confirmed licensed, more than a month further into the VASP Regulations' operation. The November 2025 unlicensed-ATM precedent remains the clearest evidence the gap has already produced real exposure. Trigger: first confirmed licence grant, or a further consumer-harm incident tied to an unlicensed provider.</div></div><div class="rl risk-med">MEDIUM</div></div>
+    <div class="ri"><div class="rr">04</div><div><div class="rn">Ethiopia — State Mining Revenue vs. Citizen-Access Ban</div><div class="rd">Not re-searched this cycle; carried forward from Vol. 21 without a fresh check, flagged as such rather than re-asserted as re-verified. Trigger: any NBE move to formalise a citizen-access channel, or further enforcement escalation.</div></div><div class="rl risk-low">LOW-MEDIUM</div></div>
+  </div>
+</section>
+
+<section class="rs" id="opps">
+  <div class="s-num">Component 06</div>
+  <div class="s-ey">Asymmetric Opportunities</div>
+  <h2>Hidden Trades — <em>Cycle 22, Verified</em></h2>
+  <div class="opp-list">
+    <div class="oc">
+      <div class="oh"><div class="otb">Tier 1 · Dated Window, Closes 3 Sep</div><div class="ott">Nigeria SEC Draft Rules — Comment-Period Positioning</div><div class="os-box"><div class="osn">8.7</div><div class="osl">Asymmetry Score</div></div></div>
+      <div class="ob2">
+        <div class="oth"><p><span class="new-tag">New</span> The comment period on the SEC's draft rules (closes 3 September 2026) is a rare, dated, procedurally real window in which the residency test's discretionary carve-out, the capital tiers, and the vanished "ancillary VASP" category can still be shaped before finalisation. Firms with existing Nigerian operations or legal counsel have a direct, low-cost channel to influence terms that will otherwise be set unilaterally.</p></div>
+        <div class="omc"><div><span class="oml">For Whom</span><span class="omv">Exchanges, custodians and platform operators with existing Nigeria operations or counsel</span></div><div><span class="oml">Timeframe</span><span class="omv">Now through 3 September 2026</span></div><div><span class="oml">Trigger</span><span class="omv">SEC comment portal remains open through the stated window</span></div></div>
+      </div>
+      <div class="oi"><strong>Invalidation:</strong> These are draft rules; the SEC could finalise them substantially unchanged regardless of comment volume, and the window's practical influence on outcome is unproven.</div>
+    </div>
+    <div class="oc">
+      <div class="oh"><div class="otb">Tier 1 · Dated Window, Closes 31 Aug</div><div class="ott">Nigeria CBN Regulatory Sandbox Cohort 2 — VASP Track</div><div class="os-box"><div class="osn">8.2</div><div class="osl">Asymmetry Score</div></div></div>
+      <div class="ob2">
+        <div class="oth"><p>Carried from Vol. 21, score trimmed slightly: the window remains open through 31 August 2026, but the SEC's own draft rules (Component 01) suggest the CBN sandbox and the SEC's ARIP track are now two of at least four parallel Nigerian entry mechanisms, which may fragment rather than simplify the practical path to market for a new applicant.</p></div>
+        <div class="omc"><div><span class="oml">For Whom</span><span class="omv">Stablecoin, payments, custody and wallet firms with Nigeria market ambitions and live product</span></div><div><span class="oml">Timeframe</span><span class="omv">Applications close 31 August 2026</span></div><div><span class="oml">Trigger</span><span class="omv">CBN sandbox portal remains open through the stated window</span></div></div>
+      </div>
+      <div class="oi"><strong>Invalidation:</strong> Sandbox participation does not guarantee eventual full licensing under whichever rulebook (SEC's or the Council's) ultimately governs.</div>
+    </div>
+    <div class="oc">
+      <div class="oh"><div class="otb">Tier 2 · Pre-Positioning</div><div class="ott">Kenya — Positioning Ahead of the First Confirmed Licence Grant</div><div class="os-box"><div class="osn">7.0</div><div class="osl">Asymmetry Score</div></div></div>
+      <div class="ob2">
+        <div class="oth"><p>Unchanged from Vol. 21, re-verified this cycle: Kenya's framework remains legally complete and operationally empty. Firms filing compliant applications now, ahead of the 4 November 2026 compliance deadline for existing operators, remain positioned to be among the first licensed once CBK/CMA begin issuing approvals.</p></div>
+        <div class="omc"><div><span class="oml">For Whom</span><span class="omv">Exchanges, custodians and stablecoin issuers already operating in or targeting Kenya</span></div><div><span class="oml">Timeframe</span><span class="omv">Now through 4 November 2026 compliance deadline for existing operators</span></div><div><span class="oml">Trigger</span><span class="omv">First confirmed CBK or CMA licence grant under the July 2026 regulations</span></div></div>
+      </div>
+      <div class="oi"><strong>Invalidation:</strong> No confirmed timeline exists for when the first licence will actually be granted.</div>
+    </div>
+    <div class="oc">
+      <div class="oh"><div class="otb">Tier 2 · Secondary Market</div><div class="ott">South Africa — Licensed-Shell Acquisition Over Fresh CASP Application</div><div class="os-box"><div class="osn">6.3</div><div class="osl">Asymmetry Score</div></div></div>
+      <div class="ob2">
+        <div class="oth"><p>Unchanged from Vol. 21, re-verified this cycle: the legal-conflict resolution path still runs through an SCA appeal with no confirmed hearing date. Acquiring an existing FSCA-licensed shell may still be faster than a fresh application, but legal review of exchange-control exposure remains a precondition.</p></div>
+        <div class="omc"><div><span class="oml">For Whom</span><span class="omv">Entities seeking fast, licensed South African market entry</span></div><div><span class="oml">Timeframe</span><span class="omv">Ongoing — secondary market is active now</span></div><div><span class="oml">Trigger</span><span class="omv">N/A — standing opportunity, priced continuously</span></div></div>
+      </div>
+      <div class="oi"><strong>Invalidation:</strong> The SCA appeal timeline is unconfirmed; the legal conflict could persist longer than a typical acquisition due-diligence horizon.</div>
+    </div>
+  </div>
+</section>
+
+<section class="rs" id="powermap">
+  <div class="s-num">Component 07</div>
+  <div class="s-ey">Power Map</div>
+  <h2>Control Architecture — <em>Cycle 22, Verified</em></h2>
+  <div class="pm-grid">
+    <div class="pb">
+      <div class="pb-title">Nigeria — The SEC Moves Ahead of Its Own Coordinating Body<span class="pb-status">Status: Draft Rules Published, HIF Still Overdue</span></div>
+      <div class="pr"><span class="p-lbl">SEC</span><span class="p-val p-crypto">Publishes independent draft prudential rulebook, 20 Aug; comments close 3 Sep.</span></div>
+      <div class="pr"><span class="p-lbl">VARC</span><span class="p-val p-contested">Harmonised Implementation Framework overdue ~10 days past 16 Aug deadline.</span></div>
+      <div class="pr"><span class="p-lbl">NRS</span><span class="p-val p-state">Tax guidance delivered on schedule, 3 Aug.</span></div>
+      <div class="pr"><span class="p-lbl">ARIP / CBN Sandbox 2</span><span class="p-val p-crypto">14 firms admitted total; CBN's separate VASP track closes 31 Aug.</span></div>
+    </div>
+    <div class="pb">
+      <div class="pb-title">Kenya — Legally Complete, Operationally Empty<span class="pb-status">Status: Re-Verified, No Change</span></div>
+      <div class="pr"><span class="p-lbl">CBK</span><span class="p-val p-state">Supervises stablecoin issuers, fiat-conversion, payment processors.</span></div>
+      <div class="pr"><span class="p-lbl">CMA</span><span class="p-val p-state">Supervises exchanges, brokers, tokenisation, ICOs.</span></div>
+      <div class="pr"><span class="p-lbl">Licensed Providers</span><span class="p-val p-contested">Zero confirmed as of this cycle.</span></div>
+      <div class="pr"><span class="p-lbl">Compliance Deadline</span><span class="p-val p-state">4 November 2026 for pre-existing operators.</span></div>
+    </div>
+    <div class="pb">
+      <div class="pb-title">South Africa — Resolution Path Unchanged<span class="pb-status">Status: Re-Verified, No New Developments</span></div>
+      <div class="pr"><span class="p-lbl">SARB / FSCA / PA / FIC</span><span class="p-val p-contested">Position: crypto is not "money"/"payment" under the NPS Act.</span></div>
+      <div class="pr"><span class="p-lbl">Gauteng High Court (Mangundhla)</span><span class="p-val p-contested">Position: Bitcoin is "money" and "capital" under exchange control law.</span></div>
+      <div class="pr"><span class="p-lbl">SCA (Standard Bank appeal)</span><span class="p-val p-crypto">Pending since Jun 2025; "expected 2026," no date confirmed.</span></div>
+      <div class="pr"><span class="p-lbl">JSE Crypto ETF</span><span class="p-val p-state">Remains barred under Working Group Recommendation 23.</span></div>
+    </div>
+    <div class="pb">
+      <div class="pb-title">Nigeria — Who Sets Terms of Entry, Six Categories Deep<span class="pb-status">Status: New This Cycle</span></div>
+      <div class="pr"><span class="p-lbl">DAX / DAC</span><span class="p-val p-crypto">₦2bn (~$1.49M) capital floor; largest, most-supervised tier.</span></div>
+      <div class="pr"><span class="p-lbl">DAPO / DAOP / RATOP</span><span class="p-val p-crypto">₦500m (~$371K) capital floor.</span></div>
+      <div class="pr"><span class="p-lbl">VASP</span><span class="p-val p-crypto">₦200m (~$148.5K) capital floor; lowest tier retained.</span></div>
+      <div class="pr"><span class="p-lbl">Ancillary VASP (Jan 2026 circular)</span><span class="p-val p-state">Absent from the draft rules entirely.</span></div>
+    </div>
+  </div>
+  <div class="psa">
+    <span class="psa-lbl">★ VERIFIED RESOLUTION: The ARIP Cohort-Size Discrepancy Is Closed</span>
+    <div class="psa-title">14 Firms Total — "12" and "14" Were Both Correct, Under Different Counting Conventions</div>
+    <div class="psa-desc">Vol. 21 declined to resolve this by picking a side. This cycle, an itemised breakdown of the SEC's own July and August admission circulars (2 original + 9 across two July batches + 3 on 14 August) confirms the total at 14, with "12" reflecting only admissions counted from July onward. ACIOS treats this as resolved by reconciliation, not by majority-source count.</div>
+  </div>
+  <div class="psa green-border">
+    <span class="psa-lbl green">★ NEW SIGNAL: Nigeria's SEC Sets Terms Independent of the Council That Outranks It On Paper</span>
+    <div class="psa-title">Draft Rules Published 20 Aug, Comments Close 3 Sep — No Harmonised Framework in Sight</div>
+    <div class="psa-desc">This is dense with independently corroborating, dated, named-source reporting (Rio Times, TechCabal, TheRadar, Nairametrics), all describing the same document and the same terms. ACIOS treats the rules' existence and core terms as high-confidence; their eventual final form, given the open comment period, as provisional.</div>
+  </div>
+</section>
+
+
+<section class="rs" id="blackswan">
+  <div class="s-num">Component 08</div>
+  <div class="s-ey">Black Swan Watch</div>
+  <h2>Tail Risk Scenario Library — <em>Cycle 22, Disclosed Method</em></h2>
+  <div class="method-box" style="margin-bottom:1.4rem;">
+    <span class="method-lbl">The ACIOS Signal-Density Method</span>
+    <p>Each scenario is assessed against three stated, checkable factors, and the qualitative Likelihood label is derived from them rather than asserted: <strong>Trigger Status</strong> — has any precursor to the trigger condition already begun; <strong>Precedent Density</strong> — how many similar cases exist in ACIOS's own tracked record, and how those resolved; <strong>Incentive Alignment</strong> — do the relevant institutional or corporate actors have a demonstrated or stated incentive toward this outcome. A scenario scoring positively on more of these three factors is labelled Moderate or Higher; a scenario scoring positively on none or one is labelled Lower.</p>
+  </div>
+  <div class="bs-list">
+    <div class="bsc s-med">
+      <div class="bs-pc"><div class="bs-pl">Likelihood</div><div class="bs-pv">Moderate-High</div><div style="font-family:'IBM Plex Mono',monospace;font-size:.53rem;color:var(--mid);margin-top:.28rem;">Escalated this cycle</div></div>
+      <div class="bs-bc"><h4>Nigeria's SEC Rulebook Becomes the De Facto National Framework, With or Without VARC's Framework</h4><p><span class="new-tag">New</span> <strong>Trigger Status:</strong> already in motion — the SEC published a complete, standalone prudential regime on 20 August while the Council's coordination document remains unpublished ten days past deadline. <strong>Precedent Density:</strong> Nigeria's SEC has a demonstrated pattern of acting unilaterally (ARIP itself was an SEC-run mechanism, not a Council one). <strong>Incentive Alignment:</strong> the SEC has clear incentive to finalise a rulebook it authored and controls before any competing framework can supersede it. All three factors point toward this outcome.</p><div class="bs-tr"><strong>Trigger:</strong> The SEC's rules are substantially finalised before the Harmonised Implementation Framework is published, or the Framework is published but explicitly defers to the SEC's rulebook on capital and licensing terms.</div></div>
+    </div>
+    <div class="bsc s-med">
+      <div class="bs-pc"><div class="bs-pl">Likelihood</div><div class="bs-pv">Moderate</div><div style="font-family:'IBM Plex Mono',monospace;font-size:.53rem;color:var(--mid);margin-top:.28rem;">Carried forward</div></div>
+      <div class="bs-bc"><h4>South Africa's Legal Split Escalates Into a Market-Structure Dispute</h4><p><strong>Trigger Status:</strong> latent — no market participant has yet been reported structuring a transaction explicitly around the gap. <strong>Precedent Density:</strong> the Standard Bank/Mangundhla split is itself the precedent; South Africa has no prior instance of two contradictory High Court rulings on the same crypto-legal question being left unresolved this long. <strong>Incentive Alignment:</strong> SARB has a clear incentive to pursue its pending SCA appeal to close the gap it is exposed by. Mixed signal — one factor active, one absent, one aligned toward resolution rather than escalation.</p><div class="bs-tr"><strong>Trigger:</strong> An SCA ruling, an appeal of Mangundhla itself, or a documented enforcement conflict.</div></div>
+    </div>
+    <div class="bsc s-med">
+      <div class="bs-pc"><div class="bs-pl">Likelihood</div><div class="bs-pv">Moderate</div><div style="font-family:'IBM Plex Mono',monospace;font-size:.53rem;color:var(--mid);margin-top:.28rem;">Carried forward</div></div>
+      <div class="bs-bc"><h4>Kenya's Licensing Gap Produces a Consumer-Harm Event Large Enough to Force Emergency Rulemaking</h4><p><strong>Trigger Status:</strong> a precursor already occurred (November 2025's unlicensed Bitcoin ATM episode). <strong>Precedent Density:</strong> one directly comparable incident on record; no second incident found this cycle. <strong>Incentive Alignment:</strong> CBK/CMA have already shown willingness to issue public warnings quickly, suggesting institutional readiness to respond if triggered again. Two of three factors present.</p><div class="bs-tr"><strong>Trigger:</strong> Any material consumer-harm incident involving an unlicensed Kenyan VASP.</div></div>
+    </div>
+    <div class="bsc s-low">
+      <div class="bs-pc"><div class="bs-pl">Likelihood</div><div class="bs-pv">Lower</div><div style="font-family:'IBM Plex Mono',monospace;font-size:.53rem;color:var(--mid);margin-top:.28rem;">Re-scored down</div></div>
+      <div class="bs-bc"><h4>Nigeria's VARC Publishes a Framework That Meaningfully Constrains the SEC's Rules</h4><p><strong>Trigger Status:</strong> not visible — no draft or preview of the Framework has surfaced this cycle, ten days past its own deadline. <strong>Precedent Density:</strong> no African market in ACIOS's tracked record has produced a coordinating document that retroactively constrained a sister agency's already-published rulebook. <strong>Incentive Alignment:</strong> the SEC has demonstrated incentive to move first and set terms; the Council has incentive to claim credit for coordination but weaker incentive to fight a rule already in public comment. Zero of three factors clearly present — this scenario is re-scored down from Vol. 21's "Lower" given this cycle's new evidence of SEC unilateralism.</p><div class="bs-tr"><strong>Trigger:</strong> VARC publishes a Framework that explicitly modifies, delays, or overrides specific terms of the SEC's draft rules.</div></div>
+    </div>
+    <div class="bsc s-low">
+      <div class="bs-pc"><div class="bs-pl">Likelihood</div><div class="bs-pv">Lower</div><div style="font-family:'IBM Plex Mono',monospace;font-size:.53rem;color:var(--mid);margin-top:.28rem;">Carried forward</div></div>
+      <div class="bs-bc"><h4>Ethiopia Formalises a Citizen Access Channel Rather Than Deepening the Ban</h4><p><strong>Trigger Status:</strong> none found; not re-searched this cycle. <strong>Precedent Density:</strong> no African central bank in ACIOS's tracked record has reversed a broadened prohibition into a formal access channel within one to two cycles. <strong>Incentive Alignment:</strong> the state's mining-revenue incentive favours continued dual-track policy over full access, not full prohibition or full access. Zero of three factors present; retained as the positive tail case.</p><div class="bs-tr"><strong>Trigger:</strong> Any NBE announcement of a licensed or sandboxed citizen-facing virtual-asset channel.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="rs" id="snoise">
+  <div class="s-num">Component 09</div>
+  <div class="s-ey">Signal vs. Noise</div>
+  <h2>Classification Table — <em>Cycle 22</em></h2>
+  <table class="sn-table">
+    <thead><tr><th>Development</th><th>Classification</th><th>Rationale</th></tr></thead>
+    <tbody>
+      <tr><td>Nigeria SEC publishes draft "Proposed Rules on Digital and Virtual Asset Operations, Custody and Markets," 20 Aug 2026</td><td><span class="sn-b sn-ss">STRONG SIGNAL</span></td><td>Corroborated by Rio Times, TechCabal, TheRadar, Nairametrics, all describing consistent, specific terms (capital tiers, licence categories, residency test). Durability HIGH for the document's existence and core terms; provisional for its final form pending the comment period.</td></tr>
+      <tr><td>Nigeria ARIP cohort size: "12 firms" vs. "14 firms" across sources</td><td><span class="sn-b sn-n">RESOLVED</span></td><td>An itemised breakdown of the SEC's July and August admission circulars reconciles both figures to a single total of 14, with "12" reflecting a July-onward-only count. Resolved by arithmetic reconciliation, not by choosing a majority source.</td></tr>
+      <tr><td>Nigeria Harmonised Implementation Framework, due ~16 Aug 2026, still unconfirmed as of 26 Aug 2026</td><td><span class="sn-b sn-u">UNRESOLVED — DEADLINE NOW ~10 DAYS OVERDUE</span></td><td>No source found confirming publication. Treated as a negative data point, not a resolved failure — publication could still occur, though the SEC's own rulemaking now proceeds independently of it.</td></tr>
+      <tr><td>South Africa: Standard Bank v. SARB appeal pending before the SCA since June 2025, "expected 2026"</td><td><span class="sn-b sn-u">UNRESOLVED — NO HEARING DATE CONFIRMED</span></td><td>Re-searched this cycle; no firmer date located despite active search. Treated as an open, dated-but-unscheduled event.</td></tr>
+      <tr><td>BCEAO reaffirms cautious, no-timeline stance on crypto regulation (26 Aug 2026 reporting)</td><td><span class="sn-b sn-s">SIGNAL — RE-VERIFIED, NO CHANGE</span></td><td>Financial Afrik analysis dated within this cycle restates BCEAO's July position essentially unchanged; treated as fresh confirmation, not new substance.</td></tr>
+    </tbody>
+  </table>
+  <div class="un-box">
+    <span class="un-lbl">Unresolved Register · Active Monitoring</span>
+    <div class="un-item">
+      <div class="un-title">Nigeria — Publication of the Harmonised Implementation Framework</div>
+      <div class="un-cond">Becomes SIGNAL upon VARC publishing the Framework; remains a fragility signal (Component 05) the longer it stays unpublished.</div>
+      <span class="un-time">Review: Vol. 23</span>
+    </div>
+    <div class="un-item">
+      <div class="un-title">Nigeria — Finalisation Terms of the SEC's Draft Rules</div>
+      <div class="un-cond">Becomes SIGNAL upon a final rule being gazetted; every capital figure and residency term is provisional until then.</div>
+      <span class="un-time">Review: Post-3 Sep comment close</span>
+    </div>
+    <div class="un-item">
+      <div class="un-title">Kenya — Timing of First Confirmed VASP Licence</div>
+      <div class="un-cond">Becomes SIGNAL upon any confirmed licence grant reported by CBK, CMA, or a credible named outlet.</div>
+      <span class="un-time">Review: Ongoing</span>
+    </div>
+    <div class="un-item">
+      <div class="un-title">South Africa — SCA Hearing Date for Standard Bank v. SARB</div>
+      <div class="un-cond">Becomes SIGNAL upon the SCA scheduling or hearing the appeal, or upon any formal SARB/FSCA response to Mangundhla.</div>
+      <span class="un-time">Review: Ongoing</span>
+    </div>
+    <div class="un-item">
+      <div class="un-title">Flutterwave — Identity of the East African Bank Acquisition Target</div>
+      <div class="un-cond">Becomes SIGNAL upon Flutterwave or a counterparty naming the specific bank and country.</div>
+      <span class="un-time">Review: Vol. 23</span>
+    </div>
+  </div>
+</section>
+
+<section class="rs" id="recs">
+  <div class="s-num">Component 10</div>
+  <div class="s-ey">Strategic Recommendations</div>
+  <h2>Cycle 22 <em>Actionable Intelligence</em></h2>
+  <div class="rec-list">
+    <div class="rec-row"><div class="rec-num">R22-01</div><div class="rec-body"><div class="rec-action">Submit comments on Nigeria's SEC draft rules before 3 September 2026, specifically addressing the residency test's discretionary carve-out and the capital tiers — this is a real, dated window in which terms can still be shaped, unlike a rule already gazetted.</div><div class="rec-specs"><span class="rec-spec">For: <strong>Exchanges, custodians and platform operators with Nigeria operations or counsel</strong></span><span class="rec-spec">Timeframe: <strong>Before 3 September 2026</strong></span><span class="rec-spec">Trigger: <strong>N/A — window is open now</strong></span></div><div class="rec-risk">Comment volume may not materially change the SEC's final terms; treat this as a hedge, not a guaranteed lever.</div></div></div>
+    <div class="rec-row"><div class="rec-num">R22-02</div><div class="rec-body"><div class="rec-action">Firms without a Nigeria-resident executive should begin identifying or relocating one now rather than waiting for the rules to finalise — the lead time on hiring or relocating a resident CEO is longer than the likely gap between the 3 September comment close and eventual finalisation.</div><div class="rec-specs"><span class="rec-spec">For: <strong>Global exchanges without an existing Nigeria-resident leadership presence</strong></span><span class="rec-spec">Timeframe: <strong>Now through rule finalisation</strong></span><span class="rec-spec">Trigger: <strong>N/A — lead-time risk exists regardless of finalisation date</strong></span></div><div class="rec-risk">The Commission's discretionary approval carve-out means some firms may secure an exception without relocating anyone; this recommendation assumes the more conservative, no-exception case.</div></div></div>
+    <div class="rec-row"><div class="rec-num">R22-03</div><div class="rec-body"><div class="rec-action">Do not treat ARIP sandbox admission, or the CBN's parallel VASP sandbox track, as a preview of the SEC's eventual licence terms — the draft rules' capital floors and residency test are materially more demanding than anything ARIP has required to date, and sandbox participants should model for a harder final bar.</div><div class="rec-specs"><span class="rec-spec">For: <strong>All 14 current ARIP participants and CBN Cohort 2 applicants</strong></span><span class="rec-spec">Timeframe: <strong>Now through rule finalisation</strong></span><span class="rec-spec">Trigger: <strong>N/A — standing caution</strong></span></div><div class="rec-risk">The SEC could grandfather existing sandbox participants under lighter terms; this recommendation assumes the conservative case where it does not.</div></div></div>
+    <div class="rec-row"><div class="rec-num">R22-04</div><div class="rec-body"><div class="rec-action">Track whether the Harmonised Implementation Framework appears before or after the SEC's rules are finalised — the sequence itself is the signal for whether Nigeria's coordination architecture functions as designed or has been superseded in practice by one member agency.</div><div class="rec-specs"><span class="rec-spec">For: <strong>Analysts and institutions monitoring Nigeria's regulatory architecture</strong></span><span class="rec-spec">Timeframe: <strong>Through rule finalisation, expected within this or next cycle's horizon</strong></span><span class="rec-spec">Trigger: <strong>Publication of the Framework, in either sequence</strong></span></div><div class="rec-risk">A single sequencing outcome is suggestive, not proof, of a durable institutional pattern; treat as one data point.</div></div></div>
+  </div>
+</section>
+<section class="rs" style="border-bottom:none;">
+  <div class="mw">
+    <div class="ms">
+      <span class="mt">Trend Memory — Updates</span>
+      <ul class="mi">
+        <li><strong>Nigeria's SEC Publishes an Independent Prudential Rulebook — NEW, HIGH SIGNIFICANCE:</strong> Draft rules (20 Aug) set capital tiers, licence categories and a residency test, ahead of and independent from the Council's own coordination framework. Direction: SEC acting unilaterally; comment period closes 3 Sep.</li>
+        <li><strong>ARIP Cohort-Size Discrepancy — RESOLVED:</strong> Total confirmed at 14 firms via reconciliation of two counting conventions. Closes an item carried open since Vol. 21.</li>
+        <li><strong>Nigeria VARC Coordination-Execution Gap — ESCALATED:</strong> Harmonised Implementation Framework now roughly ten days overdue, with the SEC proceeding independently. Watch whether the Framework appears before or after SEC finalisation.</li>
+        <li><strong>Incumbents Moving From Stablecoin Partnership to Bank Ownership — CARRIED FORWARD, RE-VERIFIED, NO CHANGE:</strong> Flutterwave's acquisition target remains unnamed this cycle.</li>
+        <li><strong>South Africa Legal Split — CARRIED FORWARD, RE-VERIFIED, NO CHANGE:</strong> No SCA hearing date located this cycle.</li>
+        <li><strong>WAEMU Cautious Non-Engagement — CARRIED FORWARD, RE-VERIFIED WITH FRESHER SOURCING:</strong> BCEAO's position re-confirmed in reporting dated within this cycle.</li>
+      </ul>
+    </div>
+    <div class="ms">
+      <span class="mt">Country Memory — Updated Dossiers (Verified Status, No Numeric Score)</span>
+      <div class="country-grid">
+        <div class="cc"><div class="cc-name">Nigeria</div><span class="cc-cms">Status: Active Rulemaking</span><p>SEC published draft prudential rules 20 Aug (comments close 3 Sep): six licence categories, ₦2bn/₦500m/₦200m capital tiers, resident-CEO test. ARIP cohort resolved at 14 firms total. Harmonised Implementation Framework still unconfirmed, ~10 days overdue. CBN Cohort 2 (VASP track) applications close 31 Aug.</p></div>
+        <div class="cc"><div class="cc-name">Kenya</div><span class="cc-cms">Status: Regulated, Inactive</span><p>Re-verified 26 Aug: no change. VASP Regulations, 2026 in force since 22 Jul. Zero confirmed licences. Existing operators must comply by 4 Nov 2026.</p></div>
+        <div class="cc"><div class="cc-name">South Africa</div><span class="cc-cms">Status: Mature, Internally Contested</span><p>Re-verified 26 Aug: no change. Joint Communication (28 May) and Mangundhla judgment (1 Jun) remain in conflict; SCA appeal of Standard Bank v. SARB remains the likelier resolution path, no hearing date confirmed.</p></div>
+        <div class="cc"><div class="cc-name">Morocco</div><span class="cc-cms">Status: Pre-Enactment</span><p>Re-verified 26 Aug: no change. Bill 42.25 remains undated; no licences issued.</p></div>
+        <div class="cc"><div class="cc-name">Rwanda</div><span class="cc-cms">Status: Enacted, Regs Pending</span><p>Re-verified 26 Aug: no change. Law No. 023/2026 in force since 28 May; CMA still drafting implementing regulations.</p></div>
+        <div class="cc"><div class="cc-name">Uganda</div><span class="cc-cms">Status: No Law</span><p>Not re-searched this cycle. P-19-04 (enactment by 18 Aug 2026) remains resolved FALSE per Vol. 21.</p></div>
+        <div class="cc"><div class="cc-name">Zambia</div><span class="cc-cms">Status: Registration Only</span><p>Not re-searched this cycle; carried from Vol. 21 without fresh verification.</p></div>
+        <div class="cc"><div class="cc-name">Zimbabwe</div><span class="cc-cms">Status: AML Registration + Sandbox</span><p>Re-verified 26 Aug: no change. SECZ's 27 Jul cohort (7 firms, 5 tokenisation-focused) stands; still short of full licensing.</p></div>
+        <div class="cc"><div class="cc-name">Ethiopia</div><span class="cc-cms">Status: Prohibition Broadened</span><p>Not re-searched this cycle; carried from Vol. 21 without fresh verification.</p></div>
+        <div class="cc"><div class="cc-name">WAEMU (8 states)</div><span class="cc-cms">Status: No Framework</span><p>Re-verified 26 Aug via fresh reporting: BCEAO reaffirms cautious stance, no timeline, language essentially unchanged from July.</p></div>
+        <div class="cc"><div class="cc-name">Ghana</div><span class="cc-cms">Status: Enacted, Licensing Underway</span><p>Re-verified 26 Aug: no change. Act 1154 in force since 30 Dec 2025; BoG registration mandatory since 5 Mar 2026; implementing guidelines still in drafting.</p></div>
+      </div>
+      <div class="ec" style="margin-top:1.5rem;"><div class="ec-name">Yellow Card</div><p>Re-verified 26 Aug: no new development. ARIP admission (14 Aug) and the $120M-vs-$145M cumulative-funding discrepancy carry forward unresolved from Vol. 21.</p></div>
+      <div class="ec"><div class="ec-name">Flutterwave</div><p>Re-verified 26 Aug: no new development. East African bank acquisition intent and the six named candidate markets stand unchanged from Vol. 21; no target, country, or closing disclosed.</p></div>
+      <div class="ec"><div class="ec-name">Nigeria SEC</div><p><strong>Tracked with elevated significance this cycle.</strong> Published a complete, independent draft prudential regime on 20 Aug, moving ahead of the Virtual Asset Council's own coordination timeline. Strategic significance: HIGH — now the most consequential single regulatory actor in the ARIP/VARC/CBN cluster.</p></div>
+      <div class="ec"><div class="ec-name">MTN MoMo</div><p>Not re-searched this cycle. No confirmed stablecoin product as of Vol. 21; carried forward.</p></div>
+    </div>
+    <div class="ms">
+      <span class="mt">Prediction Memory — Resolutions and New Predictions, Cycle 22</span>
+      <div class="pred-log">
+        <div class="pl-row resolved"><div class="pl-id">P-21-02 (partial)</div><div class="pl-text">Nigeria's SEC ARIP cohort exceeds 15 admitted firms before 31 December 2026.<span class="pl-meta">Status: OPEN, unchanged — but the cohort-count ambiguity underlying this prediction is now resolved at 14 total, giving a clean, unambiguous baseline to track toward 15. No status change to the prediction itself.</span></div><div class="pl-conf pc-h">HIGH</div></div>
+        <div class="pl-row"><div class="pl-id">P-20-01</div><div class="pl-text">Kenya's CBK or CMA publicly confirms at least one licensed VASP under the July 2026 regulations before 31 December 2026.<span class="pl-meta">Status: OPEN, unchanged. No new evidence this cycle either way.</span></div><div class="pl-conf pc-m">MEDIUM</div></div>
+        <div class="pl-row"><div class="pl-id">P-20-02</div><div class="pl-text">Nigeria's VARC publishes at least one substantive joint SEC/CBN guidance or licensing-pathway document before 31 October 2026.<span class="pl-meta">Status: OPEN. New evidence this cycle works against it: the SEC's 20 Aug rules are SEC-authored, not joint SEC/CBN, and the Harmonised Implementation Framework remains unpublished. Confidence trimmed from MEDIUM toward the lower end of MEDIUM.</span></div><div class="pl-conf pc-m">MEDIUM</div></div>
+        <div class="pl-row"><div class="pl-id">P-20-03</div><div class="pl-text">The Mangundhla judgment is appealed, or SARB/FSCA issue a formal public response addressing it directly, before 31 December 2026.<span class="pl-meta">Status: OPEN, unchanged. No new evidence this cycle.</span></div><div class="pl-conf pc-m">MEDIUM</div></div>
+        <div class="pl-row"><div class="pl-id">P-21-01</div><div class="pl-text">Nigeria's VARC publishes the Harmonised Implementation Framework before 30 September 2026.<span class="pl-meta">Status: OPEN. New evidence this cycle works against it: the deadline is now ~10 days overdue with the SEC proceeding independently, though the 30 September falsification date has not yet arrived.</span></div><div class="pl-conf pc-m">MEDIUM</div></div>
+        <div class="pl-row"><div class="pl-id">P-21-03</div><div class="pl-text">Flutterwave publicly confirms the identity of the specific East African bank it is acquiring before 31 December 2026.<span class="pl-meta">Status: OPEN, unchanged. No new evidence this cycle either way.</span></div><div class="pl-conf pc-m">MEDIUM</div></div>
+        <div class="pl-row"><div class="pl-id">P-21-04</div><div class="pl-text">At least one participant in Zimbabwe's SECZ regulatory sandbox (admitted 27 Jul 2026) graduates to full licensing before 30 June 2027.<span class="pl-meta">Status: OPEN, unchanged. Too early in the sandbox's cycle for movement; not re-searched this cycle.</span></div><div class="pl-conf pc-l">LOW-MEDIUM</div></div>
+        <div class="pl-row"><div class="pl-id">P-22-01</div><div class="pl-text">Nigeria's SEC finalises its draft prudential rules substantially as proposed — including the ₦2bn/₦500m/₦200m capital tiers and the resident-CEO requirement — before 31 March 2027.<span class="pl-meta">Falsification: the rules are withdrawn, the capital floors or residency test are materially watered down in the final version, or no final rule is gazetted by that date. Key assumptions: (1) the 3 September comment close is followed by a standard multi-month finalisation process rather than an indefinite delay; (2) the SEC's demonstrated pattern of unilateral action (ARIP, this draft) continues rather than being subordinated to VARC.</span></div><div class="pl-conf pc-m">MEDIUM</div></div>
+      </div>
+    </div>
+    <div class="ms" style="margin-bottom:0;padding-bottom:0;border-bottom:none;">
+      <span class="mt">Forward Watchlist</span>
+      <table class="watch-table">
+        <thead><tr><th>Date</th><th>Event</th><th>Markets</th><th>Predictions</th><th>Priority</th></tr></thead>
+        <tbody>
+          <tr><td>Through 31 Aug</td><td>CBN Regulatory Sandbox Cohort 2 application window (VASP track) closes.</td><td>Nigeria</td><td>Opportunity, Component 06</td><td class="pri-h">High</td></tr>
+          <tr><td>3 Sep</td><td>Comment period closes on the SEC's draft digital/virtual asset rules.</td><td>Nigeria</td><td>P-22-01</td><td class="pri-c">Critical</td></tr>
+          <tr><td>Ongoing</td><td>Monitor for publication of the Harmonised Implementation Framework, now ~10 days overdue.</td><td>Nigeria</td><td>P-21-01, P-20-02</td><td class="pri-c">Critical</td></tr>
+          <tr><td>Ongoing</td><td>Monitor for Kenya's first confirmed CBK/CMA VASP licence grant.</td><td>Kenya</td><td>P-20-01</td><td class="pri-c">Critical</td></tr>
+          <tr><td>Ongoing</td><td>Monitor for confirmation of Flutterwave's East African bank acquisition target.</td><td>Continental</td><td>P-21-03</td><td class="pri-h">High</td></tr>
+          <tr><td>Ongoing</td><td>Monitor for an SCA hearing date or ruling on Standard Bank v. SARB.</td><td>South Africa</td><td>P-20-03</td><td class="pri-h">High</td></tr>
+          <tr><td>~4 Nov</td><td>Deadline for Kenya's pre-existing VASP operators to come into compliance.</td><td>Kenya</td><td>P-20-01</td><td class="pri-m">Medium</td></tr>
+          <tr><td>Ongoing</td><td>Monitor Zimbabwe's SECZ sandbox cohort for the first graduate to full licensing.</td><td>Zimbabwe</td><td>P-21-04</td><td class="pri-m">Medium</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="closing-note">ACIOS vol22 complete · Next issue: vol23, targeted 2 September 2026 · Active monitoring: Nigeria's SEC rule finalisation and the Harmonised Implementation Framework's publication sequence, Kenya's first licence grant, Flutterwave's bank acquisition, South Africa's SCA appeal timeline, Zimbabwe's sandbox graduates · This cycle's central finding was resolved by reconciliation rather than by choosing a source: the ARIP cohort-count discrepancy closed because a source itemising both counting conventions was found, not because one side had more citations. That is the standard the "only facts, no fiction" mandate implies whenever two sourced figures disagree.</div>
+  </div>
+</section>
+
+
+</div><!-- /container -->
+
+<footer>
+  <div class="foot-bot">
+    <div class="fb-brand">Antifragile <em>Africa</em> Crypto · Vol. 22</div>
+    <div class="fl-row">
+      <a href="index.html">All Reports</a>
+      <a href="about.html">About</a>
+      <a href="terms.html">Terms</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="disclaimer.html">Disclaimer</a>
+    </div>
+    <span class="fn">Vol. 22 · 26 August 2026 · 28 Agents · 7 Layers · ARIP Cohort Discrepancy Resolved (14 Firms) · © 2026 Antifragile Africa Crypto · Not financial advice</span>
+  </div>
+</footer>
+
+<script>
+const layers=document.querySelectorAll('.sl[id]');
+const tocLinks=document.querySelectorAll('.toc-list a');
+if(layers.length){
+  const obs=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        tocLinks.forEach(l=>{l.style.color='';l.style.borderLeftColor='transparent';});
+        const a=document.querySelector('.toc-list a[href="#'+e.target.id+'"]');
+        if(a){a.style.color='var(--sky)';a.style.borderLeftColor='var(--steel)';}
+      }
+    });
+  },{rootMargin:'-20% 0px -65% 0px'});
+  layers.forEach(l=>obs.observe(l));
+}
+const sections=document.querySelectorAll('.rs[id]');
+const navLinks=document.querySelectorAll('.ih-nav a');
+if(sections.length){
+  const obs2=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        navLinks.forEach(l=>{l.style.color='';l.style.borderColor='';});
+        const a=document.querySelector('.ih-nav a[href="#'+e.target.id+'"]');
+        if(a){a.style.color='var(--sky)';a.style.borderColor='var(--steel)';}
+      }
+    });
+  },{rootMargin:'-40% 0px -55% 0px'});
+  sections.forEach(s=>obs2.observe(s));
+}
+</script>
+</body>
+</html>
